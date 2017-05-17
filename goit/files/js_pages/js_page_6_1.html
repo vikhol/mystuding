@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript</title>
+	<link href="../style/js.css" rel="stylesheet">
+	
+</head>
+<body>
+<header><nav>
+	<a href="/">Старт</a>
+	<a href="https://color.adobe.com/ru/Escape-Technology-Colours-color-theme-6679213/" target="_blank">Цвет</a>
+	<a href="">menu 3</a>
+	<a href="">menu 4</a>
+	<a href="js_page_2_2.html">МорБой</a>
+	<span>JavaScript</span>
+</nav></header>
+	<div class="main_cont">
+	<!-- Начало бокового меню -->
+		<div class="sidebar">
+			<ul>
+			    <li><a href="../js.html">Начало</a></li>
+				<li><a href="js_page_1_1.html">Глава 1</a></li>
+				<li><a href="js_page_2_1.html">Глава 2</a></li>
+				<li><a href="js_page_3_1.html">Глава 3</a></li>
+				<li><a href="js_page_4_1.html">Глава 4</a></li>
+				<li><a href="js_page_5_1.html">Глава 5</a></li>
+				<li><a href="js_page_6_1.html">Глава 6</a></li>
+				<li><a href="js_page_7_1.html">Глава 7</a></li>
+				<li><a href="js_page_8_1.html">Глава 8</a></li>
+				<li><a href="js_page_9_1.html">Глава 9</a></li>
+				<li><a href="js_page_10_1.html">Глава 10</a></li>
+				<li><a href="js_page_11_1.html">Глава 11</a></li>
+				<li><a href="js_page_12_1.html">Глава 12</a></li>
+				<li><a href="js_page_13_1.html">Глава 13</a></li>
+				<li><a href="js_other.html">Разное</a></li>
+			</ul>
+		</div>
+		<!-- Конец бокового меню -->
+		<!-- Начало блока с контентом -->
+		<div class="content">
+
+			<h1>DOM (Document Object Model)</h1>
+		<a href="js_page_6_2.html">Страничка для практики.</a>
+		<p>
+			<h3>Ключевые моменты</h3>
+			<li>
+				Браузер создает модель <strong>DOM </strong>страницы <strong>в процессе загрузки</strong> и разбора разметки HTML. Поэтому нужно либо помещать скрипт в конец body, либо воспользоваться св-вом <strong class="red">window.onload</strong> и присвоить ему нужную ф-ю. (Пример в <strong class="blue">dom.js</strong>)
+			</li>
+			<li>
+				
+			</li>
+		
+			<li>
+			Для получения доступа к DOM из нашего кода. Мы используем встроенный объект <strong class="red">document</strong>, он содержит целый набор свойств и методов для модификации DOM
+			</li>
+			<li>
+			Метод <strong class="red">document.getElementById</strong> получает элемент из DOM по идентификатору и <strong>возвращает</strong> объект <strong class="red">element</strong>, представляющий элемент страницы.
+			</li>
+			<li>
+				<strong class="red">getElementsByClassName</strong> используется для получения элементов по имени класса. 
+			</li>
+			<li>
+				<strong class="red">getElementsByTagName</strong> возвращает все элементы с заданным именем тега.
+			</li>
+			<li>
+				Чтобы полученный эл-т можно было использовать в коде, его обычно присваивают какой-нибудь переменной. (<strong class="blue">var firstPar = document.getElementById("paragraf_1");</strong>)
+			</li>
+			<li>
+				Свойство <strong class="red">innerHTML</strong> содержит текстовое содержимое элемента, а также всю его вложенную разметку HTML и может использоваться для изменения содержимого элемента. <strong class="blue">firstPar.innerHTML = "Параграф изменен";</strong>
+			</li>
+			<li>
+				<strong class="red">innerHTML</strong> представляет все содержимое элемента, 
+                включая вложенные элементы (например, абзац помимо текста абзаца может включать элементы em и img)
+			</li>
+			<li>
+				Запрашивая элемент из DOM методом getElementById, мы получаем объект element, который <strong class="red">может использоваться для чтения, изменения, замены содержимого или атрибутов элемента</strong>.
+			</li>
+			</p>
+			<p>
+				<h3 class="red">Как задать атрибут элемента методом setAttribute</h3>
+				<h4>(Пример в dom.js)</h4>
+				<li>
+					Метод <strong class="red">getAttribute</strong> позволяет <strong>получать</strong> значения атрибутов элементов.
+				</li>
+				<li>
+					Метод <strong class="red">setAttribute</strong> позволяет <strong>задавать</strong> значения атрибутов элементов.
+				</li>
+				<li>
+					<strong class="blue">paragraf_2.setAttribute(<strong class="red">"class"</strong>, <strong class="red">"greentext"</strong>);</strong> - задаст для эл-та <strong class="blue">"paragraf_2"</strong> атрибут <strong class="blue">"class"</strong> и присвоит ему значение <strong class="blue">"greentext"</strong>.
+				</li>
+				<li>
+					Вызов <strong>setAttribute</strong> для любого объекта element <strong class="red">изменяет значение существующего атрибута</strong>, а если атрибут не существует — <strong>добавляет новый атрибут</strong> в элемент. 
+				</li>
+			</p>
+			<p>
+				<h3 class="red">Значения атрибутов можно читать.</h3>
+				<li>
+					Для чтения атрибутов эл-та используется метод <strong class="red">getAttribute</strong> (Пример с описанием в <strong class="red">dom.js</strong>)
+				</li>
+			</p>
+		</div>
+		<!-- Конец блока с контентом -->
+	</div>
+</body>
+</html>

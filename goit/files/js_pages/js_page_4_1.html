@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript</title>
+	<link href="../style/js.css" rel="stylesheet">
+	
+</head>
+<body>
+<header><nav>
+	<a href="/">Старт</a>
+	<a href="https://color.adobe.com/ru/Escape-Technology-Colours-color-theme-6679213/" target="_blank">Цвет</a>
+	<a href="">menu 3</a>
+	<a href="">menu 4</a>
+	<a href="js_page_2_2.html">МорБой</a>
+	<span>JavaScript</span>
+</nav></header>
+	<div class="main_cont">
+	<!-- Начало бокового меню -->
+		<div class="sidebar">
+			<ul>
+			    <li><a href="../js.html">Начало</a></li>
+				<li><a href="js_page_1_1.html">Глава 1</a></li>
+				<li><a href="js_page_2_1.html">Глава 2</a></li>
+				<li><a href="js_page_3_1.html">Глава 3</a></li>
+				<li><a href="js_page_4_1.html">Глава 4</a></li>
+				<li><a href="js_page_5_1.html">Глава 5</a></li>
+				<li><a href="js_page_6_1.html">Глава 6</a></li>
+				<li><a href="js_page_7_1.html">Глава 7</a></li>
+				<li><a href="js_page_8_1.html">Глава 8</a></li>
+				<li><a href="js_page_9_1.html">Глава 9</a></li>
+				<li><a href="js_page_10_1.html">Глава 10</a></li>
+				<li><a href="js_page_11_1.html">Глава 11</a></li>
+				<li><a href="js_page_12_1.html">Глава 12</a></li>
+				<li><a href="js_page_13_1.html">Глава 13</a></li>
+				<li><a href="js_other.html">Разное</a></li>
+			</ul>
+		</div>
+		<!-- Конец бокового меню -->
+		<!-- Начало блока с контентом -->
+		<div class="content">
+		<a href="js_page_4_2.html">Генератор фраз</a>
+		<br>
+		<a href="js_page_4_3.html">Задание с пузырями</a>
+            <h1>Массивы</h1>
+           <p>
+            <strong class="blue">var scores = [60, 50, 60, 53, 47, 59, 50, 55, 53, 47, 59, 50, 55];</strong> - массив (данных)<br>
+            Можно работать с массивом как с единым целым, или же обращаться к отдельным значениям<br>
+            <strong class="blue">var solution1 = scores[0];</strong> - переменной solution1 присваивается значение стоящее на первом месте в массиве "scores". В нашем случае это число <b>60</b><br>
+            <b>Индексы массивов начинаются с нуля</b>
+           </p>
+           <p>
+            <h3 class="red">В массивах можно перечислять названия каких-то "схожих" по смыслу элементов</h3>
+            Пример:<br>
+            <strong class="blue">var icecream = ["Клубничное", "Ванильное", "Пломбир", "Эскимо"];</strong><br>
+            Чтобы выбрать нужный элемент из этого массива, нужно так же обратиться к его порядковому номеру.<br>
+            Например, <strong class="blue">var bestIcecream = icecream[2];</strong> - присвоит переменной <b>bestIcecream</b> значение <b>"Пломбир"</b>.
+           </p>
+           <p><b>в массивах могут храниться</b> практически любые значения JavaScript, включая <b>строки, числа, логические значения, другие массивы и даже объекты</b></p>
+           <p><h4>Можно изменить любой параметр в массиве, обратившись к нему через индекс</h4>
+           	Например: <br>
+           	<strong class="blue">var icecream[2] = "Шоколадное";</strong> - изменит значение <b>третьего</b> по порядку эл-та в массиве (Пломбир) на "Шоколадное".<br>
+           	<span class="red">Присваивание значения элементу, не существующему в массиве, приведет к созданию нового элемента.</span><br>
+           	<strong class="blue">var numIcecream = icecream.length;</strong> - используется для выяснения кол-ва эл-тов в массиве. <br>
+           	<strong class="blue">var lastIcecream = icecream.length - 1;</strong> - используется для выяснения индекса последнего эл-та в массиве.</p>
+           	<p><h3 class="red">Создание пустого массива (и добавление элементов).</h3>
+           	<strong class="blue">var genres = [];</strong> - так создается <strong>пустой массив</strong>, для последующего заполнения.<br>
+           	<h4 class="red">добавлять эл-ты в этот м-сив можно присваивая значения к какому-то конкретному индексу:</h4>
+           	<br>
+            <strong class="blue">genres[0] = "Rockabilly";</strong><br>
+            <strong class="blue">genres[1] = "Ambient";</strong><br>
+            <h4 class="red">Но лучше воспользоваться методом push</h4>
+            <strong class="blue">var genres = [];</strong><br>
+            <strong class="blue">genres.push("Rockabilly");</strong> - Создает новый элемент по следующему доступному индексу (который равен 0) и присваивает ему значение “Rockabilly".<br>
+            <strong class="blue">genres.push("Ambient");</strong> - Создает еще один элемент в следующей свободной позиции (1 в данном случае) и присваивает ему значение “Ambient".<br>
+            </p>
+            <p>Для перебора элементов массива обычно используется цикл <strong>for</strong>. Цикл <strong>while</strong> чаще всего используется, когда <strong>количество итераций неизвестно</strong>, и цикл должен выполняться, пока условие остается истинным. </p>
+		</div>
+		<!-- Конец блока с контентом -->
+	</div>
+	<script type="text/javascript" src="../js/icecream.js"></script>
+</body>
+</html>

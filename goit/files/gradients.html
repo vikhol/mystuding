@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Заготовка</title>
+	<meta charset="utf-8"/>
+	<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<header><nav>
+    <a href="../index.html">Главная</a>
+    <a href="/files/lists.html">Списки</a>
+    <a href="/files/tables.html">Таблицы</a>
+    <a href="/files/forms.html">Формы</a>
+    <a href="/files/inlineblocks.html">Inline-Blocks</a>
+</nav></header>
+<div id="osnova">
+<div class="left_menu">
+
+        <a href="../index.html">Главная</a>
+<br>        
+        <a href="/files/lists.html">Списки</a>
+<br>
+        <a href="/files/tables.html">Таблицы</a>
+<br>
+        <a href="/files/forms.html">Формы</a>
+<br>
+        <a href="/files/inlineblocks.html">Inline-Blocks</a>
+<br>       
+        <a href="/files/gradients.html">Градиенты</a>
+<br>      
+</div>
+<div class="content_main">
+<p style="font-size: 25px; text-align: center;">Градиенты</p>
+
+	<div class="gradblock grad1">to top</div>
+    <div class="gradblock grad2">to bottom</div>
+    <div class="gradblock grad3">to left</div>
+    <div class="gradblock grad4">to right</div>
+    <div class="gradblock grad5">to top left</div>
+    <div class="gradblock grad6">to top right</div>
+    <div class="gradblock grad7">to bottom left</div>
+    <div class="gradblock grad8">to bottom right</div>
+    
+    <div class="grad_uglovoy"><hr>
+
+<p style="font-size: 20px; text-align: center;">Вместо ключевого слова допускается задавать угол наклона градиентной линии, который показывает направление градиента. Вначале пишется положительное или отрицательное значение угла, затем к нему слитно добавляется deg.
+<br>
+<br>
+Синтаксис <strong> background: linear-gradient(-15deg, #000, #fff)</strong>
+<br>
+<br>
+Нулю градусов (или 360º) соответствует градиент снизу вверх, далее отсчёт ведётся по часовой стрелке.</p>  
+<p class="primer" style="font-size: 23px;">Пример:</p>
+<div class="grad_ugl">background: linear-gradient(-15deg, #000, #fff);</div>
+    </div>
+    <hr>
+    <div class="grad_prozrachniy">
+     <div class="grad_prozrachniy2">Для создания сложных градиентов двух цветов уже будет недостаточно, синтаксис позволяет добавлять их неограниченное количество, перечисляя цвета через запятую. При этом можно использовать прозрачный цвет (ключевое слово transparent), а также полупрозрачный с помощью формата RGBA
+     </div>
+    </div>
+    <hr>
+    <button class="b1">Нажми меня, детка!</button>
+    <p>Чтобы точно позиционировать цвета в градиенте, после значения цвета указывается его положение в процентах, пикселах или других единицах. Например, запись <strong>background: linear-gradient(to top, #3C576D 0%, #618DBE 30%, #D0D6DE 100%)</strong> означает, что градиент начинается с цвета <strong style="color: black;">#3C576D</strong>, затем на 30% переходит в <strong style="color: black;">#618DBE</strong>, а затем до конца в <strong style="color: black;">#D0D6DE</strong>. <strong>Для простоты крайние единицы вроде 0% и 100% можно не писать, они подразумеваются по умолчанию.</strong></p>
+  <hr>  
+</div>
+</div>
+
+</body>
+</html>

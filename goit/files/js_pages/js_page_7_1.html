@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript</title>
+	<link href="../style/js.css" rel="stylesheet">
+	
+</head>
+<body>
+<header><nav>
+	<a href="/">Старт</a>
+	<a href="https://color.adobe.com/ru/Escape-Technology-Colours-color-theme-6679213/" target="_blank">Цвет</a>
+	<a href="">menu 3</a>
+	<a href="">menu 4</a>
+	<a href="js_page_2_2.html">МорБой</a>
+	<span>JavaScript</span>
+</nav></header>
+	<div class="main_cont">
+	<!-- Начало бокового меню -->
+		<div class="sidebar">
+			<ul>
+			    <li><a href="../js.html">Начало</a></li>
+				<li><a href="js_page_1_1.html">Глава 1</a></li>
+				<li><a href="js_page_2_1.html">Глава 2</a></li>
+				<li><a href="js_page_3_1.html">Глава 3</a></li>
+				<li><a href="js_page_4_1.html">Глава 4</a></li>
+				<li><a href="js_page_5_1.html">Глава 5</a></li>
+				<li><a href="js_page_6_1.html">Глава 6</a></li>
+				<li><a href="js_page_7_1.html">Глава 7</a></li>
+				<li><a href="js_page_8_1.html">Глава 8</a></li>
+				<li><a href="js_page_9_1.html">Глава 9</a></li>
+				<li><a href="js_page_10_1.html">Глава 10</a></li>
+				<li><a href="js_page_11_1.html">Глава 11</a></li>
+				<li><a href="js_page_12_1.html">Глава 12</a></li>
+				<li><a href="js_page_13_1.html">Глава 13</a></li>
+				<li><a href="js_other.html">Разное</a></li>
+			</ul>
+		</div>
+		<!-- Конец бокового меню -->
+		<!-- Начало блока с контентом -->
+		<div class="content">
+			<h1>Типы, равенства, преобразования и т.д.</h1>
+			<h3>(types.js)</h3>
+			<p>
+				<strong class="red">Типы операндов</strong> бывают следующих видов: “<strong class="blue">string</strong>" - строка, “<strong class="blue">boolean</strong>" - логический тип (булевское значение), “<strong class="blue">number</strong>" - число, “<strong class="blue">object</strong>" - объект, “<strong class="blue">undefined</strong>" - неопределенный, “<strong class="blue">function</strong>" - функция, и т. д.
+				<p>
+					Для проверки типа операнда используется встроенный оператор <strong class="red"> typeof</strong>. (Пример в <strong>types.js</strong>)
+				</p>
+				<p>
+					<strong class="red">Примитивы</strong>: числа, строки, булевские значения, null и undefined. <strong>Все остальное — объекты</strong>.
+				</p>
+			</p><hr>
+			
+			<strong class="red">undefined </strong>означает, что переменная (или свойство, или элемент массива) еще не была инициализирована значением. Например:
+			<p>
+				<ol>
+					<li>Возвращает ф-я при <strong>отсутствии</strong> в ней команды <strong>return</strong>.</li>
+					<li>Является значением переменной, которой еще <strong>не присвоили значение</strong>.</li>
+					<li>Значение эл-та <strong>не существующего</strong> в <strong>разреженном массиве</strong>.</li>
+					<li>Значение <strong>несуществующего св-ва</strong>.</li>
+					<li>и т.д.</li>
+				</ol>
+				<li>Поэтому <strong class="red">undefined</strong> может использоваться <strong>для проверки</strong> заполнения форм, объектов и т.д.
+			</li>
+			</p>
+			
+			
+			<p>
+				<strong class="red">null</strong> обозначает <strong>отсутствие объекта</strong>.
+				
+					<li>
+						Может использоваться в коде, например так: <strong class="blue">var header = document.getElementById("header");</strong> <strong class="red">if (header == null) {...}</strong>
+					</li>
+				
+			</p>
+            <p>
+            	<strong class="red">NaN</strong> (Not a Number) - используется для представления числовых рез-тов, <strong>не имеющих представления</strong>. Например:
+            	<li>
+            		<strong class="blue">var x = "stroka" + 99;</strong> - не сможет сложить слово с числом и вернет NaN.
+            	</li>
+            	<li>А так как <strong>NaN не равно ничему</strong> (даже самому себе), его не получится проверить стандартными способами, как в случае с <strong class="blue">null</strong> и <strong class="blue">undefined</strong>. Для этого используется специальная ф-я <strong class="red">isNan</strong>.</li>
+            	<li>Например: <strong class="blue">if (<strong class="red">isNaN</strong>(moeChislo)) {...};</strong> - Функция <strong class="blue">isNaN</strong> возвращает <strong>true</strong>, если переданное ей значение <strong>не</strong> является <strong>числом</strong>.</li>
+            </p>
+            <p><hr>
+            	<h3 class="red">Равенства и преобразования.</h3>
+                <p>
+                	<strong class="red">==</strong> - оператор проверки равенства.
+                </p>
+                <li>
+                	Если два знач-я относятся к <strong>одному</strong> типу, то <strong class="red">==</strong> просто сравнивает их.
+                </li>
+                <li>
+                	А если знач-я относятся к <strong>разным</strong> типам, JavaScript сперва пытается <strong class="red">преобразовать</strong> их, и уже потом сравнить. Т.е. когда мы пытаемся сравнить <strong>строку с числом</strong>, JS пробует преобразовать <strong>строку в число</strong>.
+                </li>
+                <li>
+                	Если преобразуемая строка не содержит число, то и преоразовать ее получится только в <strong>NaN</strong>. Пример: <strong class="blue">99 == "строка"</strong> -> <strong class="blue">99 == NaN</strong> -> <strong class="blue">false</strong>.
+                </li>
+                <li>
+                	В случае сравнения <strong>булевского значения</strong> с числом, <strong>true</strong> преобразуется в число <strong>1</strong>, а <strong>false</strong> в <strong>0</strong>.
+                </li>
+                <li>
+                	Так же <strong class="blue">"1" == true</strong>. Сперва true преобразуется в число. А затем строка "1" сравнивается с числом 1. T.e. <strong class="blue">"1" == true;</strong> -> <strong class="blue">"1" == 1;</strong> -> <strong class="blue">1 == 1</strong>; <strong class="blue">true</strong>
+                </li>
+                <li>
+                	<strong class="red">null == undefined</strong> -> <strong class="red">true</strong>
+                </li>
+                <li>
+                	<strong class="red">1 == ""</strong> -> <strong class="red">1 == 0</strong> -> <strong class="red">false</strong>
+                </li>
+            </p>
+            <p>
+            	<strong class="red">===</strong> - оператор <strong class="red">"Строгое равенство"</strong>, или <strong class="red">оператор тождественности</strong>
+            	<li>
+            		При использовании <strong class="red">===</strong>, два значения считаются строго равными только в том случае, если они относятся к <strong>одному типу</strong> и содержат <strong>одно значение</strong>.
+            	</li>
+            	<li>
+            		<strong class="red">!==</strong> - <strong class="red">строгое неравенство</strong>
+            	</li>
+            </p>
+            <p>
+            	Одна строка может быть меньше или больше другой. Например: <strong class="red">"banana" < "melone"</strong> Потому что в алфавите <strong>первая буква</strong> слова banana предшествует первой букве melone.
+            </p>
+            <p>
+            	<h3 class="red">О канкатенации (склеивании строк) и суммировании</h3>
+            	Оператор <strong class="red">+</strong> <strong>суммирует числа</strong>, а <strong>строки склеивает</strong>.
+            	<li>
+            		<strong class="blue">var x = "4" + 3</strong> -> <strong class="red">x = 43</strong>
+            	</li>
+            	<li>
+            		Но поскольку оператор <strong class="blue">+</strong> обладает так называемой левосторонней ассоциативностью, в следующей ситуации: <strong class="blue">var order = 1 + 2 + " pizzas";</strong> мы получим строку “<strong class="red">3 pizzas</strong>”, а не "12 pizzas"
+            	</li>
+            	<li>
+            		Чтобы <strong class="blue">JS</strong> преобразовал строку в число и сложил его с другим числом, нужно использовать встроенную ф-ю <strong class="red">Number</strong>. П-р: <strong class="blue">var x = 3 + <strong class="red">Number</strong>("4");</strong> -> <strong class="red">x = 7</strong>.
+            	</li>
+            </p>
+            <p>
+            	Другие арифметические операторы ("<strong class="red">-</strong>" вычитание, "<strong class="red">/</strong>" деление, "<strong class="red">*</strong>" умножение) будут в этом случае преобразовывать строку в число и <strong>работать как с числом</strong>.
+            	<li>
+            		<strong class="blue">var x = "4" * 3</strong> -> <strong class="red">x = 12</strong>
+            	</li>
+            	<li>
+            		<strong class="blue">var x = 10 / "2"</strong> -> <strong class="red">x = 5</strong>
+            	</li>
+            	<li>
+            		<strong class="blue">var x = 4 - "3"</strong> -> <strong class="red">x = 1</strong>
+            	</li>
+            </p>
+            <p>
+            	<h3 class="red">Как проверить два объекта на равенство</h3>
+            	   <li>При проверке равенства двух <strong>объектных</strong> переменных сравниваются <strong class="red">ссылки</strong> на эти объекты.</li>
+            	   <li>
+            	   	Две ссылки равны только в том случае, <strong>если они ссылаются на один объект</strong>.
+            	   </li>
+            </p>
+            <p>
+            	<h3 class="red">Псевдоложь (false)</h3>
+            	<li><strong class="blue">undefined</strong></li>
+            	<li><strong class="blue">null</strong></li>
+            	<li><strong class="blue">0</strong></li>
+            	<li><strong class="blue">пустая строка "" (без пробелов)</strong></li>
+            	<li><strong class="blue">NaN</strong></li>
+            </p>
+		</div>
+		<!-- Конец блока с контентом -->
+	</div>
+<script src="../js/types.js"></script>	
+</body>
+</html>

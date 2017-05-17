@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript</title>
+	<link href="../style/js.css" rel="stylesheet">
+	
+</head>
+<body>
+<header><nav>
+	<a href="/">Старт</a>
+	<a href="https://color.adobe.com/ru/Escape-Technology-Colours-color-theme-6679213/" target="_blank">Цвет</a>
+	<a href="">menu 3</a>
+	<a href="">menu 4</a>
+	<a href="js_page_2_2.html">МорБой</a>
+	<span>JavaScript</span>
+</nav></header>
+	<div class="main_cont">
+	<!-- Начало бокового меню -->
+		<div class="sidebar">
+			<ul>
+			    <li><a href="../js.html">Начало</a></li>
+				<li><a href="js_page_1_1.html">Глава 1</a></li>
+				<li><a href="js_page_2_1.html">Глава 2</a></li>
+				<li><a href="js_page_3_1.html">Глава 3</a></li>
+				<li><a href="js_page_4_1.html">Глава 4</a></li>
+				<li><a href="js_page_5_1.html">Глава 5</a></li>
+				<li><a href="js_page_6_1.html">Глава 6</a></li>
+				<li><a href="js_page_7_1.html">Глава 7</a></li>
+				<li><a href="js_page_8_1.html">Глава 8</a></li>
+				<li><a href="js_page_9_1.html">Глава 9</a></li>
+				<li><a href="js_page_10_1.html">Глава 10</a></li>
+				<li><a href="js_page_11_1.html">Глава 11</a></li>
+				<li><a href="js_page_12_1.html">Глава 12</a></li>
+				<li><a href="js_page_13_1.html">Глава 13</a></li>
+				<li><a href="js_other.html">Разное</a></li>
+			</ul>
+		</div>
+		<!-- Конец бокового меню -->
+		<!-- Начало блока с контентом -->
+		<div class="content">
+			<h1>Объекты</h1>
+			<a href="js_page_5_2.html">Пример "работы" объекта</a>
+			<p>
+				<li>Определение объекта начинается с открывающейся фигурной скобки</li>
+				<li>Объявление свойства состоит из <strong>имени, двоеточия, и значения</strong></li>
+				<li>Свойства разделяются запятыми</li>
+				<li>Закрывается все это фигурной скобкой и <strong>точкой с запятой</strong> <strong class="blue">};</strong></li>
+				<li>Если строка, используемая как имя свойства, содержит <strong>пробелы</strong>, ее необходимо заключить <strong>в кавычки</strong>: <strong class="blue">"on sale": true</strong></li>
+				<li>Объект не может содержать два свойства с одинаковыми именами.</li>
+				<li>После значения последнего свойства запятая не ставится.</li>
+			</p>
+			<p>
+				<h3><strong class="red">Как использовать св-ва объекта</strong></h3>
+				<li>Чтобы обратиться к св-ву объекта, нужно сперва указать имя объекта, а затем после точки нужное св-во. <strong class="red">Пример:</strong> <strong class="blue">taz2107.power = 200;</strong> - изменит св-во power и задаст ему значение 200</li>
+				<li>Есть и <strong class="red">более гибкий способ обращения</strong> к св-ву: <strong class="blue">taz2107["power"] = 300</strong> - так же изменит св-во power и присвоит ему значение 300 (<strong class="blue">Пример #2</strong> в objects.js)</li>
+                <li><strong>Если</strong> ранее этого свойства в объекте <strong>не существовало</strong>, то оно <strong>добавится</strong> в объект. <strong class="blue">taz2107.needsWashing = true;</strong> - добавит в объект <strong class="blue">taz2107</strong> св-во <strong class="blue">needsWashing</strong> и задаст для него значение <strong class="blue">true</strong></li>
+                <li>Для удаления свойств используется  команда <strong class="red">delete</strong>.
+                Таким образом <strong class="blue">delete taz2107.needsWashing;</strong> - удалит св-во
+                <strong class="blue">needsWashing</strong> из объекта <strong class="blue">taz2107</strong> (При удалении уничтожается именно само св-во, а не только его значение и обратиться к нему потом уже не получится.)</li>
+                <li>Чтобы <strong>вывести все св-а</strong> объекта (в консоль, например), нужно просто использовать имя объекта. <strong class="blue">console.log(taz2106);</strong> <strong class="red">Но лучше</strong> воспользоваться циклом <strong class="red">for in</strong> (<strong class="blue">Пример #1</strong> в файле objects.js) Такой способ выводит в консоль все тело объекта (с комментами)</li>
+                <li>В остальном, свойства объекта используется так же, как переменные.</li>
+			</p>
+			<p>
+				<li>Чтобы создать объект без св-в (для заполнения в будущем) нужно просто пропустить все св-ва. <strong>Пример:</strong> <strong class="blue">var taz2109 = { };</strong></li>
+			</p>
+			<p><li>
+				<strong class="red">Все изменения свойств отражаются на объекте, который был передан функции при вызове.</strong> (пример в файле objects.js, функция "<strong>skrutkaProbega</strong>")
+			</li></p>
+			<p>
+				<h1 class="red">"Методы"</h1>
+				<li><strong class="red">Методами</strong> называются функции встроенные в тело объекта.</li>
+				<li>
+					Для <strong class="red">запуска функции</strong> из объекта (т.е. метода) так же используется запись через точку. <strong class="blue"> taz2107.drive();</strong>
+				</li>
+				<li>
+					<strong class="red">Добавить метод</strong> в объект можно командой <strong class="blue">object.svoistvo = function() {...};</strong> (по аналогии с добавлением свойств)
+				</li>
+				<li>Ф-ия "метод"" не имеет названия</li>
+				<li>
+					Чтобы использовать в "методе" какое-либо св-во данного объекта, нужно использовать команду <strong class="red">this</strong>. Пример: <strong class="blue">stop: function() {<strong class="red">this.started</strong> = false;}</strong> или <strong class="blue">if (<strong class="red">this.started</strong>) {</strong>
+				</li>
+				<li>
+					 Значение <strong class="red">this</strong> присваивается <strong>при вызове</strong> метода.
+				</li>
+				<p><strong class="red">Методы могут все то же, что и обычные функции</strong>:
+				<ol>
+				<li>Содержать в себе локальные переменные</li>
+				<li>Возвращать значения</li>
+				<li>Работать с аргументами</li>
+				</ol>
+				</p>
+			</p>
+			    <h1 class="red">Встроенные объекты</h1>
+			    <h3 class="red">В JavaScript присутствуют и готовые дефолтные объекты</h3>
+			    <h4>Например:</h4>
+			    <ul>
+			    	<li>
+			    		<strong class="blue">Date</strong> - предназначен для работы с датой и временем.
+			    	</li>
+			    	<li>
+			    		<strong class="blue">Math</strong> - используется для работы с числами (генерация и т.д.)
+			    	</li>
+			    	<li>
+			    		<strong class="blue">RegExp</strong> - позволяет искать текст в строках по заданному шаблону.
+			    	</li>
+			    	<li>
+			    		<strong class="blue">JSON</strong> - с помощью этого о-та можно передавать о-ты в другие приложения.
+			    	</li>
+			    	<li>
+			    		<strong class="blue">console</strong> - метод log объекта console использовался для вывода сообщений на консоль.
+			    	</li>
+			    	<li>
+			    		<strong class="blue">document</strong> - используется для записи в веб-страницу из программного кода
+			    	</li>
+			    	<li>
+			    		<strong class="blue">Window</strong> - представляет свойства, относящиеся к браузеру, и методы, которые могут использоваться в вашем коде.
+			    	</li>
+			    </ul>
+		</div>
+		<!-- Конец блока с контентом -->
+	</div>
+<script src="../js/objects.js"></script>	
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Формы</title>
+	<meta charset="utf-8"/>
+	<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<header><nav>
+    <a href="../index.html">Главная</a>
+    <a href="/files/lists.html">Списки</a>
+    <a href="/files/tables.html">Таблицы</a>
+    <a href="/files/forms.html">Формы</a>
+    <a href="/files/inlineblocks.html">Inline-Blocks</a>
+</nav></header>
+<div id="osnova">
+
+<form name="Search" action="/">
+    <input type="text" name="t" value="" placeholder="сюда пиши">
+    <input type="submit" value="Search">
+</form>
+<hr>
+
+<form name="login" action="/">
+    <input type="text" name="login" value="" placeholder="login">
+    <input type="password" name="password" value="" placeholder="password">
+    <input type="submit" value="GO">
+</form>
+<hr>
+
+<form name="Search" action="/">
+    <input type="radio" name="sex" value="male" checked>Мужской
+    <input type="radio" name="sex" value="female">Женский
+    <br>
+    <input type="checkbox" name="vehicle" value="bike">Мотоцикл
+    <br>
+    <input type="checkbox" name="vehicle" value="car">Машина
+    <br>
+    <input type="submit" value="Отправить">
+    <input type="reset" value="Очистить">
+    <hr>
+    <input class="color_button" type="color" value="Цвет">
+</form>
+<hr>
+<textarea rows="4" cols="50" name="mytext">Тут можно расположить
+   большой
+      многострочный 
+         текст...
+(автоматически поддерживает перенос строк)</textarea>
+<hr>
+<select name="food">
+    <option value="pie">Пирог</option>
+    <option value="bread" selected="selected">Хлеб</option>
+    <option value="cookie">Печенье</option>
+</select>
+<hr>
+<select name="cars">
+   <optgroup label="Шведские авто">
+    <option value="volvo">Вольво</option>
+    <option value="saab">Сааб</option>
+   </optgroup> 
+   <optgroup label="Немецкие авто">
+    <option value="vw">Фольксваген</option>
+    <option value="audi">Ауди</option>
+   </optgroup> 
+</select>
+
+
+</div>
+</body>
+</html>

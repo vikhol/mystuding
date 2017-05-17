@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Позиционирование</title>
+	<meta charset="utf-8"/>
+	<link href="style/style.css" rel="stylesheet"/>
+    <link href="style/position.css" rel="stylesheet"/>
+</head>
+<body>
+<header><nav>
+    <a href="../index.html">Главная</a>
+    <a href="/files/lists.html">Списки</a>
+    <a href="/files/tables.html">Таблицы</a>
+    <a href="/files/forms.html">Формы</a>
+    <a href="/files/inlineblocks.html">Inline-Blocks</a>
+</nav></header>
+<div id="osnova">
+<div class="left_menu">
+
+        <a href="index.html">Главная</a>
+<br>        
+        <a href="/files/lists.html">Списки</a>
+<br>
+        <a href="/files/tables.html">Таблицы</a>
+<br>
+        <a href="/files/forms.html">Формы</a>
+<br>
+        <a href="/files/inlineblocks.html">Inline-Blocks</a>
+<br>       
+        <a href="/files/gradients.html">Градиенты</a>
+<br>      
+        <a href="/files/position.html">Позиционирование</a>
+<br>      
+</div>
+<div class="content_main">
+<p style="font-size: 20px"> position: static</p>
+	<div class="parent1">
+        <div class="child1">some div 1</div>
+        <div class="child1">some div 2</div>
+        <div class="child1">some div 3</div>
+    </div>  
+        <div class="child1">some div 44</div>  
+<hr>
+<p style="font-size: 20px"> position: relative</p>
+    <div class="parent2">
+        <div class="child1">some div 1</div>
+        <div class="relative1">some div 2 relative; left:20px, top:10px;</div>
+        <div class="child1">some div 3</div>
+    </div>  
+<hr>
+<p style="font-size: 20px"> parent position: relative<br> child position: absolute <strong>(right: 10px;
+    top: 5px;)</strong></p>
+    <div class="parent3_relative">
+        <div class="child1">some div 1</div>
+        <div class="child3_absolute">ABSOLUTE</div>
+        <div class="child1">some div 3</div>
+    </div>  
+<hr>    
+    <p style="font-size: 20px"> parent position: relative</p>
+    <p style="font-size: 20px">child1 position: absolute<br>
+    left: 50%;<br>
+    top: 0;<br>
+    bottom: 0;<br>
+    right: 0;<br>
+    background: red;
+    </p>
+    <p style="font-size: 20px">child2 position: absolute<br>
+    left: 50%;<br>
+    top: 0;<br>
+    bottom: 0;<br>
+    right: 0;<br>
+    background: green;
+    </p>
+    <p>можно применять все 4 смещения и если у блока не заданна ширина, то он растянется как указанно в смещении (в данном случае на 50 процентов ширины родителя со свойством позиционирования отличающимся от стандартного (static))</p>
+    <div class="parent4">
+        <div class="position">
+            <div class="position inner"></div>
+        </div>
+    </div>
+<hr>
+<p style="font-size: 20px"> parent position: relative</p>
+<p style="font-size: 20px"> child position: absolute<br>
+    margin: auto;<br>
+    left: 0;<br>
+    top: 0;<br>
+    bottom: 0;<br>
+    right: 0;
+</p>
+    <div class="parent5">
+        <div class="position5" style="font-size: 22px; text-align: center;">abs</div>
+    </div>    
+<hr>
+<p style="font-size: 20px; color: red;">clip</p>
+<p style="font-size: 20px">Синтаксис
+clip: rect(Y1, X1, Y2, X2) | auto | inherit</p>
+<img src="http://htmlbook.ru/files/images/css/css_clip_1.png">
+<div class="clip_primer"><p style="font-size: 20px;"><strong>Пример:</strong></p>
+<div class="clip"><img src="http://yandex.st/lego/_/X31pO5JJJKEifJ7sfvuf3mGeD_8.png" alt=""></div></div>
+<hr>
+    <div style="height: 450px;">
+       <p style="font-size: 20px"><strong>z-index - слои и их иерархия</strong></p>
+   <img src="http://alfaday.net/uploads/posts/2013-03/1364547487_eb07cqutihhbnyw.jpg" alt="3" class="card queen">
+   <img src="http://alfaday.net/uploads/posts/2013-03/1364547485_ahsngokrokdfhm4.jpg" alt="7" class="card king">
+   <img src="http://alfaday.net/uploads/posts/2013-03/1364547396_ny7xi80purqsyef.jpg" alt="Туз" class="card ace">
+    </div>
+</div>
+</div>
+
+</body>
+</html>

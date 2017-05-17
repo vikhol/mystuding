@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Списки</title>
+	<meta charset="utf-8"/>
+	<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<header><nav>
+    <a href="../index.html">Главная</a>
+    <a href="/files/lists.html">Списки</a>
+    <a href="/files/tables.html">Таблицы</a>
+    <a href="/files/forms.html">Формы</a>
+    <a href="/files/inlineblocks.html">Inline-Blocks</a>
+</nav></header>
+<div id="osnova">
+<!-- list-style-image -->
+ <div class="list_div">
+ <h3>Маркер - картинка</h3>
+    <ul class="list_img">
+       <li>Херня с картинкой 1</li>
+       <li>Херня с картинкой 2
+            <ul>
+                <li>Вложенная херня 1</li>
+                <li>Вложенная херня 2</li>
+            </ul>
+       </li>
+       <li>Херня с картинкой 3</li>
+       <li>Херня с картинкой 4</li>
+    </ul>
+ </div>
+<!-- Вложенный список -->
+
+    <div class="list_div">
+    <h3>Вложенный список</h3>
+    	<ul>
+    		<li>Кофе</li>
+    		<li>Чай</li>
+    		<li>Слфдости
+    		    <ul>
+    		        <li>Конфеты</li>
+    		        <li>Печеньки</li>
+    		        <li>Мороженка</li>
+    		    </ul>
+    		</li>
+    		<li>Молоко</li>
+    	</ul>
+    </div>
+
+    <div class="list_div">
+<h3>Нумерованный список с началом отсчета (атрибут start)</h3>
+<!-- Нумерованный список с атрибутами start="15" reversed="reversed" -->
+
+    	<ol start="15">
+    		<li>Кофе</li>
+    		<li>Чай</li>
+    		<li>Слфдости</li>
+    	</ol>		
+    </div>
+
+    <div class="list_div">
+
+<h3>Нумерованный список с обратным отсчетом (атрибуты start + reversed)</h3>
+
+    	<ol start="15" reversed="reversed">
+    		<li>Кофе</li>
+    		<li>Чай</li>
+    		<li>Слфдости</li>
+    	</ol>		
+    </div>
+
+    <div class="list_div">
+
+<h3>Нумерованный список с атрибутом type и значениями A,a,I,i</h3>
+
+        <ol type="A">
+            <li>Кофе</li>
+            <li>Чай</li>
+            <li>Слфдости</li>
+            <li>Колбаса</li>
+        </ol>  
+        <ol type="a">
+            <li>Кофе</li>
+            <li>Чай</li>
+            <li>Слфдости</li>
+            <li>Колбаса</li>
+        </ol>     
+        <ol type="I">
+            <li>Кофе</li>
+            <li>Чай</li>
+            <li>Слфдости</li>
+            <li>Колбаса</li>
+        </ol>          
+        <ol type="i">
+            <li>Кофе</li>
+            <li>Чай</li>
+            <li>Слфдости</li>
+            <li>Колбаса</li>
+        </ol>           
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+.parent1 {
+	border: 1px solid #000;
+	background: #EDECBB;
+	height: 90px;
+}
+.child1 {
+	font-size: 30px;
+	border: 1px solid black;
+}
+.parent2 {
+	border: 1px solid #000;
+	background: #EDECBB;
+}
+.relative1 {
+    font-size: 30px;
+	border: 1px solid black;
+	background: #CD8F24;
+
+	position: relative;
+	left: 20px;
+	top: 10px;
+}
+.parent3_relative {
+    position: relative;
+
+	border: 1px solid #000;
+	background: #EDECBB;
+}	
+.child3_absolute {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    
+	font-size: 30px;
+	border: 1px solid black;
+	background: #CD8F24;
+	width: 200px;
+}
+.parent4 {
+	position: relative;
+	border: 1px solid #000;
+	background: #ccc;
+	height: 100px;
+}
+.position {
+	position: absolute;
+	left: 50%; /* можно применять все 4 смещения и если у блока не заданна ширина, то он растянется как указанно в смещении (в данном случае на 50 процентов ширины родителя со свойством позиционирования отличающимся от стандартного (static)) */
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background: red;
+}
+.position.inner {
+	background: green;
+} 
+.parent5 {
+	position: relative;
+	height: 150px;
+    background: #EDECBB;
+    padding: 20px;
+}
+.position5 {
+	position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 50px;
+    height: 50px;
+    background: red;
+}
+.clip {
+	position: absolute;
+	top: 30px;
+	left: 40px;
+	border: 3px solid red;
+	background: yellow;
+
+	/* top, right, bottom, left */
+	clip: rect(3px,19px,auto,3px);
+}
+.clip_primer {
+	height: 100px;
+	position: relative;
+}
+.card { position: relative; height: 300px;}
+   .queen { top: 50px; left: 55px; z-index: 5; }
+   .king { left: -120px; top: 25px; z-index: 2;}
+   .ace { left: -295px; z-index: 1; }

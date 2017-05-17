@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+* {
+	font-family: 'Noto Sans', Arial, sans-serif;
+	-webkit-box-sizing: border-box;
+     box-sizing: border-box;
+
+          margin: 0;
+          padding: 0;
+
+    transition: all .2s ease-out;
+}
+body {
+
+}
+header {
+	height: 60px;
+	background: #373737;
+	padding: 30px;
+}
+header>nav {
+    position: relative;
+    
+    padding-left: 24px;
+	max-width: 1128px;
+	margin: 0 auto;
+}
+header>nav>a {
+display: inline;
+margin-right: 40px;
+text-transform: uppercase;
+text-decoration: none;
+}
+header>nav>a {
+color: white;
+}
+header>nav>a:hover {
+color: #E5EAF2;
+}
+header span {
+	position: relative;
+    bottom: 18px;
+    right: 40px;
+
+	float: right;
+	color: #D0D0D0;
+	font-size: 30px;
+}
+h1, h2, h3, h4, h5 {
+	color: #373737;
+	margin-top: 15px;
+}
+hr {
+	margin-top: 20px;
+}
+.center {
+	text-align: center;
+}
+.greentext {
+	color: #61A669;
+}
+.red {
+    color: #F74936;
+}
+.blue {
+	color: #0774BA;
+}
+.main_cont {
+	position: relative;
+	padding: 20px;
+    
+    min-width: 768px;
+	max-width: 1128px;
+	margin: 60px auto;
+	background: #E5EAF2;
+    border-radius: 10px 10px 0 0;
+    overflow: auto;
+}
+.sidebar {
+	width: 200px;
+	float: left;
+}
+.sidebar ul li:first-child {
+    margin-bottom: 25px;
+ }
+ .sidebar ul li:last-child {
+    margin-top: 25px;
+ }
+.sidebar li {
+	list-style-type: none;
+	background: #ED8340;
+}
+.sidebar li a {
+	display: block;
+	height: 40px;
+	margin-bottom: 1px;
+	text-align: center;
+	line-height: 40px;
+	text-decoration: none;
+	color: #373737;
+	font-size: 20px;
+}
+.sidebar li a:hover {
+	background: #028EA3;
+	color: white;
+	font-size: 22px;
+}
+.content {
+	margin-left: 220px;
+	min-height: 700px;
+	background: white;
+	border-radius: 0 10px 10px 0;
+	padding: 1em;
+	line-height: 30px;
+	overflow: auto;
+}
+.content h1, h2, h3, h4 {
+	text-align: center;
+}
+.content div {
+	margin-top: 20px;
+}
+.content img {
+	width: 80%;
+	margin-top: 20px;
+}
+
+.content p.img {
+	text-align: center;
+}
+.content p.img.ship {
+	margin: 150px auto;
+}
+.content p {
+	margin-top: 15px;
+}
+.content li {
+	margin-left: 20px;
+}
+.knopka {
+	width: 300px;
+	height: 200px;
+	line-height: 200px;
+	font-size: 50px;
+	color: white;
+	margin: 0 auto;
+	background: #373737;
+    border-radius: 5px;
+	text-align: center;
+	box-shadow: 0 0 1px rgba(55, 55, 55, 0.4);
+}
+.dla_knopki a {
+	text-decoration: none;
+}
+
+.knopka:hover {
+	width: 302px;
+	height: 202px;
+    box-shadow: 0 0 3px rgba(55, 55, 55, 0.6);
+    font-size: 52px;
+    background: #028EA3;
+}
