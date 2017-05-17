@@ -74,7 +74,7 @@ var model = {
 //ф-я возвращает false              
               return false;
             }
-          }   return true;   
+    }   return true;   
   }  
 };
 //===================================================================================
@@ -82,12 +82,34 @@ var model = {
 //Метод обработки выстрелов
 var controller = {
 guesses: 0, //Количество выстрелов  
-  processGuess: function(guess) { //Метод обработки координат выстрела, и передача их модели.
+
+//Метод обработки координат выстрела, и передача их модели.
+  processGuess: function(guess) { 
+
+//Создаем переменную которой будет присвоено значение возвращенное ф-ей parseGuess 
+//это результат сложения переменных row + column (числа в виде строк), или null    
+    var location = parseGuess(guess);
+//если ф-я parseGuess вернет null, то следующий код не будет выполняться, 
+//так как null псевдоложное значение и приравнивается к false. 
+    if (location) {
+//Счетчик выстрелов увеличивается на 1.      
+      this.guesses++;
+//Переменной хит присваивается значение, переработанное методом model.fire(guess), 
+//которому в качестве параметра guess передан агрумент-переменная location    
+      var hit = model.fire(location);
+//если hit = true, значит model.fire засчитало попадание и вернуло true
+//и если количество потопленных кораблей == количеству кораблей заданных изначально,
+//ф-я отрабатывает сообщение в блок view.displayMessage        
+      if (hit && model.shipsSunk === model.numShips) {
+        view.displayMessage("Ты потопил все корабли за " + this.guesses + " выстрелов");
+      }
+
+    }
 //Проверка на корректность введенных координат    
     function parseGuess(guess) {
-     var alphabet = ["A", "B", "C", "D", "E", "F", "G"]; 
+      var alphabet = ["A", "B", "C", "D", "E", "F", "G"]; 
       if (guess === null || guess.length !==2) {
-      alert("Координаты выстрела должны состоять из одной буквы и цифры. Например: A2")
+      alert("Координаты выстрела должны состоять из одной буквы и цифры. Например: A2");
       } else {
 //Получаем первую букву в строке guess (Например "А", в строке "А3")        
         firstChar = guess.charAt(0);
@@ -112,7 +134,22 @@ guesses: 0, //Количество выстрелов
   }   
 }
 
+controller.processGuess("A0");
+controller.processGuess("A6");
+controller.processGuess("B6");
+controller.processGuess("C6");
+controller.processGuess("C4");
+controller.processGuess("D4");
+controller.processGuess("E4");
+controller.processGuess("B0");
+controller.processGuess("B1");
+controller.processGuess("B2");
+controller.processGuess("C0");
+controller.processGuess("D0");
+controller.processGuess("D3");
+controller.processGuess("D5");
+controller.processGuess("D2");
+controller.processGuess("G4");
+controller.processGuess("G5");
+controller.processGuess("G6");
 
-view.displayMessage("Тест");
-view.diplayHit(11);
-view.diplayMiss(22);
