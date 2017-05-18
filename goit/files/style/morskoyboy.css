@@ -1,7 +1,8 @@
 #messageArea {
 	color: #98CF71;
 	font-size: 25px;
-	margin-left: 105px;
+	1margin-left: 105px;
+	text-align: center;
 }
 #fireButton {
 	width: 100px;

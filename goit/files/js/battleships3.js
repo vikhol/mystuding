@@ -27,10 +27,10 @@ var model = {
        { locations: ["32", "33", "34"], hits: ["", "", ""] },
        { locations: ["63", "64", "65"], hits: ["", "", "hit"] }
     ],
-    boardSize: 7, //длина строки 
+  boardSize: 7, //длина строки 
 	numShips: 3,  //количество кораблей
 	shipsSunk: 0, //число потопленых кораблей
-	shipLength: 3, //длиня корабля
+	shipLength: 3, //длина корабля
 	fire: function(guess) {
 //Перебираем все корабли
 		for (var i = 0; i < this.numShips; i++) {
@@ -95,7 +95,8 @@ guesses: 0, //Количество выстрелов
 //Счетчик выстрелов увеличивается на 1.      
       this.guesses++;
 //Переменной хит присваивается значение, переработанное методом model.fire(guess), 
-//которому в качестве параметра guess передан агрумент-переменная location    
+//которому в качестве параметра guess передан агрумент-переменная location 
+//model.fire возвращает либо true, либо false   
       var hit = model.fire(location);
 //если hit = true, значит model.fire засчитало попадание и вернуло true
 //и если количество потопленных кораблей == количеству кораблей заданных изначально,
@@ -108,8 +109,8 @@ guesses: 0, //Количество выстрелов
 //Проверка на корректность введенных координат    
     function parseGuess(guess) {
       var alphabet = ["A", "B", "C", "D", "E", "F", "G"]; 
-      if (guess === null || guess.length !==2) {
-      alert("Координаты выстрела должны состоять из одной буквы и цифры. Например: A2");
+      if (guess === null || guess.length !== 2) {
+      alert("Координаты выстрела должны состоять из буквы и цифры. Например: A2");
       } else {
 //Получаем первую букву в строке guess (Например "А", в строке "А3")        
         firstChar = guess.charAt(0);
@@ -132,24 +133,49 @@ guesses: 0, //Количество выстрелов
       }
     } 
   }   
+
 }
 
-controller.processGuess("A0");
-controller.processGuess("A6");
-controller.processGuess("B6");
-controller.processGuess("C6");
-controller.processGuess("C4");
-controller.processGuess("D4");
-controller.processGuess("E4");
-controller.processGuess("B0");
-controller.processGuess("B1");
-controller.processGuess("B2");
-controller.processGuess("C0");
-controller.processGuess("D0");
-controller.processGuess("D3");
-controller.processGuess("D5");
-controller.processGuess("D2");
-controller.processGuess("G4");
-controller.processGuess("G5");
-controller.processGuess("G6");
+//Эта функция получает доступ к кнопке "Огонь!"  
+function init() {
+  var fireButton = document.getElementById("fireButton");
+//и по клику запускает функцию handleFireButton (ф-я передается обработчику без скобочек)  
+  fireButton.onclick = handleFireButton;
+//Чтобы нажимать кнопку "Огонь" можно было клавишей "Enter", используется следующий код
+  var guessInput = document.getElementById("guessInput");
+  guessInput.onkeypress = handleKeyPress;
+
+//Ф-я для обработки события кнопкой "Enter"
+//В параметрах задается переменная (e), которая будет использоваться для проверки нажатой кнопки.
+function handleKeyPress(e) {
+  var fireButton = document.getElementById("fireButton");
+//Если нажат Enter, то свойство keyCode события будет равно 13, а ф-я продолжит работу.  
+    if (e.keyCode === 13) {
+//Для элемента fireButton срабатывает встроенный метод click, который вызывает нажатие кнопки.      
+      fireButton.click();
+
+      //далее ф-я возвращает false (типа, чтобы она не делала ничего лишнего)
+      return false;
+    }
+
+}
+}
+//Ф-я загрузится после полной загрузки страницы
+window.onload = init;
+
+
+
+//Блок обработчика
+//Получение координат от формы и передача их контроллеру
+  function handleFireButton() {
+    var guessInput = document.getElementById("guessInput");
+//Извлекаем данные, введенные пользователем в форму "guessInput" 
+//они хранятся в свойстве value элемента input   
+    var guess = guessInput.value;
+//и передаем их контроллеру    
+    controller.processGuess(guess);
+
+//следующая строка автоматически очистит поле ввода     
+    guessInput.value = "";
+  }
 
