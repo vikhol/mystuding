@@ -8,14 +8,26 @@ var view = {
       messageArea.innerHTML = msg;
 	},
 
-    diplayHit: function(location){
+    displayHit: function(location){
       var cell = document.getElementById(location);
       cell.setAttribute("class", "hit");
     },
-    diplayMiss: function(location){
+    displayMiss: function(location){
       var cell = document.getElementById(location);
       cell.setAttribute("class", "miss");
     },
+    displayGuesses: function(msg) {
+      var guessesArea = document.getElementById("guessesArea");
+      guessesArea.innerHTML = msg;
+    },
+    displayAllHits: function(msg) {
+      var hitsArea = document.getElementById("hitsArea");
+      hitsArea.innerHTML = msg;
+    },
+    displayAccuracy: function(msg) {
+      var accuracyArea = document.getElementById("accuracyArea");
+      accuracyArea.innerHTML = msg;
+    }
 };
 //===================================================================================
 
@@ -31,6 +43,7 @@ var model = {
 	numShips: 3,  //количество кораблей
 	shipsSunk: 0, //число потопленых кораблей
 	shipLength: 3, //длина корабля
+  allHits: 0,
 
 //Метод создает массив со случайными позициями корабля  
   generateShip: function() {
@@ -109,25 +122,31 @@ var model = {
 //поставит отметку в массиве hits
 				ship.hits[index] = "hit";
 //затем обратится к методу diplayHit объекта view, который меняет класс нужной ячейки (guess) таблицы-поля.
-        view.diplayHit(guess);
+        view.displayHit(guess);
 //а в блоке для сообщений появится соответствующая надпись.        
         view.displayMessage("ПОПАДАНИЕ!");
+        this.allHits++;
+        view.displayAllHits("Попаданий: " + this.allHits);
         if (this.isSunk(ship)) {
           this.shipsSunk++;
           view.displayMessage("Корабль потоплен");
         }
+        view.displayAccuracy("Точность: " + Math.floor(Math.round(this.allHits/controller.guesses * 100) / 100 * 100) + "%");
                 return true;
 			}
-	  }
+	  }   
+        view.displayAllHits("Попаданий: " + this.allHits);
+        view.displayAccuracy("Точность: " + Math.floor(Math.round(this.allHits/controller.guesses * 100) / 100 * 100) + "%");
 //Если после перебора всех кораблей, попадание не обнаружено, 
 //выводит соответствующее сообщение в блоке для сообщений.      
       view.displayMessage("Промах");
 //применяет соответствующий стиль для клетки (guess).      
-      view.diplayMiss(guess);
+      view.displayMiss(guess);
 //и ф-я возвращает false	    
 	    return false;
 
   },
+
 //Метод для проверки "потоплен корабль, или нет".  
   isSunk: function(ship) {
 //For отрабатывает по кол-ву "палуб корабля"    
@@ -157,6 +176,7 @@ guesses: 0, //Количество выстрелов
     if (location) {
 //Счетчик выстрелов увеличивается на 1.      
       this.guesses++;
+      view.displayGuesses("Попытка: " + this.guesses);
 //Переменной хит присваивается значение, переработанное методом model.fire(guess), 
 //которому в качестве параметра guess передан агрумент-переменная location 
 //model.fire возвращает либо true, либо false   
@@ -175,8 +195,9 @@ guesses: 0, //Количество выстрелов
       if (guess === null || guess.length !== 2) {
       alert("Координаты выстрела должны состоять из буквы и цифры. Например: A2");
       } else {
-//Получаем первую букву в строке guess (Например "А", в строке "А3")        
-        firstChar = guess.charAt(0);
+//Получаем первую букву в строке guess (Например "А", в строке "А3")  
+        var xex = guess.charAt(0);      
+        var firstChar = xex.toUpperCase();
 //затем ищем индекс этой буквы в массиве alphabet и присваиваем эту цифру переменной row        
         var row = alphabet.indexOf(firstChar);
 //переменной column присваиваем значение второго числа в строке guess.        
