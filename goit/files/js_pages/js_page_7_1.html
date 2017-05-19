@@ -126,6 +126,9 @@
             	<li>
             		<strong class="blue">var x = "4" + 3</strong> -> <strong class="red">x = 43</strong>
             	</li>
+                <li>
+                    <strong class="blue">var x = "" + 4 + 3</strong>; тоже сработает как сложение строк и выдаст <strong class="red">x = 43</strong>.
+                </li>
             	<li>
             		Но поскольку оператор <strong class="blue">+</strong> обладает так называемой левосторонней ассоциативностью, в следующей ситуации: <strong class="blue">var order = 1 + 2 + " pizzas";</strong> мы получим строку “<strong class="red">3 pizzas</strong>”, а не "12 pizzas"
             	</li>

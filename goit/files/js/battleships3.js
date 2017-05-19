@@ -23,14 +23,77 @@ var model = {
 //Создаем свойство-массив, 
 //который содержит все корабли, как объекты!
 	ships: [  //значения св-в тоже являются массивами
-       { locations: ["10", "20", "30"], hits: ["", "", ""] },
-       { locations: ["32", "33", "34"], hits: ["", "", ""] },
-       { locations: ["63", "64", "65"], hits: ["", "", "hit"] }
+       { locations: [0, 0, 0], hits: ["", "", ""] },
+       { locations: [0, 0, 0], hits: ["", "", ""] },
+       { locations: [0, 0, 0], hits: ["", "", ""] }
     ],
   boardSize: 7, //длина строки 
 	numShips: 3,  //количество кораблей
 	shipsSunk: 0, //число потопленых кораблей
 	shipLength: 3, //длина корабля
+
+//Метод создает массив со случайными позициями корабля  
+  generateShip: function() {
+/*Сперва выбирается направление, для этого случайно генерируется число - 0 или 1.
+если число равно 1, то корабль располагается горизонтально, а если 0, то вертикально */
+  var direction = Math.floor(Math.random() * 2);   
+  var row, col;
+
+  if (direction === 1) {
+    row = Math.floor(Math.random() * this.boardSize);
+    col = Math.floor(Math.random() * (this.boardSize - this.shipLength + 1));
+  } else {
+    row = Math.floor(Math.random() * (this.boardSize - this.shipLength + 1));
+    col = Math.floor(Math.random() * this.boardSize);
+  }
+//Пустой массив позиций нового корабля  
+  var newShipLocations = [];
+  for (var i = 0; i < this.shipLength; i++) {
+    if (direction === 1) {
+/* Последовательно (метод push) добавляем координаты в массив.
+Если корабль лежит горизонтально, то первое значение (row) остается неименным,
+а col плюсуется с индексом прохождения ф-и (col + 0, col + 1, col +2) */       
+      newShipLocations.push(row + "" + (col + i));
+    } else {
+/* Кавычки в выражении нужны, чтобы JS воспринял ответ как сложение строк
+и выполнил конкатенацию вместо банального сложения */      
+      newShipLocations.push((row + i) + "" + col);
+     
+    }
+  }
+  console.log(newShipLocations);
+  return newShipLocations;
+  },
+
+
+  generateShipLocations: function() {
+    var locations;
+    for (var i = 0; i < this.numShips; i++) {
+//цикл "do" будет выполняться пока будет истинно условие while, следующее ниже      
+      do {
+        locations = this.generateShip();
+
+      } while (this.collision(locations)); 
+        this.ships[i].locations = locations;
+    }
+
+
+  },
+
+  collision: function(locations) {
+    for (var i = 0; i < this.numShips; i++) {
+      var ship = model.ships[i];
+      for (var j = 0; j < locations.length; j++) {
+/* Проверяем, встречается ли какая- нибудь позиция массива locations нового корабля
+в массиве locations существующих кораблей */        
+        if (ship.locations.indexOf(locations[j]) >= 0 ) {
+//Возврат из цикла, выполняемого в другом цикле прерывает оба цикла и функция немедленно завершается          
+          return true;
+        }
+      }
+    }
+    return false;
+  },
 	fire: function(guess) {
 //Перебираем все корабли
 		for (var i = 0; i < this.numShips; i++) {
@@ -136,7 +199,8 @@ guesses: 0, //Количество выстрелов
 
 }
 
-//Эта функция получает доступ к кнопке "Огонь!"  
+//Эта функция будет загружаться при загрузке страницы.
+//она получает доступ к кнопке "Огонь!" и запускает ф-ю расстановки кораблей. 
 function init() {
   var fireButton = document.getElementById("fireButton");
 //и по клику запускает функцию handleFireButton (ф-я передается обработчику без скобочек)  
@@ -147,7 +211,7 @@ function init() {
 
 //Ф-я для обработки события кнопкой "Enter"
 //В параметрах задается переменная (e), которая будет использоваться для проверки нажатой кнопки.
-function handleKeyPress(e) {
+  function handleKeyPress(e) {
   var fireButton = document.getElementById("fireButton");
 //Если нажат Enter, то свойство keyCode события будет равно 13, а ф-я продолжит работу.  
     if (e.keyCode === 13) {
@@ -158,7 +222,9 @@ function handleKeyPress(e) {
       return false;
     }
 
-}
+  }
+//Здесь мы запускаем функцию расстановки кораблей, что она тоже произошла при загрузке страницы.  
+  model.generateShipLocations();
 }
 //Ф-я загрузится после полной загрузки страницы
 window.onload = init;
