@@ -7,6 +7,10 @@ var firstPar = document.getElementById("paragraf_1");
 
 //Свойство innerHTML эл-та firstPar может использоваться для изменения содержимого эл-та.
 firstPar.innerHTML = "Параграф изменен";
+
+var paragraf_3 = document.getElementById("paragraf_3");
+paragraf_3.innerHTML = "Изначально этот параграф был пуст";
+
 }
 
 //Функция init задается свойству window.onload. 

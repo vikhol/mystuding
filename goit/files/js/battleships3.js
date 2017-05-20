@@ -107,6 +107,10 @@ var model = {
     }
     return false;
   },
+  showGuessAndPercent: function() {
+    view.displayAllHits("Попаданий: " + this.allHits);
+    view.displayAccuracy("Точность: " + Math.floor(Math.round(this.allHits/controller.guesses * 100) / 100 * 100) + "%");   
+  },
 	fire: function(guess) {
 //Перебираем все корабли
 		for (var i = 0; i < this.numShips; i++) {
@@ -126,17 +130,15 @@ var model = {
 //а в блоке для сообщений появится соответствующая надпись.        
         view.displayMessage("ПОПАДАНИЕ!");
         this.allHits++;
-        view.displayAllHits("Попаданий: " + this.allHits);
         if (this.isSunk(ship)) {
           this.shipsSunk++;
           view.displayMessage("Корабль потоплен");
         }
-        view.displayAccuracy("Точность: " + Math.floor(Math.round(this.allHits/controller.guesses * 100) / 100 * 100) + "%");
+        this.showGuessAndPercent();
                 return true;
 			}
 	  }   
-        view.displayAllHits("Попаданий: " + this.allHits);
-        view.displayAccuracy("Точность: " + Math.floor(Math.round(this.allHits/controller.guesses * 100) / 100 * 100) + "%");
+        this.showGuessAndPercent();
 //Если после перебора всех кораблей, попадание не обнаружено, 
 //выводит соответствующее сообщение в блоке для сообщений.      
       view.displayMessage("Промах");
@@ -176,7 +178,7 @@ guesses: 0, //Количество выстрелов
     if (location) {
 //Счетчик выстрелов увеличивается на 1.      
       this.guesses++;
-      view.displayGuesses("Попытка: " + this.guesses);
+      view.displayGuesses("Попыток: " + this.guesses);
 //Переменной хит присваивается значение, переработанное методом model.fire(guess), 
 //которому в качестве параметра guess передан агрумент-переменная location 
 //model.fire возвращает либо true, либо false   
@@ -230,6 +232,21 @@ function init() {
   var guessInput = document.getElementById("guessInput");
   guessInput.onkeypress = handleKeyPress;
 
+//Блок обработчика
+//Получение координат от формы и передача их контроллеру
+  function handleFireButton() {
+    var guessInput = document.getElementById("guessInput");
+//Извлекаем данные, введенные пользователем в форму "guessInput" 
+//они хранятся в свойстве value элемента input 
+//И ПРИСВАИВАЕМ ЭТО ЗНАЧЕНИЕ ПЕРЕМЕННОЙ GUESS, на которой завязанно очень многое   
+    var guess = guessInput.value;
+//и передаем их контроллеру    
+    controller.processGuess(guess);
+
+//следующая строка автоматически очистит поле ввода     
+    guessInput.value = "";
+  }  
+
 //Ф-я для обработки события кнопкой "Enter"
 //В параметрах задается переменная (e), которая будет использоваться для проверки нажатой кнопки.
   function handleKeyPress(e) {
@@ -244,7 +261,7 @@ function init() {
     }
 
   }
-//Здесь мы запускаем функцию расстановки кораблей, что она тоже произошла при загрузке страницы.  
+//Здесь мы запускаем функцию расстановки кораблей, чтобы она тоже произошла при загрузке страницы.  
   model.generateShipLocations();
 }
 //Ф-я загрузится после полной загрузки страницы
@@ -252,17 +269,5 @@ window.onload = init;
 
 
 
-//Блок обработчика
-//Получение координат от формы и передача их контроллеру
-  function handleFireButton() {
-    var guessInput = document.getElementById("guessInput");
-//Извлекаем данные, введенные пользователем в форму "guessInput" 
-//они хранятся в свойстве value элемента input   
-    var guess = guessInput.value;
-//и передаем их контроллеру    
-    controller.processGuess(guess);
 
-//следующая строка автоматически очистит поле ввода     
-    guessInput.value = "";
-  }
 
