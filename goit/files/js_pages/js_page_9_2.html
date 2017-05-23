@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>JavaScript</title>
 	<link href="../style/js.css" rel="stylesheet">
+	<link href="../style/imggame.css" rel="stylesheet">
 	
 </head>
 <body>
@@ -39,25 +40,20 @@
 		<!-- Конец бокового меню -->
 		<!-- Начало блока с контентом -->
 		<div class="content">
-		    <h2>Глава 9</h2>
-			<h1 class="red">Обработка событий</h1>
-			<p>
-				<a href="js_page_9_2.html">Пример  с картинками.</a>
-			</p>
-			<p>
-				<a href="js_page_9_3.html">Гоша Дударь</a>
-			</p>
-			<p>
-				<strong class="red">Обработчик </strong>- фрагмент кода, который должен выполняться при возникновении какого-либо события. Т.е. это обычная функция (часто такие ф-и называют "<strong>функцией обратного вызова</strong>")
-				<li>
-					Чтобы обработчик сработал существуют разные способы <em>регистрации</em> и вызова этого о-чка.
-				</li>
-				<li>
-					Чтобы назначить <strong>смену</strong> аттрибута <strong>src</strong>, нужно использовать метод <strong class="blue">element.src = "../новый/путь/к файлу"</strong>.
-				</li>
-			</p>
-        </div>
+		    <h2>Дополнение к главе 9</h2>
+			<h1 class="red">Пример с картинками</h1>
+			<h3>(код в <strong class="blue">imggame.js</strong>)</h3>
+			<div id="game_container">
+			<div id="div_blur1" class="openblur"></div>
+				<img id="zero" class="imggame1" src="../img/zeroblur.jpg">
+				<img id="one" class="imggame1" src="../img/zero.jpg">
+				<img id="two" class="imggame1" src="../img/zeroblur.jpg">
+				<img id="three" class="imggame1" src="../img/zeroblur.jpg">
+			</div>
+		</div>
+
 		<!-- Конец блока с контентом -->
 	</div>
+<script src="../js/imggame.js"></script>	
 </body>
 </html>
