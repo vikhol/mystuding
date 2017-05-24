@@ -164,6 +164,7 @@ h4 {
 
 .content p.img {
     text-align: center;
+    
 }
 
 .content p.img.ship {
@@ -177,7 +178,9 @@ h4 {
 .content li {
     margin-left: 20px;
 }
-
+.content a {
+	color: #028EA3;
+}
 .knopka {
     width: 300px;
     height: 200px;
