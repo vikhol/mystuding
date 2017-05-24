@@ -9,6 +9,7 @@
 }
 div#game_container>img {
 	width: 150px;
+	height: 150px;
 	margin-left: 20px;
 	border: solid 2px #5D230B;
 }

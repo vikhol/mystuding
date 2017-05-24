@@ -1,63 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>JavaScript</title>
-	<link href="../style/js.css" rel="stylesheet">
-	
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <link href="../style/js.css" rel="stylesheet">
 </head>
+
 <body>
-<header><nav>
-	<a href="/">Старт</a>
-	<a href="https://color.adobe.com/ru/Escape-Technology-Colours-color-theme-6679213/" target="_blank">Цвет</a>
-	<a href="">menu 3</a>
-	<a href="">menu 4</a>
-	<a href="js_page_2_2.html">МорБой</a>
-	<span>JavaScript</span>
-</nav></header>
-	<div class="main_cont">
-	<!-- Начало бокового меню -->
-		<div class="sidebar">
-			<ul>
-			    <li><a href="../js.html">Начало</a></li>
-				<li><a href="js_page_1_1.html">Глава 1</a></li>
-				<li><a href="js_page_2_1.html">Глава 2</a></li>
-				<li><a href="js_page_3_1.html">Глава 3</a></li>
-				<li><a href="js_page_4_1.html">Глава 4</a></li>
-				<li><a href="js_page_5_1.html">Глава 5</a></li>
-				<li><a href="js_page_6_1.html">Глава 6</a></li>
-				<li><a href="js_page_7_1.html">Глава 7</a></li>
-				<li><a href="js_page_8_1.html">Глава 8</a></li>
-				<li><a href="js_page_9_1.html">Глава 9</a></li>
-				<li><a href="js_page_10_1.html">Глава 10</a></li>
-				<li><a href="js_page_11_1.html">Глава 11</a></li>
-				<li><a href="js_page_12_1.html">Глава 12</a></li>
-				<li><a href="js_page_13_1.html">Глава 13</a></li>
-				<li><a href="js_other.html">Разное</a></li>
-			</ul>
-		</div>
-		<!-- Конец бокового меню -->
-		<!-- Начало блока с контентом -->
-		<div class="content">
-		    <h2>Глава 9</h2>
-			<h1 class="red">Обработка событий</h1>
-			<p>
-				<a href="js_page_9_2.html">Пример  с картинками.</a>
-			</p>
-			<p>
-				<a href="js_page_9_3.html">Гоша Дударь</a>
-			</p>
-			<p>
-				<strong class="red">Обработчик </strong>- фрагмент кода, который должен выполняться при возникновении какого-либо события. Т.е. это обычная функция (часто такие ф-и называют "<strong>функцией обратного вызова</strong>")
-				<li>
-					Чтобы обработчик сработал существуют разные способы <em>регистрации</em> и вызова этого о-чка.
-				</li>
-				<li>
-					Чтобы назначить <strong>смену</strong> аттрибута <strong>src</strong>, нужно использовать метод <strong class="blue">element.src = "../новый/путь/к файлу"</strong>.
-				</li>
-			</p>
+    <header>
+        <nav>
+            <a href="/">Старт</a>
+            <a href="https://color.adobe.com/ru/Escape-Technology-Colours-color-theme-6679213/" target="_blank">Цвет</a>
+            <a href="">menu 3</a>
+            <a href="">menu 4</a>
+            <a href="js_page_2_2.html">МорБой</a>
+            <span>JavaScript</span>
+        </nav>
+    </header>
+    <div class="main_cont">
+        <!-- Начало бокового меню -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="../js.html">Начало</a></li>
+                <li><a href="js_page_1_1.html">Глава 1</a></li>
+                <li><a href="js_page_2_1.html">Глава 2</a></li>
+                <li><a href="js_page_3_1.html">Глава 3</a></li>
+                <li><a href="js_page_4_1.html">Глава 4</a></li>
+                <li><a href="js_page_5_1.html">Глава 5</a></li>
+                <li><a href="js_page_6_1.html">Глава 6</a></li>
+                <li><a href="js_page_7_1.html">Глава 7</a></li>
+                <li><a href="js_page_8_1.html">Глава 8</a></li>
+                <li><a href="js_page_9_1.html">Глава 9</a></li>
+                <li><a href="js_page_10_1.html">Глава 10</a></li>
+                <li><a href="js_page_11_1.html">Глава 11</a></li>
+                <li><a href="js_page_12_1.html">Глава 12</a></li>
+                <li><a href="js_page_13_1.html">Глава 13</a></li>
+                <li><a href="js_other.html">Разное</a></li>
+            </ul>
         </div>
-		<!-- Конец блока с контентом -->
-	</div>
+        <!-- Конец бокового меню -->
+        <!-- Начало блока с контентом -->
+        <div class="content">
+            <h2>Глава 9</h2>
+            <h1 class="red">Обработка событий</h1>
+            <p>
+                <a href="js_page_9_2.html">Пример  с картинками.</a>
+            </p>
+            <p>
+                <a href="js_page_9_3.html">Гоша Дударь</a>
+            </p>
+            <p>
+                <strong class="red">Обработчик </strong>- фрагмент кода, который должен выполняться при возникновении какого-либо события. Т.е. это обычная функция (часто такие ф-и называют "<strong>функцией обратного вызова</strong>")
+                <li>
+                    Чтобы обработчик сработал существуют разные способы <em>регистрации</em> и вызова этого о-чка.
+                </li>
+                <li>
+                    Чтобы назначить <strong>смену</strong> аттрибута <strong>src</strong>, нужно использовать метод <strong class="blue">element.src = "../новый/путь/к файлу"</strong>.
+                </li>
+            </p>
+            <p>
+                <h3 class="red">Объект события</h3>
+                <li>
+                    Чтобы обработчик работал по нужному элементу, ему <strong>передается</strong> <strong class="red">объект события</strong>.
+                </li>
+                <li>
+                    Объект события <strong>содержит общую инфу</strong> о событии: какой эл-т породил это событие, в какое время оно произошло и т.д.. Например, для щелчка мыши передаются координаты щелчка
+                </li>
+                <div class="vajno">В примере с картинками (<strong>imggame2.js</strong>) Происходит следующее:
+                    <ol>
+                        <li>Мы <strong>щелкаем</strong> на изображении</li>
+                        <li>происходит <strong>событие щелчка</strong></li>
+                        <li>для этого события <strong>создается объект события</strong></li>
+                        <li>который уже <strong>передается функции</strong> обработчика</li>
+                    </ol>
+                </div>
+                <p>
+                    В обработчике можно использовать этот объект и его св-ва.
+                    <li>
+                        <strong class="red">.target</strong> - св-во в котором хранится ссылка на объект, сгенерировавший событие.
+                    </li>
+                    <div class="vajno">
+                        Например, если пользователь щелкнул по эл-ту страницы, этот эл-т становится источником события и к нему можно обратиться следующим образом <strong class="blue">function showAnswer(<strong class="red">eventObj</strong>) {var image = <strong class="red">eventObj.target</strong>;}</strong>
+                    </div>
+                    <li><strong class="red">.id</strong> содержит id объекта события</li>
+                </p>
+            </p>
+        </div>
+        <!-- Конец блока с контентом -->
+    </div>
 </body>
+
 </html>

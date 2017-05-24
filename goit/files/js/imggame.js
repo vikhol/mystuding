@@ -1,27 +1,9 @@
-/*window.onload = init;
-
-function init() {
-	var image = document.getElementById("zero");
-	image.onclick = showAnswer;
-
-
-
-};
-function showAnswer() {
-	var image = document.getElementById("zero");
-	    image.src = "../img/zero.jpg";
-	    image.setAttribute("class", "imggame2");
-	    
-};*/
 
 window.onload = init;
 
 function init() {
 	var image = document.getElementById("zero");
 	image.onclick = showAnswer;
-
-
-
 };
 
 //Усовершенстованная ф-я меняет картинку по клику "туда -> обратно"
@@ -39,6 +21,4 @@ function showAnswer() {
 	    	image.src = "../img/zeroblur.jpg";
 	    	image.setAttribute("class", "imggame1");
 	    }
-		
-
 }
