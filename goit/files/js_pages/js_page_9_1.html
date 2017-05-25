@@ -48,10 +48,11 @@
                 <a href="js_page_9_2.html">Пример  с картинками.</a>
             </p>
             <p>
-                <a href="js_page_9_3.html">Гоша Дударь</a>
-            </p>
-            <p>
                 <a href="js_page_9_4.html">Упражнение с картой сокровищ</a>
+            </p>
+            <p><a href="js_page_9_5.html">Таймер</a></p>
+            <p>
+                <a href="js_page_9_3.html">Гоша Дударь</a>
             </p>
             <p>
                 <strong class="red">Обработчик </strong>- фрагмент кода, который должен выполняться при возникновении какого-либо события. Т.е. это обычная функция (часто такие ф-и называют "<strong>функцией обратного вызова</strong>")
@@ -88,15 +89,28 @@
                     </div>
                     <li><strong class="red">.id</strong> содержит id объекта события</li>
                     <li>
-                    	<strong class="red">clientX</strong>, <strong class="red">clientY</strong>: смещение (в пикселах) указателя мыши от левого (и верхнего) края <strong>окна браузера</strong>.
+                        <strong class="red">clientX</strong>, <strong class="red">clientY</strong>: смещение (в пикселах) указателя мыши от левого (и верхнего) края <strong>окна браузера</strong>.
                     </li>
                     <li>
-                    	<strong class="red">screenX</strong>, <strong class="red">screenY</strong>: смещение (в пикселах) указателя мыши от левого (и верхнего) края <strong>пользовательского экрана</strong>.
+                        <strong class="red">screenX</strong>, <strong class="red">screenY</strong>: смещение (в пикселах) указателя мыши от левого (и верхнего) края <strong>пользовательского экрана</strong>.
                     </li>
                     <li>
-                    	<strong class="red">pageX</strong>, <strong class="red">pageY</strong>: смещение (в пикселах) указателя мыши от левого (и верхнего) края <strong>страницы браузера</strong>.
+                        <strong class="red">pageX</strong>, <strong class="red">pageY</strong>: смещение (в пикселах) указателя мыши от левого (и верхнего) края <strong>страницы браузера</strong>.
                     </li>
                 </p>
+            </p>
+            <p>
+                <h2 class="red">Таймеры</h2>
+                <strong class="red">setTimeout</strong> - "<strong>секундомер</strong>", который по истечении таймера вызовет отправленную ему ф-ю.
+                <li>время задается в милисекундах (в 1-й секунде 1000 милисекунд)</li>
+                <li><strong class="blue">setTimeout(myFunctionName(), 5000);</strong> через <strong>пять секунд</strong> запустит ф-ю <strong class="blue">myFunctionName</strong> (если та вообще существует).</li>
+                <strong class="red">setInterval</strong> - таймер-цикл. Он задает <strong>интервал</strong> через который ф-я будет вызываться снова и снова.
+                <li><strong class="blue">setInterval(myFunctionName(), 5000);</strong> будет запускать ф-ю <strong class="blue">myFunctionName</strong> каждые 5 секунд.</li>
+                <li>Чтобы <strong>остановить</strong> счетчик <strong class="blue">setInterval</strong> используется встроенная ф-я <strong class="red">clearInterval()</strong>, ей передается имя переменной, которой был назначен таймер <strong class="blue">setInterval</strong>. <strong class="red">Пример:</strong> </li>
+                <div class="vajno"><strong class="blue">var <strong class="red">id</strong> = setInterval(myFunctionName, 1000);</strong> запускает таймер
+                    <br>
+                    <strong class="blue">clearInterval(<strong class="red">id</strong>);</strong> этот таймер останавливает.
+                </div>
             </p>
             <p>
                 <h3 class="red">Очереди и события</h3>
