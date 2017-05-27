@@ -103,14 +103,15 @@
                 <h2 class="red">Таймеры</h2>
                 <strong class="red">setTimeout</strong> - "<strong>секундомер</strong>", который по истечении таймера вызовет отправленную ему ф-ю.
                 <li>время задается в милисекундах (в 1-й секунде 1000 милисекунд)</li>
-                <li><strong class="blue">setTimeout(myFunctionName(), 5000);</strong> через <strong>пять секунд</strong> запустит ф-ю <strong class="blue">myFunctionName</strong> (если та вообще существует).</li>
+                <li><strong class="blue">setTimeout(myFunctionName, 5000);</strong> через <strong>пять секунд</strong> запустит ф-ю <strong class="blue">myFunctionName</strong> (если та вообще существует).</li>
                 <strong class="red">setInterval</strong> - таймер-цикл. Он задает <strong>интервал</strong> через который ф-я будет вызываться снова и снова.
-                <li><strong class="blue">setInterval(myFunctionName(), 5000);</strong> будет запускать ф-ю <strong class="blue">myFunctionName</strong> каждые 5 секунд.</li>
+                <li><strong class="blue">setInterval(myFunctionName, 5000);</strong> будет запускать ф-ю <strong class="blue">myFunctionName</strong> каждые 5 секунд.</li>
                 <li>Чтобы <strong>остановить</strong> счетчик <strong class="blue">setInterval</strong> используется встроенная ф-я <strong class="red">clearInterval()</strong>, ей передается имя переменной, которой был назначен таймер <strong class="blue">setInterval</strong>. <strong class="red">Пример:</strong> </li>
                 <div class="vajno"><strong class="blue">var <strong class="red">id</strong> = setInterval(myFunctionName, 1000);</strong> запускает таймер
                     <br>
                     <strong class="blue">clearInterval(<strong class="red">id</strong>);</strong> этот таймер останавливает.
                 </div>
+                <li><strong class="blue">setTimeout</strong> может не только запускать ф-ии, но и <strong>передавать</strong> им <strong>аргументы</strong>. Пример: <strong class="blue">setTimeout(myFunctionName, 5000, <strong class="red">image</strong>);</strong> по истечении 5-ти сек. передаст ф-ии <strong>myFunctionName</strong> аргумент <strong>image</strong>.</li>
             </p>
             <p>
                 <h3 class="red">Очереди и события</h3>

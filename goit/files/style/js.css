@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+
 * {
     font-family: 'Noto Sans', Arial, sans-serif;
     -webkit-box-sizing: border-box;
@@ -10,6 +12,7 @@
 body {}
 
 header {
+    position: relative;
     height: 60px;
     background: #373737;
     padding: 30px;
@@ -38,8 +41,9 @@ header>nav>a:hover {
 }
 
 header span {
-    position: relative;
-    bottom: 18px;
+    display: inline-block;
+    position: absolute;
+    bottom: -2px;
     right: 40px;
     float: right;
     color: #D0D0D0;
@@ -88,11 +92,10 @@ div#js_main_page>div {
 	margin-top: 0;
 }
 .vajno {
-    width: 70%;
     padding: 20px;
-    margin-left: 100px;
+    margin: 20px 0 20px 100px;
     background: #F0F1F2;
-    border-radius: 5px;
+    border-radius: 5px 0 0 5px;
 }
 
 .center {
