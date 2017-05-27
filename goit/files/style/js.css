@@ -256,3 +256,61 @@ h4 {
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.24), 0 12px 25px 0 rgba(0,0,0,0.19);
 	transition-duration: 0.2s;
 }
+
+/* Стили для игры про бомбу. */
+
+#bombContainer {
+    background-image: url("../img/time_bomb.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 500px;
+    height: 400px;
+}
+
+
+#bombContainer #clock, #redwire, #bluewire, #yellowwire {
+    position: absolute;
+}
+
+#clock {
+    background: rgba(53, 200, 60, 0.3);
+    top: 141px;
+    left: 450px;
+    width: 136px;
+    height: 42px;
+}
+.zasechka {
+    visibility: visible;
+}
+.nozasechka {
+    visibility: hidden;
+}
+#redwire {
+    
+    top: 234px;
+    left: 380px;
+    width: 225px;
+    height: 30px;
+}
+#bluewire {
+    
+    top: 271px;
+    left: 380px;
+    width: 225px;
+    height: 32px;
+}
+#yellowwire {
+    
+    top: 320px;
+    left: 380px;
+    width: 225px;
+    height: 35px;
+}
+#clock table {
+    margin-left: 25px;
+}
+#clock td {
+    height: 34px;
+    font-size: 33px;
+    color: #423E3B;
+}

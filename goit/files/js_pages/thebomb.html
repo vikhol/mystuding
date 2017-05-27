@@ -1,48 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>JavaScript</title>
-	<link href="../style/js.css" rel="stylesheet">
-	
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <link href="../style/js.css" rel="stylesheet">
+    <script src="../js/bomb.js"></script>
 </head>
+
 <body>
-<header><nav>
-	<a href="/">Старт</a>
-	<a href="https://color.adobe.com/ru/Escape-Technology-Colours-color-theme-6679213/" target="_blank">Цвет</a>
-	<a href="">menu 3</a>
-	<a href="">menu 4</a>
-	<a href="js_page_2_2.html">МорБой</a>
-	<span>JavaScript</span>
-</nav></header>
-	<div class="main_cont">
-	<!-- Начало бокового меню -->
-		<div class="sidebar">
-			<ul>
-			    <li><a href="../js.html">Начало</a></li>
-				<li><a href="js_page_1_1.html">Глава 1</a></li>
-				<li><a href="js_page_2_1.html">Глава 2</a></li>
-				<li><a href="js_page_3_1.html">Глава 3</a></li>
-				<li><a href="js_page_4_1.html">Глава 4</a></li>
-				<li><a href="js_page_5_1.html">Глава 5</a></li>
-				<li><a href="js_page_6_1.html">Глава 6</a></li>
-				<li><a href="js_page_7_1.html">Глава 7</a></li>
-				<li><a href="js_page_8_1.html">Глава 8</a></li>
-				<li><a href="js_page_9_1.html">Глава 9</a></li>
-				<li><a href="js_page_10_1.html">Глава 10</a></li>
-				<li><a href="js_page_11_1.html">Глава 11</a></li>
-				<li><a href="js_page_12_1.html">Глава 12</a></li>
-				<li><a href="js_page_13_1.html">Глава 13</a></li>
-				<li><a href="js_other.html">Разное</a></li>
-			</ul>
-		</div>
-		<!-- Конец бокового меню -->
-		<!-- Начало блока с контентом -->
-		<div class="content">
-		    <h2>Разминируй бомбу.</h2>
-			<h1 class="red"></h1>
-		</div>
-		<!-- Конец блока с контентом -->
-	</div>
+    <header>
+        <nav>
+            <a href="/">Старт</a>
+            <a href="https://color.adobe.com/ru/Escape-Technology-Colours-color-theme-6679213/" target="_blank">Цвет</a>
+            <a href="">menu 3</a>
+            <a href="">menu 4</a>
+            <a href="js_page_2_2.html">МорБой</a>
+            <span>JavaScript</span>
+        </nav>
+    </header>
+    <div class="main_cont">
+        <!-- Начало бокового меню -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="../js.html">Начало</a></li>
+                <li><a href="js_page_1_1.html">Глава 1</a></li>
+                <li><a href="js_page_2_1.html">Глава 2</a></li>
+                <li><a href="js_page_3_1.html">Глава 3</a></li>
+                <li><a href="js_page_4_1.html">Глава 4</a></li>
+                <li><a href="js_page_5_1.html">Глава 5</a></li>
+                <li><a href="js_page_6_1.html">Глава 6</a></li>
+                <li><a href="js_page_7_1.html">Глава 7</a></li>
+                <li><a href="js_page_8_1.html">Глава 8</a></li>
+                <li><a href="js_page_9_1.html">Глава 9</a></li>
+                <li><a href="js_page_10_1.html">Глава 10</a></li>
+                <li><a href="js_page_11_1.html">Глава 11</a></li>
+                <li><a href="js_page_12_1.html">Глава 12</a></li>
+                <li><a href="js_page_13_1.html">Глава 13</a></li>
+                <li><a href="js_other.html">Разное</a></li>
+            </ul>
+        </div>
+        <!-- Конец бокового меню -->
+        <!-- Начало блока с контентом -->
+        <div class="content">
+            <h2 class="red">Разминируй бомбу.</h2>
+            <div id="bombContainer">
+                
+                        <div id="clock"><table>
+                        	<tr>
+                        		<td id="table1">00</td>
+                        		<td id="table2" class="zasechka">:</td>
+                        		<td id="table3">22</td>
+                        	</tr>
+                        </table></div>
+                    
+                        <div id="redwire" onclick="controller.checkWire()">red</div>
+                    
+                        <div id="bluewire" onclick="controller.checkWire()">blue</div>
+                    
+                        <div id="yellowwire" onclick="controller.checkWire()">yellow</div>
+                        <div id="trarata"></div>
+                    
+            </div>
+        </div>
+        <!-- Конец блока с контентом -->
+    </div>
 </body>
+
 </html>
