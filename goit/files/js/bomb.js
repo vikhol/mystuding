@@ -2,7 +2,6 @@ window.onload = init;
 
 function init() {
 	var timer = setInterval(model.startCounter, 1000);
-	//model.startCounter();
 };
 
 var controller = {
@@ -28,7 +27,7 @@ var model = {
     startCounter: function() {
     	this.counter--;
     	console.log(this.counter);
-    	var zasechka = document.getElementById("table2");
+    	
 //Инструкция для передачи представлению инфы 
 //о состоянии засечки между числами на таймере.
     	if (this.tick) {
@@ -38,26 +37,18 @@ var model = {
         }
         view.displayClock(this.counter, this.tick);
     },
-//    
-    generatePositions: function (argument) {
-    	var newWiresPos = [];
-
-    	for (var i = 0; i < this.numWires; i++) {
-    		
-    	}
-    }
 };
 
 var view = {
 //отображение таймера	
 	displayClock: function(sec, ticktak) {
-		var ticktock = document.getElementById("table3");
+		var table3 = document.getElementById("table3");
 		var zasechka = document.getElementById("table2");
 		if (ticktak) {
 			zasechka.setAttribute("class", "zasechka");
 		} else {
 			zasechka.setAttribute("class", "nozasechka");
 		}
-        ticktock.innerHTML = sec;
+        table3.innerHTML = sec;
     }
 };

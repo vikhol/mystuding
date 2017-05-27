@@ -273,6 +273,7 @@ h4 {
 }
 
 #clock {
+    border-radius: 3px;
     background: rgba(53, 200, 60, 0.3);
     top: 141px;
     left: 450px;
