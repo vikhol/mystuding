@@ -315,3 +315,9 @@ h4 {
     font-size: 33px;
     color: #423E3B;
 }
+.batman {
+    height: 563px;
+    background-image: url("../img/batman3.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
