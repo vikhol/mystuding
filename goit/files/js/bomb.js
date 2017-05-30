@@ -14,7 +14,7 @@ var controller = {
 var model = {
     //Провода
     wires: ["red", "yellow", "blue"],
-    //Количество проводов.	
+    //Количество проводов.  
     numWires: 3,
     //Состояние обезвреживания.
     defused: false,
@@ -44,7 +44,7 @@ var model = {
 };
 
 var view = {
-    //отображение таймера	
+    //отображение таймера   
     displayClock: function(sec, ticktak) {
         var table3 = document.getElementById("table3");
         var zasechka = document.getElementById("table2");
@@ -62,13 +62,10 @@ var view = {
 /*
 //А вот эта "почти копипаста" работает.   
     var counter = 30;
-
     timer = function() {
-    	setInterval(startCounter, 1000); 
+        setInterval(startCounter, 1000); 
     },
-
     startCounter = function() {
-
         counter--;
         console.log(counter);
     }

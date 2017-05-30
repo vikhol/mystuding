@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <link href="../style/js.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/">Старт</a>
+            <a href="https://color.adobe.com/ru/Escape-Technology-Colours-color-theme-6679213/" target="_blank">Цвет</a>
+            <a href="">menu 3</a>
+            <a href="">menu 4</a>
+            <a href="js_page_2_2.html">МорБой</a>
+            <span>JavaScript</span>
+        </nav>
+    </header>
+    <div class="main_cont">
+        <!-- Начало бокового меню -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="../js.html">Начало</a></li>
+                <li><a href="js_page_1_1.html">Глава 1</a></li>
+                <li><a href="js_page_2_1.html">Глава 2</a></li>
+                <li><a href="js_page_3_1.html">Глава 3</a></li>
+                <li><a href="js_page_4_1.html">Глава 4</a></li>
+                <li><a href="js_page_5_1.html">Глава 5</a></li>
+                <li><a href="js_page_6_1.html">Глава 6</a></li>
+                <li><a href="js_page_7_1.html">Глава 7</a></li>
+                <li><a href="js_page_8_1.html">Глава 8</a></li>
+                <li><a href="js_page_9_1.html">Глава 9</a></li>
+                <li><a href="js_page_10_1.html">Глава 10</a></li>
+                <li><a href="js_page_11_1.html">Глава 11</a></li>
+                <li><a href="js_page_12_1.html">Глава 12</a></li>
+                <li><a href="js_page_13_1.html">Глава 13</a></li>
+                <li><a href="js_other.html">Разное</a></li>
+            </ul>
+        </div>
+        <!-- Конец бокового меню -->
+        <!-- Начало блока с контентом -->
+        <div class="content">
+            <h2>Глава 11</h2>
+            <h1 class="red">Анонимные ф-и, область действия и замыкания.</h1>
+            <h3>Анонимные ф-и</h3>
+            <li>При определении ф-и в виде функционального выражения присваивать имя ф-и не обязательно.</li>
+            <div class="vajno">
+                <p class="p_vajno">Вместо: </p>
+                <p class="p_vajno blue">function handler() { alert("Yeah, that page loaded!"); }</p>
+                <p class="p_vajno blue">window.onload = handler;</p>
+                <p class="p_vajno">Можно использовать:</p>
+                <p class="p_vajno blue">window.onload = function() { alert("Yeah, that page loaded!"); };</p>
+            </div>
+            <p>
+                <li>
+                    Анон. ф-и можно использовать <strong>для сокращения</strong> записи некоторых событий.
+                </li>
+                <li>
+                    Если какому-то коду или событию нужно прописать ссылку на какую-то ф-ю, то вместо этого можно записать сразу функционально выражение.
+                </li>
+            </p>
+            <div class="vajno">
+                <p class="p_vajno">Например, вместо </p>
+                <p class="p_vajno red">function cookieAlarm() {</p>
+                <p class="p_vajno red">alert("Time to take the cookies out of the oven");</p>
+                <p class="p_vajno red">};</p>
+                <p class="p_vajno red">setTimeout(cookieAlarm, 600000);</p>
+                <p class="p_vajno">Можно использовать сразу</p>
+                <p class="p_vajno red">setTimeout(function() {</p>
+                <p class="p_vajno red">alert("Time to take the cookies out of the oven");</p>
+                <p class="p_vajno red">}, 600000);</p>
+            </div>
+            <p>
+                <h3 class="red">Как вложения влияют на область действия ф-й.</h3>
+                <h4>Пример в <strong class="red">oblastdest.js</strong></h4>
+                <p>
+                	<li>
+                	    Ф-и, определяемые <strong>внутри др. ф-й</strong>, обладают <strong>локальной видимостью</strong>.
+                	</li>
+                	<li>
+                		Вложенные ф-и, созданные путем <strong>обычного объявления</strong>, <strong class="red">видны в любой точке родительской ф-и</strong>.
+                	</li>
+                	<li>
+                		Если при создании <strong class="red">вложенной функции</strong> используется <strong>функциональное выражение</strong>, то эта вложенная функция <strong>определена</strong> только <strong>после обработки</strong> функционального выражения.
+                	</li>
+                </p>
+            </p>
+        </div>
+        <!-- Конец блока с контентом -->
+    </div>
+</body>
+
+</html>

@@ -93,11 +93,13 @@ div#js_main_page>div {
 }
 .vajno {
     padding: 20px;
-    margin: 20px 0 20px 100px;
+    margin: 20px 100px 20px 0;
     background: #F0F1F2;
-    border-radius: 5px 0 0 5px;
+    border-radius: 0 5px 5px 0;
 }
-
+.vajno p.p_vajno {
+    margin-top: 0;
+}
 .center {
     text-align: center;
 }
