@@ -1,19 +1,20 @@
 window.onload = startCounter;
 
 function startCounter() {
+    if (model.counter > 0) {
+        model.counter--;
+        console.log(model.counter);
 
-    model.counter--;
-    console.log(model.counter);
-
-    //Инструкция для передачи представлению инфы 
-    //о состоянии засечки между числами на таймере.
-    if (model.tick) {
-        model.tick = false;
-    } else {
-        model.tick = true;
+        //Инструкция для передачи представлению инфы 
+        //о состоянии засечки между числами на таймере.
+        if (model.tick) {
+            model.tick = false;
+        } else {
+            model.tick = true;
+        }
+        view.displayClock(model.counter, model.tick);
+        setTimeout(startCounter, 1000);
     }
-    view.displayClock(model.counter, model.tick);
-    setTimeout(startCounter, 1000);
 };
 
 var controller = {
