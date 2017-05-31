@@ -1,6 +1,20 @@
-/*window.onload = function() {
-    model.timer();
-};*/
+window.onload = startCounter;
+
+function startCounter() {
+
+    model.counter--;
+    console.log(model.counter);
+
+    //Инструкция для передачи представлению инфы 
+    //о состоянии засечки между числами на таймере.
+    if (model.tick) {
+        model.tick = false;
+    } else {
+        model.tick = true;
+    }
+    view.displayClock(model.counter, model.tick);
+    setTimeout(startCounter, 1000);
+};
 
 var controller = {
 
@@ -22,25 +36,6 @@ var model = {
     tick: true,
     //Счетчик    
     counter: 30,
-    //Запуск счетчика   
-    timer: function() {
-        setInterval(this.startCounter, 1000);
-    },
-
-    startCounter: function() {
-
-        this.counter--;
-        console.log(this.counter);
-
-        //Инструкция для передачи представлению инфы 
-        //о состоянии засечки между числами на таймере.
-        if (this.tick) {
-            this.tick = false;
-        } else {
-            this.tick = true;
-        }
-        view.displayClock(this.counter, this.tick);
-    },
 };
 
 var view = {
