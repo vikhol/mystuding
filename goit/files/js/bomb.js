@@ -3,8 +3,13 @@ window.onload = startCounter;
 function startCounter() {
     if (model.counter > 0) {
         model.counter--;
-        console.log(model.counter);
 
+        var time;
+        if (model.counter.length < 1) {
+            time = "0" + model.counter;
+        } else {
+            time = model.counter;
+        }
         //Инструкция для передачи представлению инфы 
         //о состоянии засечки между числами на таймере.
         if (model.tick) {
@@ -12,9 +17,13 @@ function startCounter() {
         } else {
             model.tick = true;
         }
-        view.displayClock(model.counter, model.tick);
+        view.displayClock(time, model.tick);
         setTimeout(startCounter, 1000);
+    } else {
+        model.boom = true;
+        console.log("BOOM");
     }
+
 };
 
 var controller = {
@@ -33,10 +42,13 @@ var model = {
     numWires: 3,
     //Состояние обезвреживания.
     defused: false,
+
+    //Состояние "провала"
+    boom: false,
     //Состояние засечки на таймере.
     tick: true,
     //Счетчик    
-    counter: 30,
+    counter: "30",
 };
 
 var view = {

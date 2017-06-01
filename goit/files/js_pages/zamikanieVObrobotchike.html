@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Click me!</title>
+    <style>
+    body,
+    button {
+        margin: 10px;
+    }
+    
+    div {
+        padding: 10px;
+    }
+    </style>
+    <script>
+    window.onload = function() {
+//Все переменные локальны по отношению к window.onload    	
+        var count = 0;
+        var showMessage = "Сколько раз нажали на кнопку: ";
+        var div = document.getElementById("message");
+        var button = document.getElementById("clickme");
+//Обработчик назначается в виде ф-ного выражения        
+        button.onclick = function() {
+            count++;
+            div.innerHTML = showMessage + count;
+        };
+    };
+    </script>
+</head>
+
+<body>
+    <button id="clickme">Click me!</button>
+    <div id="message"></div>
+</body>
+
+</html>
