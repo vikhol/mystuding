@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <link href="../style/js.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/">Старт</a>
+            <a href="https://color.adobe.com/ru/Escape-Technology-Colours-color-theme-6679213/" target="_blank">Цвет</a>
+            <a href="/">menu 3</a>
+            <a href="/">menu 4</a>
+            <a href="/">menu 5</a>
+            <span>Adaptive Web Design</span>
+        </nav>
+    </header>
+    <div class="main_cont">
+        <!-- Начало бокового меню -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="adaptive.html">Начало</a></li>
+                <li><a href="rwd_1_1.html">Глава 1</a></li>
+                <li><a href="rwd_2_1.html">Глава 2</a></li>
+                <li><a href="rwd_3_1.html">Глава 3</a></li>
+                <li><a href="rwd_4_1.html">Глава 4</a></li>
+                <li><a href="rwd_5_1.html">Глава 5</a></li>
+                <li><a href="rwd_6_1.html">Глава 6</a></li>
+                <li><a href="rwd_7_1.html">Глава 7</a></li>
+                <li><a href="rwd_8_1.html">Глава 8</a></li>
+                <li><a href="rwd_9_1.html">Глава 9</a></li>
+                <li><a href="rwd_10_1.html">Глава 10</a></li>
+                <li><a href="rwd_other.html">Разное</a></li>
+            </ul>
+        </div>
+        <!-- Конец бокового меню -->
+        <!-- Начало блока с контентом -->
+        <div class="content">
+            <h3>Глава 2</h3>
+            <h2 class="red">Медиазапросы.</h2>
+            <p>
+                <a href="example 02-01/index.html">Пример 1</a> - изменение цвета бэкграунда в зависимости от ширины видимой области.
+            </p>
+            <p>
+                <li>
+                    В HTML (в теге head) можно указать, какие <strong>файлы стилей</strong> будут использоваться, <strong>в зависимости</strong> от прописанных <strong>медиазапросов</strong>.
+                </li>
+                <div class="vajno">
+                         &lt;/head><br>
+                         &lt;link rel="stylesheet" media="(min-width: 300px)" href="w300.css" />
+                    <br> &lt;link rel="stylesheet" media="(min-width: 600px)" href="w600.css" />
+                    <br> &lt;/head>
+                </div>
+                <li>
+                    Если при загрузке страницы, <strong>медиазапрос</strong> в head <strong>не подходит</strong> под текущую ситуацию, то соответствующий <strong class="red">CSS-файл обработается позже</strong>. Это помогает в <strong>повышении производительности</strong> загрузки страниц. Но прирост небольшой и им <strong>можно пренебречь</strong>. <a href="example 02-03/index.html">Пример</a>
+                </li>
+                <p>
+                	<li>
+                		Лучше таки встраивать медиазопросы <strong>в общий</strong> CSS-файл.
+                	</li>
+                </p>
+            </p>
+            <p>
+                <li>
+                    <strong class="red">@media</strong> - указывает на необходимость медиазапроса. Затем:
+                    <ol>
+                        <li>
+                            задается тип с которым требуется совпадение. Например: <strong class="blue">screen</strong> (не обязательно)
+                        </li>
+                        <li>
+                            Затем внутри скобок вводятся особенности запроса. Например: <strong class="blue">(max-device-width: 400px)</strong>
+                        </li>
+                        <li>
+                            И далее открываются фигурнуе скобки, внутри которых уже следуют необходимые стили.
+                        </li>
+                    </ol>
+                </li>
+            </p>
+            <p>
+                <li>
+                    В большинстве случаев, указывать <strong class="blue">screen</strong> <strong>не нужно</strong>. Если <strong>тип</strong> медиаустройства <strong>не задан</strong> конкретным образом, подразумевается настройка <strong class="blue">all</strong>.
+                </li>
+                <li>
+                    В медиазапрос может быть заключен <strong>любой</strong> код <strong>CSS</strong>.
+                </li>
+            </p>
+            </p>
+            <div class="vajno">
+                <strong>Cтили, находящиеся ниже в CSS-файле, доминируют над такими же стилями, находящимися выше (если только расположенные выше стили не имеют более конкретной нацеленности). </strong>
+            </div>
+            <p>
+                <li>
+                    Поэтому в начале файла CSS можно прописать общие стили, которые будут применяться ко всем версиям сайта, а затем предопределить стили с помощью медиазапросов.
+                </li>
+            </p>
+            <p>
+            	С помощью медиазапросов можно задать правила стилей, которые будут использоваться <strong>при наличии</strong>, или <strong>отсутствии</strong> у пользователя включенного <strong class="red">JavaScript</strong>.
+            	<ol>
+            		<li><strong><p><strong class="red">@media</strong> (<strong class="red">scripting</strong>: <strong class="blue">none</strong>) {</p>
+            			<p>/* стили, предназначенные для применения <strong class="red">в отсутствие</strong> JavaScript */</p>
+            			<p>}</p></strong></li>
+            		<li><strong><p><strong class="red">@media</strong> (<strong class="red">scripting</strong>: <strong class="blue">enabled</strong>) {</p>
+            			<p>/* стили, предназначенные для применения <strong class="red">при наличии</strong> JavaScript */</p>
+            			<p>}</p></strong></li>
+            	</ol>
+            </p>
+            <p>
+            	<h3 class="red">viewport</h3>
+            	<p><li><strong class="red">viewport</strong> добавляется в head.</li></p>
+            	<p>
+            		<li>Он может настраиваться на определенную ширину, или содержать указание на масштаб.</li>
+            	</p>
+            	<p>
+            		<strong>&lt;<strong class="red">meta name</strong>=<strong class="blue">"viewport"</strong> <strong class="red">content</strong>="<strong class="blue">initial-scale=2.0</strong>,<strong class="red"> width</strong>=<strong class="blue">device-width</strong>" /></strong>
+            		<ol>
+            			<li><strong class="red">content</strong>="<strong class="blue">initial-scale=2.0</strong> - предписывает увеличить размер вдвое (от исходного)</li>
+            			<li><strong class="red"> width</strong>=<strong class="blue">device-width</strong> -  говорит браузеру, что ширина страницы должна быть равна значению device-width.</li>
+            		</ol>
+            	</p>
+            	<div class="vajno">
+            		В большинстве случаев подойдет следующий метатег:
+            		<p>&lt;<strong class="red">meta name</strong>=<strong class="blue">"viewport"</strong> <strong class="red">content</strong>="<strong class="blue">initial-scale=1.0</strong>, <strong class="red">width</strong>=<strong class="blue">device-width</strong>" /></p>
+            	</div>
+            </p>
+        </div>
+        <!-- Конец блока с контентом -->
+    </div>
+</body>
+
+</html>

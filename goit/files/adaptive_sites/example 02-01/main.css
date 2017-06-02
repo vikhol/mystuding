@@ -1,0 +1,24 @@
+body {
+	background: grey;
+}
+/*В условии не нужно ставить точку с запятой после объявления значения */
+@media screen and (min-width: 320px){
+	body {
+		background: green;
+	}
+}
+@media screen and (min-width: 550px){
+	body {
+		background: yellow;
+	}
+}
+@media screen and (min-width: 768px){
+	body {
+		background: orange;
+	}
+}
+@media screen and (min-width: 960px){
+	body {
+		background: red;
+	}
+}
