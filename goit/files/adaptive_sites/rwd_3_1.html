@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <link href="../style/js.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/">Старт</a>
+            <a href="https://color.adobe.com/ru/Escape-Technology-Colours-color-theme-6679213/" target="_blank">Цвет</a>
+            <a href="/">menu 3</a>
+            <a href="/">menu 4</a>
+            <a href="/">menu 5</a>
+            <span>Adaptive Web Design</span>
+        </nav>
+    </header>
+    <div class="main_cont">
+        <!-- Начало бокового меню -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="adaptive.html">Начало</a></li>
+                <li><a href="rwd_1_1.html">Глава 1</a></li>
+                <li><a href="rwd_2_1.html">Глава 2</a></li>
+                <li><a href="rwd_3_1.html">Глава 3</a></li>
+                <li><a href="rwd_4_1.html">Глава 4</a></li>
+                <li><a href="rwd_5_1.html">Глава 5</a></li>
+                <li><a href="rwd_6_1.html">Глава 6</a></li>
+                <li><a href="rwd_7_1.html">Глава 7</a></li>
+                <li><a href="rwd_8_1.html">Глава 8</a></li>
+                <li><a href="rwd_9_1.html">Глава 9</a></li>
+                <li><a href="rwd_10_1.html">Глава 10</a></li>
+                <li><a href="rwd_other.html">Разное</a></li>
+            </ul>
+        </div>
+        <!-- Конец бокового меню -->
+        <!-- Начало блока с контентом -->
+        <div class="content">
+            <h3>Глава 3</h3>
+            <h2 class="red">Динамически изменяемые разметки и адаптивные изображения.</h2>
+            <p>
+                <h3>Преобразование дизайна с фиксированными размерами в подстраеваемый.</h3>
+                <div class="vajno">
+                    <strong>Общая формула:</strong>
+                    <br>
+                    <strong class="red">Цель / Среда = Результат.</strong>
+                </div>
+                <p>
+                    <strong>Пример:</strong>
+                    <p class="blue"><strong>Имеется страница с фиксированными размерами: 200px - левая колонка + 660px - основная центральная + 100рх - правая колонка = 960рх стандартный размер страницы.</strong></p>
+                    <p>Чтобы <strong>преобразовать</strong> эти размеры в подстраиваемые и <strong>пропорциональные</strong>, нужно воспользоваться <strong>формулой</strong> выше.</p>
+                    <li>
+                        Сперва берем левую колонку и подставляем в формулу: <strong class="red">200 / 960 = 0,208333333</strong>
+                    </li>
+                    <li>
+                        Далее, в этом конкретном случае, чтобы расчитать <strong>процентное соотношение</strong> 200-от пикселов к 960-ти, нужно перенести запятую на 2 позиции вправо. В итоге получаем <strong class="red">20,8333333 %</strong>
+                    </li>
+                    <li>
+                        Так же поступаем со средней и правой колонками. Получаем <strong class="red">68,75 %</strong> и <strong class="red">10,4166667 %</strong> соответственно.
+                    </li>
+                    <a href="example_03-01/index.html" target="_blank">Результат</a>
+                    <p>
+                        Такое строрение страницы позволит всем эл-там оставаться <strong>пропорциональными</strong> друг к другу. Но при слишком мелких размерах, некоторые колонки становятся <strong>слишком узкими</strong>. Поэтому нужно добавить <strong>контрольную точку</strong>, которая в какой-то момент <strong>выстроит</strong> все эл-ты <strong>в одну колонку</strong>.
+                    </p>
+                </p>
+                <p>
+                    <h3 class="red">Flexbox</h3>
+                    <p><strong>Кратко о свойствах:</strong></p>
+                    <p>
+                        <li>
+                            Он легко справляется с выравниванием содержимого по вертикали.
+                        </li>
+                        <li>
+                            Может изменить порядок визуального отображения эл-тов.
+                        </li>
+                        <li>
+                            Может авт-ски заполнять пространство пробелами и выравнивать эл-ты внутри блока, автоматически распределяя между ними доступное пустое пространство.
+                        </li>
+                        
+                    </p>
+                </p>
+            </p>
+        </div>
+        <!-- Конец блока с контентом -->
+    </div>
+</body>
+
+</html>

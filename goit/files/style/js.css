@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 * {
-    font-family: 'Noto Sans', Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+            box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body {}
+body {
+    
+}
 
 header {
     position: relative;
@@ -68,28 +70,32 @@ iframe {
     margin-left: 100px;
 }
 #js_main_page {
-	background-image: url(https://s3-us-west-2.amazonaws.com/svgporn.com/logos/javascript.svg);
-	background-repeat: no-repeat;
-	background-size: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	margin-top: 0;
-	padding: 20px;
+    background-image: url(https://s3-us-west-2.amazonaws.com/svgporn.com/logos/javascript.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 0;
+    padding: 20px;
 }
 div#js_main_page>div {
-	display: inline-block;
-	padding: 0 20px;
-	margin-top: 0;
+    display: inline-block;
+    padding: 0 20px;
+    margin-top: 0;
 }
 #js_main_page a {
-	color: #2B5E50;
-	text-decoration: none;
+    color: #2B5E50;
+    text-decoration: none;
 }
 #js_main_page p {
-	margin-top: 0;
+    margin-top: 0;
+}
+#todayDate {
+    font-size: 27px;
+    color: red;
 }
 .vajno {
     padding: 20px;
@@ -153,6 +159,7 @@ div#js_main_page>div {
     line-height: 40px;
     text-decoration: none;
     color: #373737;
+    -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     font-size: 20px;
 }
@@ -162,9 +169,10 @@ div#js_main_page>div {
     color: white;
 }
 .sidebar li a:active {
-	background: #ED8340;
-	color: white;
-	transition: all .1s ease-in-out;
+    background: #ED8340;
+    color: white;
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
 }
 .content {
     position: relative;
@@ -210,7 +218,7 @@ h4 {
     margin-left: 20px;
 }
 .content a {
-	color: #028EA3;
+    color: #028EA3;
 }
 .knopka {
     width: 300px;
@@ -222,7 +230,8 @@ h4 {
     background: #373737;
     border-radius: 5px;
     text-align: center;
-    box-shadow: 0 0 1px rgba(55, 55, 55, 0.4);
+    -webkit-box-shadow: 0 0 1px rgba(55, 55, 55, 0.4);
+            box-shadow: 0 0 1px rgba(55, 55, 55, 0.4);
 }
 
 .dla_knopki a {
@@ -232,31 +241,36 @@ h4 {
 .knopka:hover {
     width: 302px;
     height: 202px;
-    box-shadow: 0 0 3px rgba(55, 55, 55, 0.6);
+    -webkit-box-shadow: 0 0 3px rgba(55, 55, 55, 0.6);
+            box-shadow: 0 0 3px rgba(55, 55, 55, 0.6);
     font-size: 52px;
     background: #028EA3;
 }
 .button1 {
-	width: 170px;
-	height: 50px;
-	margin-top: 30px;
-	border: solid 3px #4CB598;
-	border-radius: 3px;
-	background: #373737;
-	color: white;
-	font-size: 20px;
-	transition-duration: 0.4s;
+    width: 170px;
+    height: 50px;
+    margin-top: 30px;
+    border: solid 3px #4CB598;
+    border-radius: 3px;
+    background: #373737;
+    color: white;
+    font-size: 20px;
+    -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
 }
 .button1:hover {
-	background: #4CB598;
-	border: solid 3px #4CB598;
-	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 25px 0 rgba(0,0,0,0.19);
+    background: #4CB598;
+    border: solid 3px #4CB598;
+    -webkit-box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 25px 0 rgba(0,0,0,0.19);
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 25px 0 rgba(0,0,0,0.19);
 }
 .button1:active {
-	background: #028EA3;
-	border: solid 3px #028EA3;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.24), 0 12px 25px 0 rgba(0,0,0,0.19);
-	transition-duration: 0.2s;
+    background: #028EA3;
+    border: solid 3px #028EA3;
+    -webkit-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.24), 0 12px 25px 0 rgba(0,0,0,0.19);
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.24), 0 12px 25px 0 rgba(0,0,0,0.19);
+    -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s;
 }
 
 /* Стили для игры про бомбу. */

@@ -1,48 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>JavaScript</title>
-	<link href="../style/js.css" rel="stylesheet">
-	
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <link href="../style/js.min.css" rel="stylesheet">
 </head>
+
 <body>
-<header><nav>
-	<a href="/">Старт</a>
-	<a href="https://color.adobe.com/ru/Escape-Technology-Colours-color-theme-6679213/" target="_blank">Цвет</a>
-	<a href="">menu 3</a>
-	<a href="">menu 4</a>
-	<a href="js_page_2_2.html">МорБой</a>
-	<span>JavaScript</span>
-</nav></header>
-	<div class="main_cont">
-	<!-- Начало бокового меню -->
-		<div class="sidebar">
-			<ul>
-			    <li><a href="../js.html">Начало</a></li>
-				<li><a href="js_page_1_1.html">Глава 1</a></li>
-				<li><a href="js_page_2_1.html">Глава 2</a></li>
-				<li><a href="js_page_3_1.html">Глава 3</a></li>
-				<li><a href="js_page_4_1.html">Глава 4</a></li>
-				<li><a href="js_page_5_1.html">Глава 5</a></li>
-				<li><a href="js_page_6_1.html">Глава 6</a></li>
-				<li><a href="js_page_7_1.html">Глава 7</a></li>
-				<li><a href="js_page_8_1.html">Глава 8</a></li>
-				<li><a href="js_page_9_1.html">Глава 9</a></li>
-				<li><a href="js_page_10_1.html">Глава 10</a></li>
-				<li><a href="js_page_11_1.html">Глава 11</a></li>
-				<li><a href="js_page_12_1.html">Глава 12</a></li>
-				<li><a href="js_page_13_1.html">Глава 13</a></li>
-				<li><a href="js_other.html">Разное</a></li>
-			</ul>
-		</div>
-		<!-- Конец бокового меню -->
-		<!-- Начало блока с контентом -->
-		<div class="content">
-		    <h2>Глава 12</h2>
-			<h1 class="red">Создание объектов.</h1>
-		</div>
-		<!-- Конец блока с контентом -->
-	</div>
+    <header>
+        <nav>
+            <a href="/">Старт</a>
+            <a href="https://color.adobe.com/ru/Escape-Technology-Colours-color-theme-6679213/" target="_blank">Цвет</a>
+            <a href="">menu 3</a>
+            <a href="">menu 4</a>
+            <a href="js_page_2_2.html">МорБой</a>
+            <span>JavaScript</span>
+        </nav>
+    </header>
+    <div class="main_cont">
+        <!-- Начало бокового меню -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="../js.html">Начало</a></li>
+                <li><a href="js_page_1_1.html">Глава 1</a></li>
+                <li><a href="js_page_2_1.html">Глава 2</a></li>
+                <li><a href="js_page_3_1.html">Глава 3</a></li>
+                <li><a href="js_page_4_1.html">Глава 4</a></li>
+                <li><a href="js_page_5_1.html">Глава 5</a></li>
+                <li><a href="js_page_6_1.html">Глава 6</a></li>
+                <li><a href="js_page_7_1.html">Глава 7</a></li>
+                <li><a href="js_page_8_1.html">Глава 8</a></li>
+                <li><a href="js_page_9_1.html">Глава 9</a></li>
+                <li><a href="js_page_10_1.html">Глава 10</a></li>
+                <li><a href="js_page_11_1.html">Глава 11</a></li>
+                <li><a href="js_page_12_1.html">Глава 12</a></li>
+                <li><a href="js_page_13_1.html">Глава 13</a></li>
+                <li><a href="js_other.html">Разное</a></li>
+            </ul>
+        </div>
+        <!-- Конец бокового меню -->
+        <!-- Начало блока с контентом -->
+        <div class="content">
+            <h3>Глава 12</h3>
+            <h2 class="red">Создание объектов.</h2>
+            <p>
+                <strong class="red">Объектный литерал</strong> - полное описание объекта.
+                <h3 class="red">Конструкторы.</h3>
+                <h4>Основа - <strong class="red">constructor.js</strong><br>
+                    Пример с кофе - <strong class="red">exerciseCoffee.js</strong><br>
+                    Пример с тачками - <strong class="red">exerciseCars.js</strong>
+                    <br>
+                    Альтернативный пример с тачками - <strong class="red">exerciseCars2.js</strong>
+				</h4>
+                <li>Обычно, <strong>имя конструктора</strong> начинается с <strong>заглавной</strong> буквы, но это просто соглашение, а не правило.</li>
+                <li>Имена свойств и параметров так же не обязательно должны совпадать, это просто еще одно соглашение для удобства.</li>
+                <p>
+                    <li>В кон-ры можно добавлять <strong>методы</strong>, которые будут автоматически добавляться к новым объектам</li>
+                    <li>Объекты, созданные конструкторами, можно потом <strong>изменять</strong>: добавлять новые св-ва и методы, удалять ненужные. Пример:
+                        <br>
+                        <strong class="blue">var <strong class="red">fido</strong> = <strong class="red">new</strong> Dog("Fido", "Mixed", 38);
+                        <br>
+                        <strong class="red">fido.owner</strong> = "Bob";
+                        <br>
+                        <strong class="red">delete</strong> fido.weight;</strong>
+                    </li>
+                </p>
+                <p>
+                    <li>Для <strong>создания</strong> объекта, используется оператор "<strong class="red">new</strong>".
+                        <br><strong class="blue">var houseBlend = <strong class="red">new</strong> Coffee("House Blend", 12);</strong>
+                    </li>
+                </p>
+                <p>
+                    <li><strong>В параметры</strong> конструктора можно <strong>передавать</strong> готовый <strong>объектный литерал</strong>. Это очень удобно если в конс-ре помимо свойств, имеются еще методы и одинаковые для всех объектов параметры св-в. (Пример в <strong class="red">exerciseCars2.js</strong>)</li>
+                </p>
+            </p>
+            <p>
+                <h3 class="red">instanceof</h4>
+				<p>
+				   <strong class="red">instanceof</strong> - позволяет <strong>проверить</strong>, создан ли объект <strong>конкретным кос-ром</strong>, указаным в условии. 
+				</p>
+			</p>
+			<p>
+				<h3 class="red">Встроенные конструкторы.</h3>
+                <h4>standartConst.js</h4>
+                <p>
+                    <strong class="red">Date</strong> - конструктор даты. Располагая таким объектом, можно использовать его <strong>методы</strong> для выполнения операций с датой и временем. <br>
+                    <strong>var <strong class="red">now</strong> = <strong class="red">new</strong> <strong class="blue">Date()</strong>;</strong>
+                </p>
+                <div class="vajno">
+                    <div id="todayDate"></div>
+                </div>
+                <li>
+                	<strong class="blue">toString()</strong> - метод, возвращающий <strong>полную дату</strong> и время в виде строки:  <strong>“Thu Jun 08 2017 11:56:23 GMT+0700”.</strong> <br>
+                	<strong>var dateString = <strong class="red">now</strong>.<strong class="blue">toString()</strong>;</strong>
+                </li>
+                <li>
+                	<strong class="blue">getFullYear()</strong> - метод, возвращающий текущий <strong>год</strong>. <br>
+                	<strong>var theYear = <strong class="red">now</strong>.<strong class="blue">getFullYear()</strong>;</strong>
+                </li>
+                <li>
+                	<strong class="blue">getDay()</strong> возвращает номер <strong>дня недели</strong> (1 - понедельник)
+                </li>
+                <p>
+                	
+                </p>
+            </p>
+        </div>
+        <!-- Конец блока с контентом -->
+    </div>
+    <script src="../js/constructor.js"></script>
+    <script src="../js/standartConst.js"></script>
+    <script src="../js/exerciseCoffee.js"></script>
+    <script src="../js/exerciseCars2.js"></script>
+    <script src="../js/exerciseCars.js"></script>
 </body>
+
 </html>

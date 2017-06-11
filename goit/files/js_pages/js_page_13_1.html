@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <link href="../style/js.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/">Старт</a>
+            <a href="https://color.adobe.com/ru/Escape-Technology-Colours-color-theme-6679213/" target="_blank">Цвет</a>
+            <a href="">menu 3</a>
+            <a href="">menu 4</a>
+            <a href="js_page_2_2.html">МорБой</a>
+            <span>JavaScript</span>
+        </nav>
+    </header>
+    <div class="main_cont">
+        <!-- Начало бокового меню -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="../js.html">Начало</a></li>
+                <li><a href="js_page_1_1.html">Глава 1</a></li>
+                <li><a href="js_page_2_1.html">Глава 2</a></li>
+                <li><a href="js_page_3_1.html">Глава 3</a></li>
+                <li><a href="js_page_4_1.html">Глава 4</a></li>
+                <li><a href="js_page_5_1.html">Глава 5</a></li>
+                <li><a href="js_page_6_1.html">Глава 6</a></li>
+                <li><a href="js_page_7_1.html">Глава 7</a></li>
+                <li><a href="js_page_8_1.html">Глава 8</a></li>
+                <li><a href="js_page_9_1.html">Глава 9</a></li>
+                <li><a href="js_page_10_1.html">Глава 10</a></li>
+                <li><a href="js_page_11_1.html">Глава 11</a></li>
+                <li><a href="js_page_12_1.html">Глава 12</a></li>
+                <li><a href="js_page_13_1.html">Глава 13</a></li>
+                <li><a href="js_other.html">Разное</a></li>
+            </ul>
+        </div>
+        <!-- Конец бокового меню -->
+        <!-- Начало блока с контентом -->
+        <div class="content">
+            <h3>Глава 13</h3>
+            <h2 class="red">Использование прототипов.</h2>
+            <h4>(<strong class="red">prototypes.js</strong>)</h4>
+            <strong class="red">Прототип</strong> - объект со св-вами и методами, которые могут понадобиться каждому объекту, создаваемому конс-ром.
+            <p>
+                <li>
+                    При вызове метода из объекта, метод <strong>сперва</strong> ищется <strong>в экземпляре</strong> объекта, а если там он не обнаруживается, то программа <strong>обращается к прототипу</strong>.
+                </li>
+                <li>
+                    Если же для какого-то конкретного экземпляра <strong>изменить</strong> какой либо <strong>метод</strong> и прописать его непосредственно <strong>в теле объекта</strong>, то такой объект <strong>не</strong> будет <strong>обращаться</strong> за этим методом <strong>в прототип</strong>.
+                </li>
+            </p>
+            <p>
+                <strong>Объект-прототип задается в св-ве <strong class="red">prototype</strong> конструктора,</strong> и выглядит это побобным образом: <strong><strong class="blue">Dog</strong>.<strong class="red">prototype</strong>.<strong class="blue">run</strong> = function() { ... };</strong>
+            </p>
+            <p>
+                <li>
+                    Все экземпляры, созданные каким-то конкретным конс-ром, <strong class="red">автоматически</strong> <strong>получают доступ</strong> к методу, прописанному в прототипе этого конс-ра.
+                </li>
+            </p>
+            <p>
+                <li>
+                    Все <strong>изменения</strong> в прототипе так же сразу <strong>отразятся</strong> на объектах которые ссылаются на этот прототип.
+                </li>
+            </p>
+        </div>
+        <!-- Конец блока с контентом -->
+    </div>
+    <script src="../js/prototypes.js"></script>
+</body>
+
+</html>

@@ -16,8 +16,11 @@ body {
 }
 header {
 
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+
+	        box-sizing: border-box;
 	height: 60px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#6B8FA1), to(#D2E2EA));
 	background: linear-gradient(to bottom, #6B8FA1, #D2E2EA);
 	color: #160E35;
 	margin-top: 0;
@@ -73,10 +76,18 @@ section {
 section:before {
     content: 'Section ' counter(sections);
 }
+div.indexMenu {
+	margin-left: 50px;
+}
+div.indexMenu>li {
+	list-style-type: none;
+}
 .box {
 	counter-increment: boxes;
 
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+            box-sizing: border-box;
 	display: inline-block;
 	width: 50px;
 	height: 50px;
@@ -134,7 +145,8 @@ section:before {
 	width: 1024px;
 }
 .left_menu {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	margin-top: 50px;
 	border: 1px solid #466781;
 	border-radius: 3px;
@@ -160,7 +172,8 @@ section:before {
 	padding: 10px;
 	margin: 0 10px 20px;
 	height: 200px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 	text-align: center;
 	border: 1px solid #555661;
 	border-radius: 5px;
@@ -200,7 +213,8 @@ section:before {
 	width: 600px;
 	height: 600px;
 	padding: 15px;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 .fon_opacity {
 	vertical-align: top;
@@ -224,7 +238,8 @@ section:before {
 }
 .fon_s_prokrutkoy {
 	overflow: auto;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	padding: 20px;
 	height: 810px;
 	margin-top: 30px;
@@ -315,6 +330,7 @@ button.b1 {
 	border-radius: 20px;
 	margin: 20px 20px 20px 0;
 	padding: 15px;
+	background: -webkit-gradient(linear, left bottom, left top, from(#3C576D), color-stop(30%, #618DBE), to(#D0D6DE));
 	background: linear-gradient(to top, #3C576D, #618DBE 30%, #D0D6DE);
 }
 .table_border {
@@ -322,7 +338,8 @@ button.b1 {
 	display: inline-block;
 }
 .inline_li {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	border-radius: 5px;
 	padding: 10px;
 	display: inline-block;
@@ -344,7 +361,8 @@ button.b1 {
 .gradblock {
 	margin-right: 10px;
 	float: left;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	width: 200px;
 	height: 200px;
 	padding-top: 70px;
@@ -355,34 +373,43 @@ button.b1 {
 }
 .grad1 {
 	
+	background: -webkit-gradient(linear, left bottom, left top, from(black), to(white));
+	
 	background: linear-gradient(to top, black, white);
 margin-bottom: 10px;
 }
 .grad2 {
+	background: -webkit-gradient(linear, left top, left bottom, from(black), to(white));
 	background: linear-gradient(to bottom, black, white);
 margin-bottom: 10px;
 }
 .grad3 {
+	background: -webkit-gradient(linear, right top, left top, from(black), to(white));
 	background: linear-gradient(to left, black, white);
 margin-bottom: 10px;
 }
 .grad4 {
+	background: -webkit-gradient(linear, left top, right top, from(black), to(white));
 	background: linear-gradient(to right, black, white);
     margin-bottom: 10px; 
 }
 .grad5 {
+	background: -webkit-gradient(linear, right bottom, left top, from(black), to(white));
 	background: linear-gradient(to top left, black, white);
 	margin-bottom: 10px; 
 }
 .grad6 {
+	background: -webkit-gradient(linear, left bottom, right top, from(black), to(white));
 	background: linear-gradient(to top right, black, white);
     margin-bottom: 10px; 
 }
 .grad7 {
+	background: -webkit-gradient(linear, right top, left bottom, from(black), to(white));
 	background: linear-gradient(to bottom left, black, white);
     margin-bottom: 10px; 
 }
 .grad8 {
+	background: -webkit-gradient(linear, left top, right bottom, from(black), to(white));
 	background: linear-gradient(to bottom right, black, white);
     margin-bottom: 10px; 
 }
@@ -393,7 +420,8 @@ margin-bottom: 10px;
 	float: left;
 }
 .grad_ugl {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	width: 450px;
 	height: 150px;
 	background: linear-gradient(-15deg, #000, #fff);
@@ -405,7 +433,8 @@ margin-bottom: 10px;
 }
 .grad_prozrachniy {
 	padding-top: 40px;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	margin-top: 25px;
 	margin-bottom: 30px;
 	clear: both;
@@ -416,6 +445,9 @@ margin-bottom: 10px;
 .grad_prozrachniy2 {
 	padding-top: 20px;
 	height: 200px;
+	background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(30,87,153,0.1)), color-stop(rgba(30,87,153,0.8)), color-stop(rgba(30,87,153,1)),
+                      color-stop(rgba(30,87,153,1)), color-stop(rgba(41,137,216,1)), color-stop(rgba(30,87,153,1)), color-stop(rgba(30,87,153,1)),
+                      color-stop(rgba(30,87,153,0.8)),to(rgba(30,87,153,0.1)));
 	background-image: linear-gradient(to top, rgba(30,87,153,0.1), rgba(30,87,153,0.8), rgba(30,87,153,1),
                       rgba(30,87,153,1), rgba(41,137,216,1), rgba(30,87,153,1), rgba(30,87,153,1),
                       rgba(30,87,153,0.8),rgba(30,87,153,0.1));
