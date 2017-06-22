@@ -1,0 +1,64 @@
+html, body {
+    margin: 0;
+    padding: 0;
+
+}
+
+.FlexWrapper {
+    background-color: indigo;
+    display: flex;
+    flex-direction: column;
+}
+.FlexItems {
+    display: flex;
+    align-items: center;
+    min-height: 6.25rem;
+    padding: 1rem;
+}
+.FlexHeader {
+    background-color: #105B63;
+    order: -2;
+}
+.FlexContent {
+    background-color: #FFFAD5;
+/* order: -1; поменяет метоположение эл-та и поставит его выше остальных эл-тов, 
+если для тех не задан более низкий порядок */    
+    order: -1;
+}
+.FlexSideOne {
+    background-color: #FFD34E;
+}
+.FlexSideTwo {
+    background-color: #DB9E36;
+    order: 1;
+}
+.FlexFooter {
+    background-color: #BD4932;
+    order: 2;
+}
+
+@media (min-width: 30rem) {
+    .FlexWrapper {
+        flex-flow: row wrap;
+    }
+   .FlexHeader {
+        width: 100%;
+        order: 0;
+    }
+    .FlexContent {
+        flex: 1;
+        order: 3;
+    }
+    .FlexSideOne {
+        width: 150px;
+        order: 2;
+    }
+    .FlexSideTwo {
+        width: 150px;
+        order: 4;
+    }
+    .FlexFooter {
+        width: 100%;
+        order: 5;
+    }
+}

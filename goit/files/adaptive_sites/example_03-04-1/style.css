@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: indigo;
+	font-family: 'Oswald', sans-serif;
+
+	font-size: 1.25rem;
+	min-height: 3.125rem;
+
+	display: flex;
+	align-items: center;
+/* "Разворачивает" эл-ты в обратном порядке */	
+	flex-direction: row-reverse;
+
+
+	padding: 0 1rem;
+}
+
+.Item,
+.LastItem {
+    color: #ebebeb;
+    text-decoration: none;
+}
+
+.Item {
+    margin-right: 1rem;
+}
+
+.LastItem {
+    margin-right: auto;
+}

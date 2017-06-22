@@ -1,12 +1,3 @@
-@font-face {
-	font-family: Againts;
-	src: url(fonts/againts.ttf);
-	font-weight: normal;
-}
-.font-face {
-	font-family: Againts;
-}
-
 body {
 	margin: 0;
 	padding: 0;
@@ -26,8 +17,6 @@ header {
 	margin-top: 0;
 	padding: 30px;
     text-align: center;
-    border-top: 1px solid #697078;
-    border-bottom: 2px solid #697078;
 }
 a {
 	padding: 1px 5px;
@@ -311,11 +300,9 @@ ol li:nth-child(even){
 
 :visited {color: #2D8481;}
 :link {color: #174D8A;}
-:link:hover {background: #BCD0DB;}
 
 :link:active {
-	background: #B0C7D2;
-    color: #040415;
+	color: #040415;
 }
 input:focus {
 	background: #E9E3ED;

@@ -1,0 +1,65 @@
+.FlexWrapper {
+    background-color: indigo;
+    display: flex;
+    height: 200px;
+    width: 400px;
+    color: white;
+}
+.FlexInner {
+    background-color: #34005B;
+    display: flex;
+    height: 100px;
+    width: 200px;
+    align-items: center;
+    padding: 0 .3rem;
+}
+.Wrapper2 {
+	align-items: center;
+}
+.alignSelf {
+	align-self: flex-end;
+}
+/* justify-content: space-between; */
+.FlexWrapper3 {
+    background-color: indigo;
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    width: 100%;
+}
+.FlexInner3 {
+    background-color: #34005B;
+    display: flex;
+    height: 100px;
+    width: 25%;
+}
+/*=====================================*/
+/*space-around распределит свободное пространство в равных долях вокруг эл-тов.*/
+.FlexWrapper4 {
+    background-color: indigo;
+    display: flex;
+    justify-content: space-around;
+    height: 200px;
+    width: 100%;
+}
+
+/* flex */
+.FlexWrapper5 {
+    background-color: indigo;
+    display: flex;
+    height: 200px;
+    color: white;
+}
+.FlexItems {
+    border: 1px solid #ebebeb;
+    background-color: #34005B;
+    display: flex;
+    height: 100px;
+}
+.FlexOne {
+    flex: 1.5 0 auto;
+}
+.FlexTwo,
+.FlexThree {
+    flex: 1 0 auto;
+}

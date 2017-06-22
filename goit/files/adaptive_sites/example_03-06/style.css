@@ -1,0 +1,13 @@
+.inlineFlex {
+	display: inline-flex;
+    align-items: center;
+
+	height: 120px;
+	background: indigo;
+	padding: 0 5px;
+	text-decoration: none;
+	border-radius: 3px;
+    color: #ddd;
+    font-family: sans-serif;
+    font-size: 1.25rem;
+}

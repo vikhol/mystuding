@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Boom</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <div class="content">
+            <h2 class="red">Разминируй бомбу, спаси Димона.</h2>
+            <div id="bombContainer">
+                
+                        <div id="clock"><table>
+                        	<tr>
+                        		<td id="table1">00</td>
+                        		<td id="table2" class="zasechka">:</td>
+                        		<td id="table3">22</td>
+                        	</tr>
+                        </table></div>
+                    
+                        <div id="redwire" onclick="checkWire()"></div>
+                    
+                        <div id="bluewire" onclick="checkWire()"></div>
+                    
+                        <div id="yellowwire" onclick="checkWire()"></div>
+            </div>
+            <p class="dimon">
+            	<img src="tapok.jpg" alt="Димон">
+            </p>
+        </div>
+        <script src="dabomb.js"></script>
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+
+</html>

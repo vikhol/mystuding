@@ -66,11 +66,42 @@
                 <li>
                     Все <strong>изменения</strong> в прототипе так же сразу <strong>отразятся</strong> на объектах которые ссылаются на этот прототип.
                 </li>
+                <p>
+                    <li>
+                        Чтобы определить <strong>откуда</strong> взято конкретное <strong>св-во</strong> - из прототипа, или оно определено в самом объекте, нужно воспользоваться методом <strong class="red">hasOwnProperty</strong>. Эта команда проверяет - <strong>содержит ли</strong> данный объект заданное <strong>св-во</strong> в <strong>в самом объекте</strong>. Если находит, то возвращает <strong class="blue">true</strong>, а если нет, то может быть это св-во определяется в прототипе (а может и не определяется). <strong>console.log(<strong class="blue">Spot</strong>.<strong class="red">hasOwnProperty</strong>("<strong class="blue">sitting</strong>"));</strong>
+                    </li>
+                </p>
+            </p>
+            <p>
+                <h3 class="red">Добавление методов в встроенный объект.</h3>
+                <li>
+                    Методы можно <strong>добавлять к встроенным</strong>/родным объектам. Пример в <strong class="red">stringPrototype.js</strong>.
+                </li>
+
+            </p>
+            <p>
+                <h3 class="red">Прототипы могут наследовать св-ва от других прототипов!</h3>
+                <h4>(Пример в <span class="red">exerciseShowDogs.js</span>)</h4>
+                <strong>Дополнение к примеру</strong>
+                <li>
+                    <strong class="red">.call</strong> - встроенный метод который может использоваться с любой ф-ей.
+                </li>
+                <li>
+                    <strong><strong class="blue">Dog</strong>.<strong class="red">call</strong> (<strong class="red">this</strong>, <strong class="blue">name</strong>, <strong class="blue">breed</strong>, <strong class="blue">weight</strong>)</strong> В этом коде мы вызываем конструктор Dog, но приказываем ему <strong>использовать</strong> наш <strong>экземпляр</strong> ShowDog <strong>как</strong> текущий объект <strong class="red">this</strong>.
+                </li>
+                <li>
+                    В передаваемых параметрах, <strong>this</strong> исп-ся как <strong>this в теле ф-и Dog</strong>, остальные арг-ты просто передаются ф-и Dog (они берутся из параметров).
+                </li>
             </p>
         </div>
         <!-- Конец блока с контентом -->
     </div>
     <script src="../js/prototypes.js"></script>
+    <script src="../js/exerciseShowDogs.js"></script>
+    <script src="../js/stringPrototype.js"></script>
+    <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Выравнивание.</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <p>Без выравнивания.</p>
+    <div class="FlexWrapper">
+        <div class="FlexInner">I am content in the inner Flexbox.</div>
+    </div>
+    <p>
+        <strong class="red">align-items</strong> позиционирует элементы относительно <strong>поперечной</strong> оси.
+    </p>
+    <div class="FlexWrapper Wrapper2">
+        <div class="FlexInner">I am content in the inner Flexbox.</div>
+    </div>
+    <p>
+        <strong class="red">align-self</strong> используется для выравнивания <strong>"себя"</strong> отдельных flex-элементов. (применено значение <strong class="blue">flex-end;</strong>)
+        <div class="FlexWrapper">
+            <div class="FlexInner">I am content in the inner Flexbox.</div>
+            <div class="FlexInner alignSelf">I am content in the inner Flexbox.</div>
+            <div class="FlexInner">I am content in the inner Flexbox.</div>
+        </div>
+    </p>
+    <p>
+    <strong>justify-content: space-between;</strong> равномерно распределяет пустое пространство между блоками.
+        <div class="FlexWrapper3">
+            <div class="FlexInner3"></div>
+            <div class="FlexInner3"></div>
+            <div class="FlexInner3"></div>
+        </div>
+    </p>
+    <p>
+        <strong class="blue">space-around</strong> -  распределит свободное пространство в равных долях вокруг элементов.
+        <div class="FlexWrapper4">
+            <div class="FlexInner3"></div>
+            <div class="FlexInner3"></div>
+            <div class="FlexInner3"></div>
+        </div>
+    </p>
+    <p>
+    <strong>flex: 1.5 0 auto;</strong> FlexOne занимает в 1,5 раза больше пространства, чем FlexTwo FlexThree (если для этого достаточно места).
+
+        <div class="FlexWrapper5">
+    <div class="FlexItems FlexOne">I am content in the inner Flexbox 1.</div>
+    <div class="FlexItems FlexTwo">I am content in the inner Flexbox 2.</div>
+    <div class="FlexItems FlexThree">I am content in the inner Flexbox 3.</div>
+</div>
+    </p>
+</body>
+
+</html>

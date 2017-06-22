@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>JavaScript</title>
-    <link href="../style/js.css" rel="stylesheet">
+    <link href="../style/js.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -79,13 +79,201 @@
                         <li>
                             Может авт-ски заполнять пространство пробелами и выравнивать эл-ты внутри блока, автоматически распределяя между ними доступное пустое пространство.
                         </li>
-                        
                     </p>
+                </p>
+                <p>
+                    У <strong class="blue">Flexbox</strong> имеются 4 основных параметра:
+                    <ol>
+                        <li><strong class="red">direction</strong> - направление.</li>
+                        <li><strong class="red">alignment</strong> - выравнивание.</li>
+                        <li><strong class="red">ordering</strong> - определение порядка.</li>
+                        <li><strong class="red">flexibility</strong> - динамическое изменение.</li>
+                    </ol>
+                </p>
+            </p>
+            <p>
+                <h3 class="red">Текст безупречно выровненный по вертикали.</h3>
+                <h4><a href="example_03-03/index.html">Пример 03-03.</a></h4> В CSS-файле примера нам интересны следующие св-ва:
+                <li><strong class="red">display: <strong class="blue">flex</strong>;</strong> - настройка элемента на его принадлежность к Flexbox.</li>
+                <li><strong class="red">align-items: <strong class="blue">center</strong>;</strong> - выравнивает эл-ты по поперечной оси.</li>
+                <li><strong class="red">justify-content: <strong class="blue">center</strong>;</strong>- задает выравнивание содержимого по центру главной оси.</li>
+            </p>
+            <p><a href="example_03-04/index.html">Пример 03-04</a> - в этом примере особую роль играет св-во <strong class="blue">margin-left: auto;</strong>, которое применяется к последнему элементу и заставляет его отступить <strong>вправо</strong> на <strong>максимально</strong> доступную <strong>ширину</strong>.</p>
+            <p>
+                <h3 class="red">Изменение порядка следования элементов.</h3>
+                <p>
+                    Можно просто добавить к элементу-<strong>контейнеру</strong> свойство <strong><strong class="red">flex-direction</strong>: <strong class="blue">row-reverse</strong>;</strong>, а для смещенного эл-та (<strong>LastItem</strong>) вместо <strong><strong class="red">margin-left</strong>: <strong class="blue">auto</strong></strong> написать <strong><strong class="red">margin-right</strong>: <strong class="blue">auto</strong>:</strong>
+                    <li>
+                        <a href="example_03-04-1/index.html">Пример 03-04-1</a> - эл-ты не только перестроились по "разным углам", но так же стали следовать в <strong>обратном порядке</strong>.
+                    </li>
+                    <li>
+                        Для отражения порядка отображения эл-тов в столбике, нужно прописать <strong><strong class="red">flex-direction</strong>: <strong class="blue">column-reverse</strong>;</strong>
+                    </li>
+                </p>
+            </p>
+            <p>
+                <a href="example_03-05/index.html">Пример подстравиваемого Flexbox (03-05)</a>
+            </p>
+            <p>
+                <h3 class="red">inline-flex</h3>
+                <p>
+                    <strong><strong class="red">display</strong>: <strong class="blue">inline-flex</strong>;</strong> является аналогом <strong><strong class="red">display</strong>: <strong class="blue">inline-block</strong>;</strong>, только для <strong>FlexBox</strong>. <a href="example_03-06/index.html">Пример.</a>
+                </p>
+            </p>
+            <p>
+                <h3 class="red">Св-ва выравнивания для FlexBox</h3>
+                <a href="example_03-07/index.html">Пример.</a>
+                <li>
+                    Сперва важно разобраться с концепцией осей: <strong>главная</strong> (<strong class="red">main axis</strong>) и <strong>поперечная</strong> (<strong class="red">cross axis</strong>).
+                </li>
+                <li>
+                    Например, если направление Flexbox-контейнера настроено <strong>на строку</strong>, <strong>главная</strong> ось будет <strong>горизонтальной</strong>, а поперечная ось — вертикальной. И наоборот, если направление настроено на столбец.
+                </li>
+                <h4>Выравнивание по поперечной оси.</h4>
+                <li>
+                    <strong class="red">align-items</strong> позиционирует элементы относительно <strong>поперечной</strong> оси.
+                </li>
+                <li>
+                    <strong class="red">align-self</strong> используется для выравнивания <strong>"себя"</strong> отдельных flex-элементов. Может иметь следующие значения:
+                    <ol>
+                        <li><strong class="blue">flex-start</strong> - заставит эл-т начинаться с начальной границы своего flex-контейнера.</li>
+                        <li><strong class="blue">flex-end</strong> - заставит эл-т выровняться по конечной границе своего flex-контейнера.</li>
+                </li>
+                <li><strong class="blue">center</strong> - заставит элемент расположиться посредине flex-контейнера.</li>
+                <li><strong class="blue">baseline</strong> - заставит все flex-элементы в контейнере выровняться по нижним строкам.</li>
+                <li><strong class="blue">stretch</strong> - заставит элементы растянуться по размеру их flex-контейнера (по поперечной оси).</li>
+                </ol>
+                </li>
+            </p>
+            <p>
+                <h4>Выравнивание по главной оси.</h4>
+                <li>
+                    <strong class="red">justify-content</strong> - отвечает за выравнивание по главной оси (<strong class="red">justify-self</strong> для эл-тов, не находящихся в flex-контейнере.). Может иметь следующие значения:
+                    <ol>
+                        <li><strong class="blue">flex-start</strong> (аналогично таким же св-вам для <strong>align-items</strong>)</li>
+                        <li><strong class="blue">flex-end</strong> (аналогично таким же св-вам для <strong>align-items</strong>)</li>
+                        <li><strong class="blue">center</strong> (аналогично таким же св-вам для <strong>align-items</strong>)</li>
+                        <li><strong class="blue">space-between</strong> - заставит распределить свободное пространство поровну между элементами.</li>
+                        <li><strong class="blue">space-around</strong> - распределит свободное пространство в равных долях вокруг элементов.</li>
+                    </ol>
+                </li>
+            </p>
+            <p>
+                <h3 class="red">Свойство <strong class="blue">flex</strong>.</h3>
+                <p>
+                    <img id="flexImg" src="../img/flex.jpg" alt="">
+                </p>
+                Cв-во <strong class="red">flex</strong> является сокращенным определением трех отдельных свойств: <strong class="red">flex-grow</strong>, <strong class="red">flex-shrink</strong> и <strong class="red">flex-basis</strong>.
+                <li>
+                    <strong class="blue">flex-grow</strong> - является величиной <strong>относительно</strong> других flex-элементов, до которой может увеличиваться flex-элемент <strong>при наличии свободного</strong> пространства.
+                </li>
+                <li>
+                    <strong class="blue">flex-shrink</strong> является величиной, до которой может уменьшаться flex-элемент <strong>относительно</strong> других flex-элементов, когда имеется <strong>дефицит</strong> пространства.
+                </li>
+                <li>
+                    <strong class="blue">flex-basis</strong> является <strong>базовым размером</strong>, к которому приводится размер flex-элемента.
+                </li>
+                <div class="vajno">
+                    <strong><strong class="red">flex</strong>: <strong class="blue">0 0 50</strong><strong class="red">px</strong>;</strong> означает, что элемент не будет ни увеличиваться, ни уменьшаться и его базовая величина составит 50px (то есть он будет иметь размер 50 пикселов независимо от величины свободного пространства)
+                </div>
+                <li>
+                    Если установить для свойства <strong class="blue">flex-shrink</strong> <strong>нулевое значение</strong>, то свойство <strong class="blue">flex-basis</strong> поведет себя как задание <strong>минимальной ширины</strong>.
+                </li>
+                <li>
+                    <strong class="red">flex</strong> можно представлять в виде способа задания отношений. Когда для каждого flex-элемента этому свойству присвоено значение <strong>1</strong>, то все они занимают <strong>одинаковое пространство</strong>.
+                </li>
+            </p>
+            <p>
+                <h3 class="red">Зафиксированный Footer.</h3>
+                <p>
+                    <a href="example_03-08/index.html">Пример.</a>
+                </p>
+                Работает за счет св-ва <strong class="red">flex</strong> <strong>со значением 1</strong>, которое применяется для <strong>контейнера</strong> с <strong>основным контентом</strong> (он находится между header и footer).
+            </p>
+            <p>
+                А так же в результате применения св-в <strong class="blue">min-height</strong>: <strong class="red">100%</strong>; для <strong class="red">body</strong> и <strong class="blue">height</strong>: <strong class="red">100%</strong> для <strong class="red">html</strong>.
+            </p>
+            <p>
+                <h3 class="red">Изменение порядка следования эл-тов</h3>
+                <p><a href="example_03-09/index.html">Пример</a></p>
+                <p>
+                    <strong class="red">order</strong> - позволяет пересмотреть порядок следования элементов внутри Flexbox.
+                    <li>
+                        <strong><strong class="red">order</strong>: -2;</strong> будет стоять на позицию выше в списке, чем <strong><strong class="red">order</strong>: -1; </strong>
+                    </li>
+                    <li>
+                        По умолчанию имеет значение <strong><strong class="red">order</strong>: 0;</strong>
+                    </li>
+                    <li>
+                        <strong class="red">flex-flow</strong>: <strong class="blue">row wrap</strong>; позволяет flex-элементам располагаться на нескольких строках. Данное свойство относится к числу <strong>наименее поддерживаемых</strong>, поэтому в зависимости от того, насколько глубоко в прошлое должна простираться поддержка вашего продукта, может понадобиться заключить содержимое и две боковые панели в другой элемент
+                    </li>
+                </p>
+            </p>
+            <p>
+                <h3 class="red">Адаптивные изображения.</h3>
+                <strong>Наиболее распространенные сценарии, для которых понадобятся адаптивные изоб-я:</strong>
+                <p>
+                    <ol>
+                        <li>
+                            Они (сценарии) будут <strong>переключать</strong> изображение, когда потребуется <strong>другое разрешение</strong>.
+                        </li>
+                        <li>
+                            Полностью менять изображение в зависимости от <strong>доступного пространства</strong> окна просмотра.
+                        </li>
+                    </ol>
+                </p>
+                <p>
+                    <strong class="red">srcset</strong>
+                    <div class="vajno">
+                    Пример:<br>
+                        &lt;img src="scones_small.jpg" srcset="scones_medium.jpg 1.5x, scones_large.jpg 2x" alt="Scones taste amazing">
+                    </div>
+                    <ol>
+                        <li>
+                            Сначала идет <strong class="blue">src</strong> и указывает на <strong>дефолтную </strong>версию изобр-я. (Которая так же будет использоваться, если браузер не поддерживает srcset)
+                        </li>
+                        <li>
+                            Далее через запятые идет список изображений из которых браузер сделает выбор.
+                        </li>
+                    </ol>
+                </p>
+                <p>
+                <strong class="red">picture</strong> (не поддерживается в IE и Opera mini) - контейнер, который содержит в себе все варианты изображений и может выводить нужное из них, в зависимости от заданного медиа запроса. 
+                </p>
+                <div class="vajno">
+                    <p>Пример использования:</p>
+                    <strong>&lt;picture>
+                            <p class="p_vajno">&lt;source <strong class="red">media</strong>="(min-width: 30em)" <strong class="red">srcset</strong>="cake-table.jpg"></p>
+                            <p class="p_vajno">&lt;source <strong class="red">media</strong>="(min-width: 60em)" <strong class="red">srcset</strong>="cake-shop.jpg"></p>
+                            <p class="p_vajno">&lt;<strong class="red">img</strong> src="scones.jpg" alt="One way or another, you WILL get cake."></p>
+                        &lt;/picture></strong>
+                        <p>
+                            Тег <strong class="red">img</strong> в данном контейнере <strong class="red">обязателен!</strong>
+                        </p>
+                </div>
+                <li>
+                    <strong class="red">picture</strong> можно использовать для отображения изображений в формате WebP (если он поддерживается браузером).
+                    <div class="vajno">
+                        Пример:
+                        <p>
+                           <strong> &lt;picture>
+                                   <p class="p_vajno">&lt;source <strong class="red">type="image/webp"</strong> srcset="scones-baby-yeah.<strong class="red">webp</strong>"></p>
+                                   <p class="p_vajno">&lt;img src="scones-baby-yeah.jpg" alt="Again, you WILL eat cake."></p>
+                               &lt;/picture></strong>
+                        </p>
+                        <strong class="red">type="image/webp"</strong> работает примерно так же, как и медиазапрос в предыдущем примере.
+                    </div>
+                </li>
+                <p>
+                    
                 </p>
             </p>
         </div>
         <!-- Конец блока с контентом -->
     </div>
+    <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
 </body>
 
 </html>

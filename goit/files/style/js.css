@@ -1,16 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
 * {
     font-family: 'Open Sans', sans-serif;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-body {
-    
 }
 
 header {
@@ -23,6 +18,7 @@ header {
 header>nav {
     position: relative;
     padding-left: 24px;
+    min-width: 860px;
     max-width: 1128px;
     margin: 0 auto;
 }
@@ -69,6 +65,10 @@ iframe {
     margin-top: 30px;
     margin-left: 100px;
 }
+details {
+    background-color: rgba(2, 142, 163, 0.15);
+    padding: 0.6rem;
+}
 #js_main_page {
     background-image: url(https://s3-us-west-2.amazonaws.com/svgporn.com/logos/javascript.svg);
     background-repeat: no-repeat;
@@ -81,31 +81,38 @@ iframe {
     margin-top: 0;
     padding: 20px;
 }
+
 div#js_main_page>div {
     display: inline-block;
     padding: 0 20px;
     margin-top: 0;
 }
+
 #js_main_page a {
     color: #2B5E50;
     text-decoration: none;
 }
+
 #js_main_page p {
     margin-top: 0;
 }
+
 #todayDate {
     font-size: 27px;
     color: red;
 }
+
 .vajno {
     padding: 20px;
     margin: 20px 100px 20px 0;
     background: #F0F1F2;
     border-radius: 0 5px 5px 0;
 }
+
 .vajno p.p_vajno {
     margin-top: 0;
 }
+
 .center {
     text-align: center;
 }
@@ -125,7 +132,7 @@ div#js_main_page>div {
 .main_cont {
     position: relative;
     padding: 20px;
-    min-width: 768px;
+    min-width: 720px;
     max-width: 1128px;
     margin: 60px auto;
     background: #E5EAF2;
@@ -168,12 +175,14 @@ div#js_main_page>div {
     background: #028EA3;
     color: white;
 }
+
 .sidebar li a:active {
     background: #ED8340;
     color: white;
     -webkit-transition: all .1s ease-in-out;
     transition: all .1s ease-in-out;
 }
+
 .content {
     position: relative;
     margin-left: 220px;
@@ -181,7 +190,7 @@ div#js_main_page>div {
     background: white;
     border-radius: 0 10px 10px 0;
     padding: 1em;
-    line-height: 30px;
+    line-height: 1.8rem;
     overflow: auto;
 }
 
@@ -195,7 +204,9 @@ h4 {
 .content div {
     margin-top: 20px;
 }
-
+#flexImg {
+    width: 300px;
+}
 .content img {
     width: 80%;
     margin-top: 20px;
@@ -203,7 +214,6 @@ h4 {
 
 .content p.img {
     text-align: center;
-    
 }
 
 .content p.img.ship {
@@ -217,9 +227,11 @@ h4 {
 .content li {
     margin-left: 20px;
 }
+
 .content a {
     color: #028EA3;
 }
+
 .knopka {
     width: 300px;
     height: 200px;
@@ -231,7 +243,7 @@ h4 {
     border-radius: 5px;
     text-align: center;
     -webkit-box-shadow: 0 0 1px rgba(55, 55, 55, 0.4);
-            box-shadow: 0 0 1px rgba(55, 55, 55, 0.4);
+    box-shadow: 0 0 1px rgba(55, 55, 55, 0.4);
 }
 
 .dla_knopki a {
@@ -242,10 +254,11 @@ h4 {
     width: 302px;
     height: 202px;
     -webkit-box-shadow: 0 0 3px rgba(55, 55, 55, 0.6);
-            box-shadow: 0 0 3px rgba(55, 55, 55, 0.6);
+    box-shadow: 0 0 3px rgba(55, 55, 55, 0.6);
     font-size: 52px;
     background: #028EA3;
 }
+
 .button1 {
     width: 170px;
     height: 50px;
@@ -256,22 +269,25 @@ h4 {
     color: white;
     font-size: 20px;
     -webkit-transition-duration: 0.4s;
-            transition-duration: 0.4s;
+    transition-duration: 0.4s;
 }
+
 .button1:hover {
     background: #4CB598;
     border: solid 3px #4CB598;
-    -webkit-box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 25px 0 rgba(0,0,0,0.19);
-            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 25px 0 rgba(0,0,0,0.19);
+    -webkit-box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 25px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 25px 0 rgba(0, 0, 0, 0.19);
 }
+
 .button1:active {
     background: #028EA3;
     border: solid 3px #028EA3;
-    -webkit-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.24), 0 12px 25px 0 rgba(0,0,0,0.19);
-            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.24), 0 12px 25px 0 rgba(0,0,0,0.19);
+    -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.24), 0 12px 25px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.24), 0 12px 25px 0 rgba(0, 0, 0, 0.19);
     -webkit-transition-duration: 0.2s;
-            transition-duration: 0.2s;
+    transition-duration: 0.2s;
 }
+
 
 /* Стили для игры про бомбу. */
 
@@ -283,8 +299,10 @@ h4 {
     height: 400px;
 }
 
-
-#bombContainer #clock, #redwire, #bluewire, #yellowwire {
+#bombContainer #clock,
+#redwire,
+#bluewire,
+#yellowwire {
     position: absolute;
 }
 
@@ -296,41 +314,46 @@ h4 {
     width: 136px;
     height: 42px;
 }
+
 .zasechka {
     visibility: visible;
 }
+
 .nozasechka {
     visibility: hidden;
 }
+
 #redwire {
-    
     top: 234px;
     left: 380px;
     width: 225px;
     height: 30px;
 }
+
 #bluewire {
-    
     top: 271px;
     left: 380px;
     width: 225px;
     height: 32px;
 }
+
 #yellowwire {
-    
     top: 320px;
     left: 380px;
     width: 225px;
     height: 35px;
 }
+
 #clock table {
     margin-left: 25px;
 }
+
 #clock td {
     height: 34px;
     font-size: 33px;
     color: #423E3B;
 }
+
 .batman {
     height: 563px;
     background-image: url("../img/batman3.png");

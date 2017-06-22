@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <link href="../style/js.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/">Старт</a>
+            <a href="https://color.adobe.com/ru/Escape-Technology-Colours-color-theme-6679213/" target="_blank">Цвет</a>
+            <a href="/">menu 3</a>
+            <a href="/">menu 4</a>
+            <a href="/">menu 5</a>
+            <span>Adaptive Web Design</span>
+        </nav>
+    </header>
+    <div class="main_cont">
+        <!-- Начало бокового меню -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="adaptive.html">Начало</a></li>
+                <li><a href="rwd_1_1.html">Глава 1</a></li>
+                <li><a href="rwd_2_1.html">Глава 2</a></li>
+                <li><a href="rwd_3_1.html">Глава 3</a></li>
+                <li><a href="rwd_4_1.html">Глава 4</a></li>
+                <li><a href="rwd_5_1.html">Глава 5</a></li>
+                <li><a href="rwd_6_1.html">Глава 6</a></li>
+                <li><a href="rwd_7_1.html">Глава 7</a></li>
+                <li><a href="rwd_8_1.html">Глава 8</a></li>
+                <li><a href="rwd_9_1.html">Глава 9</a></li>
+                <li><a href="rwd_10_1.html">Глава 10</a></li>
+                <li><a href="rwd_other.html">Разное</a></li>
+            </ul>
+        </div>
+        <!-- Конец бокового меню -->
+        <!-- Начало блока с контентом -->
+        <div class="content">
+            <h3>Глава 4</h3>
+            <h2 class="red">Использование <span class="blue">HTML5</span> в целях разработки адаптивного веб-дизайна.</h2>
+            <p>
+                <li>
+                    <strong class="red">lang="<strong class="blue">en</strong>"</strong> указывает основной язык <strong>содержимого</strong> элементов и любого из атрибутов элемента, <strong>содержащего текст</strong>. Если вы не пишете страницы на английском, то лучше указать правильный код языка. Для русского указывается <strong class="blue">ru</strong>.
+                </li>
+            </p>
+            <p>
+                <li>
+                    В <strong class="red">&lt;a></strong> можно заключать целые наборы других тегов. Например, <strong class="red">&lt;h1></strong> + <strong class="red">&lt;p></strong> + <strong class="red">&lt;img></strong>. Но есть и иключения: <strong>другой</strong> тег <strong>&lt;a></strong>, <strong>&lt;button></strong>, или какие либо <strong>формы</strong>.
+                </li>
+            </p>
+            <p>
+                <li>
+                    <strong class="red">&lt;main></strong> - представляет собой блок основного содержимого страницы, <strong>включает</strong> <strong>уникальную</strong> для этой страницы информацию и <strong>исключает</strong> содержимое, <strong>повторяющееся</strong> в наборе документов, например, навигационные ссылки, информация об авторском праве, логотипы и баннеры сайта и формы для поиска данных (если только основной функцией документа или приложения не является именно поиск данных)».
+                    <li>
+                        На странице не может быть несколько блоков <strong class="red">&lt;main></strong>. А так же <strong class="red">&lt;main></strong> не может быть "<strong>ребенком</strong>" относительно <strong class="blue">article</strong>, <strong class="blue">aside</strong>, <strong class="blue">header</strong>, <strong class="blue">footer</strong>, <strong class="blue">nav</strong> и <strong class="blue">header</strong>, но вполне может являться их <strong>родителем</strong>.
+                    </li>
+                </li>
+            </p>
+            <p>
+                <li>
+                    <strong class="red">&lt;section></strong> подходит для таких элементов страницы, как элементы списка новостей, элементы списка товаров в каталоге, переключающихся табов. Т.е. для подобных друг-другу элементов и блоков в одном родителе и имеющих <strong>заголовки</strong>. Так же section может использоваться для разбиения текста на части. Например главы. Использование section как аналога article - неправильно и противоречит спецификации. (Т.е. проще говоря section это аналог тега li только для блоков страницы).
+                </li>
+            </p>
+            <p>
+                <li>
+                    <strong class="red">&lt;article></strong> - контейнер для <strong>законченных</strong> фрагментов содержимого.
+                </li>
+            </p>
+            <div class="vajno">
+                Пример разницы:
+                <p class="p_vajno"><strong class="red">&lt;article></strong> - статья</p>
+                <p class="p_vajno"><strong class="red">&lt;section></strong> - кусок этой статьи или любой кусок некоторого целого материала.</p>
+            </div>
+            <p>
+                <li>
+                    <strong class="red">&lt;nav></strong> используется в качестве контейнера основных <strong>навигационных</strong> ссылок на другие страницы или фрагменты внутри той же самой страницы.
+                </li>
+            </p>
+            <p>
+                <li>
+                    <strong class="red">&lt;aside></strong> - контейнер, который можно использовать в качесте <strong>сайдбара</strong>, блоков <strong>рекламы</strong>, <strong>цитат</strong>, или блока «клиенты, купившие этот товар, приобрели также...»
+                </li>
+            </p>
+            <p>
+                <li>
+                    <strong class="red">&lt;figure></strong> используется для группирования любых элементов, например, изображений и подписей к ним.
+                </li>
+                <li>
+                    <strong class="red">&lt;figcaption></strong> пригодится тогда, когда изображениям или коду нужны небольшие <strong>сопроводительные подписи</strong>, которые не будут соответствовать основному тексту содержимого.
+                </li>
+            </p>
+            <p>
+                <li>
+                    <details>
+                        <summary> <strong class="red">&lt;details></strong> и <strong class="red">&lt;summary></strong> (при нажатии на эту "ссылку" откроется описание)</summary>
+                        <p>Является чем-то вроде <strong>spoiler</strong>'а. При этом <strong class="red">&lt;details></strong> - используется для хранения информации, которую можно скрыть или показать по требованию пользователя. <strong class="red">&lt;summary></strong> заголовок для тега <strong class="red">&lt;details></strong>, по которому можно щелкать для разворачивания/сворачивания информации. Не поддерживает (без использования JS) анимацию. Не поддерживается в IE и Opera Mini. Пример естественно в коде этой страницы.</p>
+                    </details>
+                    <div class="vajno">
+                        Чтобы сменить или убрать стандартную иконку нужно прописать:
+                        <strong>
+            			    <p class="p_vajno"><strong class="red">summary</strong>::<strong class="blue">-webkit-details-marker</strong> {</p>
+            				<p class="p_vajno"><strong class="red">display</strong>: <strong class="blue">none</strong>;</p>
+            				<p class="p_vajno">}</p>
+            		    </strong>
+                    </div>
+                </li>
+            </p>
+            <p>
+            	<li>
+            		<strong class="red">&lt;header></strong> используется как хедер основной страницы, но не только. Его можно использовать <strong>не ограниченное</strong> кол-во раз на странице, например, внутри каждого элемента <strong class="red">&lt;section></strong>
+
+            	</li>
+            </p>
+            <p>
+            	<li>
+            		 <strong class="red">&lt;footer></strong> так же можно использовать, как для "подвала" основной страницы, так и в качестве подвальной части отдельной публикации.
+            	</li>
+            </p>
+            <p>
+            	<li>
+            		<strong class="red">&lt;address></strong> предназначен для хранения информации об авторе и может включать в себя любые элементы HTML вроде ссылок, текста, выделений и т.д. Планируется, что поисковые системы будут анализировать содержимое этого тега для сбора информации об авторах сайтов.
+            	</li>
+            </p>
+        </div>
+        <!-- Конец блока с контентом -->
+    </div>
+    <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+</body>
+
+</html>

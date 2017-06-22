@@ -5,7 +5,7 @@ function startCounter() {
         model.counter--;
 
         var time;
-        if (model.counter.length < 1) {
+        if (model.counter.length < 10) {
             time = "0" + model.counter;
         } else {
             time = model.counter;

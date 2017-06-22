@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+img {
+	border-radius: 5px;
+}
+p.dimon {
+	text-align: center;
+}
+h1, h2, h3, h4, h5 {
+	text-align: center;
+}
+
+.content {
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+	width: 960px;
+	margin: 0 auto;
+}
+
+#bombContainer {
+	position: relative;
+    background-image: url("../img/time_bomb.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 70%;
+    -background-color: gray;
+    height: 30rem;
+}
+
+#clock {
+	position: relative;
+    left: 52.1%;
+    top: 16%;
+    font-family: 'Orbitron', sans-serif;
+    width: 19.3%;
+    height: 11.9%;
+    background: rgba(53, 200, 60, 0.2);
+    border-radius: 2px;
+}
+
+#redwire, #bluewire, #yellowwire {
+	position: relative;
+	1background: rgba(53, 200, 60, 0.3);
+	height: 9%;
+	width: 31%;
+}
+#redwire, #bluewire, #yellowwire:hover {
+	cursor: help;
+}
+
+#redwire {
+	left: 43.1%;
+    top: 31%;
+}
+#bluewire{
+	left: 43.1%;
+    top: 32%;
+}
+#yellowwire {
+	left: 43.1%;
+    top: 37%;
+}
+
+#clock table {
+   position: relative;
+   top: 6%;
+   left: 15%;
+}
+
+#clock td {
+    font-size: 2.2rem;
+    color: #423E3B;
+}
+
+.zasechka {
+    visibility: visible;
+}
+
+.nozasechka {
+    visibility: hidden;
+}
