@@ -22,7 +22,7 @@
         <!-- Начало бокового меню -->
         <div class="sidebar">
             <ul>
-                <li><a href="adaptive.html">Начало</a></li>
+                <li><a href="rwd.html">Начало</a></li>
                 <li><a href="rwd_1_1.html">Глава 1</a></li>
                 <li><a href="rwd_2_1.html">Глава 2</a></li>
                 <li><a href="rwd_3_1.html">Глава 3</a></li>
@@ -41,6 +41,11 @@
         <div class="content">
             <h3>Глава 4</h3>
             <h2 class="red">Использование <span class="blue">HTML5</span> в целях разработки адаптивного веб-дизайна.</h2>
+            <p>
+                <li>
+                    <a href="example_04-01/index.html">Практическое применение эл-тов HTML5.</a>
+                </li>
+            </p>
             <p>
                 <li>
                     <strong class="red">lang="<strong class="blue">en</strong>"</strong> указывает основной язык <strong>содержимого</strong> элементов и любого из атрибутов элемента, <strong>содержащего текст</strong>. Если вы не пишете страницы на английском, то лучше указать правильный код языка. Для русского указывается <strong class="blue">ru</strong>.
@@ -101,35 +106,80 @@
                     <div class="vajno">
                         Чтобы сменить или убрать стандартную иконку нужно прописать:
                         <strong>
-            			    <p class="p_vajno"><strong class="red">summary</strong>::<strong class="blue">-webkit-details-marker</strong> {</p>
-            				<p class="p_vajno"><strong class="red">display</strong>: <strong class="blue">none</strong>;</p>
-            				<p class="p_vajno">}</p>
-            		    </strong>
-                    </div>
+                            <p class="p_vajno"><strong class="red">summary</strong>::<strong class="blue">-webkit-details-marker</strong> {</p>
+            <p class="p_vajno"><strong class="red">display</strong>: <strong class="blue">none</strong>;</p>
+            <p class="p_vajno">}</p>
+            </strong>
+            </div>
+            </li>
+            </p>
+            <p>
+                <li>
+                    <strong class="red">&lt;header></strong> используется как хедер основной страницы, но не только. Его можно использовать <strong>не ограниченное</strong> кол-во раз на странице, например, внутри каждого элемента <strong class="red">&lt;section></strong>
                 </li>
             </p>
             <p>
-            	<li>
-            		<strong class="red">&lt;header></strong> используется как хедер основной страницы, но не только. Его можно использовать <strong>не ограниченное</strong> кол-во раз на странице, например, внутри каждого элемента <strong class="red">&lt;section></strong>
-
-            	</li>
+                <li>
+                    <strong class="red">&lt;footer></strong> так же можно использовать, как для "подвала" основной страницы, так и в качестве подвальной части отдельной публикации.
+                </li>
             </p>
             <p>
-            	<li>
-            		 <strong class="red">&lt;footer></strong> так же можно использовать, как для "подвала" основной страницы, так и в качестве подвальной части отдельной публикации.
-            	</li>
+                <li>
+                    <strong class="red">&lt;address></strong> предназначен для хранения информации об авторе и может включать в себя любые элементы HTML вроде ссылок, текста, выделений и т.д. Планируется, что поисковые системы будут анализировать содержимое этого тега для сбора информации об авторах сайтов.
+                </li>
             </p>
             <p>
-            	<li>
-            		<strong class="red">&lt;address></strong> предназначен для хранения информации об авторе и может включать в себя любые элементы HTML вроде ссылок, текста, выделений и т.д. Планируется, что поисковые системы будут анализировать содержимое этого тега для сбора информации об авторах сайтов.
-            	</li>
+                <h3 class="red">Добавление видео и аудио средствами HTML5.</h3>
+                <p>
+                    <li>
+                        Повсеместной поддержкой как на обычных, так и на мобильных платформах пользуется формат <strong class="red">MP4</strong>.
+                    </li>
+                    <li>
+                        <strong class="red">&lt;video></strong><strong>Текст</strong><strong class="red">&lt;/video></strong> для видео, <strong class="red">&lt;audio></strong><strong>Текст</strong><strong class="red">&lt;/audio></strong> для аудио. <strong>Текст</strong> заключенный в эти теги будет выводиться, <strong>если</strong> с загрузкой аудио/видео возникли какие либо <strong>проблемы</strong> (у меня почему-то не работает).
+                    </li>
+                    <details>
+                        <summary>Instinkt and DJ Mrki - One With Music (OFFICIAL VIDEO)</summary>
+                        <p style="text-align: center;">
+                            <video src="../video/Instinkt & DJ Mrki - One With Music (OFFICIAL VIDEO).mp4" width="640" height="480" controls preload="auto" poster="../img/One With Music.jpg">Instinkt DJ Mrki - One With Music (OFFICIAL VIDEO)</video>
+                        </p>
+                    </details>
+                </p>
+                <p>
+                    <li>
+                        <strong class="red">width</strong>/<strong class="red">height</strong> - ну тут все понятно.
+                    </li>
+                    <li>
+                        <strong class="red">controls</strong> - этот атрибут добавляет кнопки управления, без которых медиафайл просто не запустить.
+                    </li>
+                    <li>
+                        <strong class="red">autoplay</strong> - атрибут для автоматического запуска медиафайла после загрузки страницы.
+                    </li>
+                    <li>
+                        <strong class="red">preload="auto";</strong> - для управления предварительной загрузкой медиа.
+                    </li>
+                    <li>
+                        <strong class="red">loop</strong> для залупирования медиа.
+                    </li>
+                    <li>
+                        <strong class="red">poster</strong> определяет заставку для видео.
+                    </li>
+                </p>
+            </p>
+            <p>
+                <h3 class="red">Адаптивное HTML5-видео и iFrames.</h3> Чтобы видео, заключенное в тег <strong class="red">&lt;video></strong> было адаптивным, нужно удалить из атрибутов строгие размеры высоты/ширины и вместо них добавить: <strong><strong class="red">max-width</strong>: 100%; <strong class="red">height</strong>: auto;</strong>
+            </p>
+            <details>
+                <summary>Instinkt and DJ Mrki - One With Music (OFFICIAL VIDEO)</summary>
+                <p style="text-align: center;">
+                    <video class="adaptiveVideo" src="../video/Instinkt & DJ Mrki - One With Music (OFFICIAL VIDEO).mp4" controls preload="auto" poster="../img/One With Music.jpg">Instinkt DJ Mrki - One With Music (OFFICIAL VIDEO)</video>
+                </p>
+            </details>
+            <p>
+                Пример адаптивности для <strong class="red">iFrame</strong> (Видео с Ютуб), описан на странице 112.
             </p>
         </div>
         <!-- Конец блока с контентом -->
     </div>
-    <script>
-    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
-    </script>
 </body>
 
 </html>

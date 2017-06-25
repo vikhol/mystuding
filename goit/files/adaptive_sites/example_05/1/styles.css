@@ -1,0 +1,13 @@
+.columns1 {
+	padding: 1rem;
+	background-color: rgba(2, 142, 163, 0.15);
+
+/* Минимальная ширина колонок */
+	column-width: 10em;
+/* Максимальное кол-во колонок */	
+	column-count: 4;
+
+	column-gap: 2em;
+/* Разделительная линия между колонок */
+	column-rule: thin dotted #999;
+}

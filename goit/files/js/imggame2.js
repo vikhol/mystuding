@@ -39,6 +39,7 @@ window.onload = function() {
 function showAnswer(eventObj) {
     var image = eventObj.target;
     var name = image.id;
+    console.log(image);
     name = name + ".jpg";
     image.src = "../img/" + name;
 //setTimeout может не только запускать ф-ии, но и передавать им аргументы (image)  

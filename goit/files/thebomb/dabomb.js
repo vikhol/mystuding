@@ -1,7 +1,15 @@
-window.onload = startCounter;
+window.onload = function() {
+	var wires = document.getElementsByClassName("wire");
+	for (var i = 0; i < wires.length; i++) {
+        wires[i].onclick = checkWire;
+    }
+	startCounter();
+}
+
 var counter = 30;
 var tick = true;
 var wires = ["", "", ""];
+
 
 function startGame() {
     
@@ -40,8 +48,10 @@ function displayClock(time, tick) {
 }
 
 //Проверка провода. Срабатывает по клику на проводе.
-function checkWire() {
+function checkWire(eventObj) {
     console.log("Проверка провода");
+    var checked = eventObj.target;
+    console.log(checked);
 }
 
 function boom() {
