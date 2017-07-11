@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>JavaScript</title>
+    <title>Adaptive</title>
     <link href="../style/js.min.css" rel="stylesheet">
 </head>
 
@@ -18,6 +18,11 @@
             <span>Adaptive Web Design</span>
         </nav>
     </header>
+    <a href="#">
+        <div id="upward">
+            <img src="../icon/hand.svg" alt="up-arrow" class="up_arrow">
+        </div>
+    </a>
     <div class="main_cont">
         <!-- Начало бокового меню -->
         <div class="sidebar">
@@ -43,28 +48,244 @@
                 <h3>Глава 5</h3>
                 <h2 class="red">CSS3. Селекторы, разметка, цветовые режимы и новые возможности</h2>
                 <section>
-                	<h3 class="red">Многоколоночная разметка для адаптивных конструкций.</h3>
-                	<p><a href="example_05/1/index.html">Пример</a></p>
-                	<li>
-                		<strong><strong class="red">column-width</strong>: <strong class="blue">12em</strong>;</strong> - задаст <strong>минимальную</strong> ширину колонок. <strong>Кол-во</strong> колонок бедет <strong>меняться</strong> в зависимости от <strong>ширины</strong> блока - родителя.
-                	</li>
-                	<li>
-                		<strong><strong class="red">column-count</strong>: <strong class="blue">4</strong>;</strong> - задает <strong>максимальное</strong> кол-во колонок.
-                	</li>
-                	<li>
-                		<strong><strong class="red">column-gap</strong>: <strong class="blue">2em</strong>;</strong> -  <strong>расстояние</strong> между колонками.
-                	</li>
-                	<li>
-                		<strong><strong class="red">column-rule</strong>: <strong class="blue">thin dotted #999;</strong>;</strong> - настраивает <strong>разделитель</strong> для колонок.
-                	</li>
+                    <h3 class="red">Многоколоночная разметка для адаптивных конструкций.</h3>
+                    <p><a href="example_05/1/index.html">Пример</a></p>
+                    <li>
+                        <strong><strong class="red">column-width</strong>: <strong class="blue">12em</strong>;</strong> - задаст <strong>минимальную</strong> ширину колонок. <strong>Кол-во</strong> колонок бедет <strong>меняться</strong> в зависимости от <strong>ширины</strong> блока - родителя.
+                    </li>
+                    <li>
+                        <strong><strong class="red">column-count</strong>: <strong class="blue">4</strong>;</strong> - задает <strong>максимальное</strong> кол-во колонок.
+                    </li>
+                    <li>
+                        <strong><strong class="red">column-gap</strong>: <strong class="blue">2em</strong>;</strong> - <strong>расстояние</strong> между колонками.
+                    </li>
+                    <li>
+                        <strong><strong class="red">column-rule</strong>: <strong class="blue">thin dotted #999;</strong>;</strong> - настраивает <strong>разделитель</strong> для колонок.
+                    </li>
                 </section>
                 <section>
-                	<h3 class="red">Перенос слов на новые строки. (стр.112)</h3>
+                    <h3 class="red">Перенос слов на новые строки. (стр.119)</h3>
+                    <p>
+                        Если длинная ссылка (или еще какая-нибудь строка) <strong>не влезает</strong> в ширину своего блока и выходит за его пределы, то для этого блока можно объявить CSS-правило: <strong><strong class="red">word-wrap</strong>: <strong class="blue">break-word</strong>; </strong>
+                    </p>
+                    <details>
+                        <summary>Пример</summary>
+                        <div class="vajno" style="width: 100px;">
+                            <p class="p_vajno">
+                                <strong>До</strong>
+                            </p>
+                            <a href="https://color.adobe.com/ru/Escape-Technology-Colours-color-theme-6679213/">https://color.adobe.com/ru/Escape-Technology-Colours-color-theme-6679213/</a>
+                        </div>
+                        <div class="vajno" style="width: 100px; word-wrap: break-word;">
+                            <p class="p_vajno">
+                                <strong>После</strong>
+                            </p>
+                            <a href="https://color.adobe.com/ru/Escape-Technology-Colours-color-theme-6679213/">https://color.adobe.com/ru/Escape-Technology-Colours-color-theme-6679213/</a>
+                        </div>
+                    </details>
+                </section>
+                <section>
+                    <h3 class="red">Создание панелей, прокручивающихся по горизонтали</h3>
+                    <p>
+                        <a href="example_05/2/index.html">Пример</a>
+                        <li>
+                            В данном примере <strong><strong class="red">white-space</strong>: <strong class="blue">nowrap</strong>;</strong> предписывает браузеру не переносить эл-ты на новую строку при обнаружении пробельного символа.
+                        </li>
+                        <li>
+                            <strong><strong class="red">display</strong>: <strong class="blue">inline-flex</strong>;</strong> используется для выстраивания эл-тов в ряд.
+                        </li>
+                    </p>
+                    <p>
+                    </p>
+                </section>
+                <section>
+                    <h3 class="red">Запросы возможностей (feature queries).</h3>
+                    <p>
+                        <strong class="red">@supports</strong> позволяет задать условия выполнения объявления, основанные на возможностях конкретного браузера.
+                    </p>
+                    <details>
+                        <summary>Пример 1</summary>
+                        <p>
+                            Если браузер <strong>поддерживает</strong> технологию <strong>flex</strong>, то выполняется код объявления.
+                        </p>
+                        <strong>
+                            <p class="p_vajno"><strong class="red">@supports</strong> (display: flex) {</p>
+                        <p class="p_vajno">.Item {</p>
+                        <p class="p_vajno">display: inline-flex;</p>
+                        <p class="p_vajno">}</p>
+                        <p class="p_vajno">}</p>
+                        </strong>
+                    </details>
+                    <details>
+                        <summary>Пример 2</summary>
+                        <p>
+                            Если браузер <strong>не поддерживает</strong> технологию <strong>flex</strong>, то выполняется код объявления.
+                        </p>
+                        <strong>
+                            <p class="p_vajno"><strong class="red">@supports not</strong> (display: flex) {</p>
+                        <p class="p_vajno">.Item {</p>
+                        <p class="p_vajno">display: inline-block;</p>
+                        <p class="p_vajno">}</p>
+                        <p class="p_vajno">}</p>
+                        </strong>
+                    </details>
+                    <p>В примерах выше один блок кода определяется на случай поддержки возможности, а другой — на случай отсутствия такой поддержки.</p>
+                    <p>
+                        <h4>Комбинирование условий</h4>
+                        <p>Можно задать сразу несколько условий!</p>
+                        <details>
+                            <summary>Пример 1</summary>
+                            <p>
+                                Строгое соответствие.
+                            </p>
+                            <strong>
+                            <p class="p_vajno"><strong class="red">@supports</strong> ((display: flex) <strong class="red">and</strong> (pointer: coarse)) {</p>
+                    <p class="p_vajno">.Item {</p>
+                    <p class="p_vajno">display: inline-block;</p>
+                    <p class="p_vajno">}</p>
+                    <p class="p_vajno">}</p>
+                    </strong>
+                    </details>
+                    <details>
+                        <summary>Пример 2</summary>
+                        <p>
+                            Строгое соответствие + <strong class="red">or</strong>
+                        </p>
+                        <strong>
+                            <p class="p_vajno"><strong class="red">@supports</strong> ((display: flex) <strong class="red">and</strong> (pointer: coarse)) <strong class="red">or</strong> (transform:translate3d(0, 0, 0)) {</p>
+                        <p class="p_vajno">.Item {</p>
+                        <p class="p_vajno">display: inline-block;</p>
+                        <p class="p_vajno">}</p>
+                        <p class="p_vajno">}</p>
+                        </strong>
+                    </details>
+                    </p>
+                    <li>
+                        <strong><strong class="red">@supports</strong> вообще не поддерживается в IE</strong>, поэтому лучше использовать <strong class="red">Modernizr</strong>.
+                    </li>
+                </section>
+                <section>
+                    <h3 class="red">Modernizr</h3>
+                    <a href="https://habrahabr.ru/post/144352/">Статья на хабре про Modernizr.</a>
+                    <p>
+                        <strong class="red">Modernizr</strong> - JS библиотека, которая тестирует браузер на наличие определенных возможностей. После проверки Modernizr добавляет в корневому тегу <strong>html</strong> соответствующие теги.
+                    </p>
+                </section>
+            </article>
+            <article>
+                <h2 class="red">Новые селекторы в CSS3 и порядок их использования</h2>
+                <section>
+                    <h3 class="red">Селекторы атрибутов в CSS3 (c.126)</h3>
+                    <p>
+                        <li>
+                            <strong><strong class="red">img</strong><strong class="blue">[alt]</strong> { width: 20rem; }</strong> - применит стиль к каждому <strong>img</strong>, у которого есть атрибут <strong>alt</strong>.
+                        </li>
+                        <li>
+                            <strong><strong class="red">img</strong><strong class="blue">[alt="sausages"]</strong> { width: 20rem; }</strong> применит стили только к тем эл-там <strong>img</strong>, которые имеют атрибут <strong>alt</strong> со значением <strong>sausages</strong>.
+                        </li>
+                        <li>
+                            <strong><strong class="blue">[alt]</strong> { width: 20rem; }</strong> - применит стили к <strong>любым</strong> эл-там, у которых имеется атрибут <strong>alt</strong>.
+                        </li>
+                        <li>
+                            <strong>[<strong class="blue">alt</strong><strong class="red">*</strong>="<strong class="blue">cream</strong>"] { // Cтили }</strong>. - В этом примере,
+                            <strong class="red">*</strong> означает, что атрибут "содержит" в себе это слово. Например <strong>&lt;img src="п/к/ф" <strong class="blue">alt</strong>="this <strong class="red">cream</strong> pie"></strong>
+                        </li>
+                        <li>
+                            <strong><strong class="red">img</strong>[<strong class="blue">alt</strong><strong class="red">^</strong>="<strong class="blue">film</strong>"] { // Стили }</strong> - селектор по подстроке атрибута, которая находится <strong>в начале</strong>.
+                        </li>
+                        <li>
+                            <strong>[<strong class="blue">alt</strong><strong class="red">$</strong>="<strong class="blue">jam</strong>"] { // Стили }</strong> - селектор по подстроке находящейся <strong>в конце</strong>.
+                        </li>
+                    </p>
+                    <p>
+                        <h3 class="red">Структурные псевдоклассы CSS3</h3>
+                        <p>
+                            <li>
+                                <strong class="red">:first-child</strong> и <strong class="red">:last-child</strong> (просто чтобы не забыть)
+                            </li>
+                        </p>
+                        <p>
+                            <h4 class="red">nth-child</h4>
+                            <strong class="red">:nth-child</strong> используется для добавления стиля к элементам на основе нумерации в дереве элементов.
+                            <li>
+                                может иметь следующие значения:
+                                <ol>
+                                    <li>
+                                        <strong class="blue">odd</strong> - все нечетные номера элементов.
+                                    </li>
+                                    <li>
+                                        <strong class="blue">even</strong> - все четные номера элементов.
+                                    </li>
+                                    <li>
+                                        <strong class="blue">число</strong> - порядковый номер дочернего элемента относительно своего родителя. Нумерация начинается с 1, это будет первый элемент в списке.
+                                    </li>
+                                    <li>
+                                        <strong class="blue">выражение</strong> - задается в виде an+b, где a и b целые числа, а n — счетчик, который автоматически принимает значение 0, 1, 2... Например, <strong>3n+2</strong> выберет <strong>2, 5, 8, 11, 14</strong> и т.д.
+                                    </li>
+                                </ol>
+                            </li>
+                        </p>
+                        <p>
+                            <li>
+                                :<strong class="red">nth-last-child</strong>(<strong class="blue">-n+3</strong>) - сперва выберет третий эл-т <strong>с конца</strong>, а затем все эл-ты после него.
+                            </li>
+                        </p>
+                    </p>
+                    <p>
+                        <h4>Селектор отрицания (<strong class="red">:not</strong>)</h4>
+                        <p>
+                            <strong class="blue">div</strong><strong class="red">:not</strong>(<strong class="blue">.not-me</strong>) { // Стили } - применит стили ко всем эл-там div, которые <strong>не</strong> содержат класс <strong class="blue">.not-me</strong>
+                        </p>
+                    </p>
+                    <p>
+                        <h4>Еще селекторы</h4>
+                        <li>
+                            <strong class="red">:first-line</strong> - используется для изменения цвета первой строки, видимо на экране. При изменении ширины экрана, первая строка так же будет изменяться.
+                        </li>
+                        <li>
+                            <strong class="red">:first-letter</strong> - первая буква.
+                        </li>
+                    </p>
+                    <p>
+                        <h3>CSS-функция  <span class="red">calc</span></h3>
+                        <li>
+                            <strong class="red">calc()</strong> - функция, используемая для <strong>арифметических</strong> операций в коде CSS. Например, .thing { <strong class="red">width</strong>: <strong class="blue">calc(50% - 10px)</strong>; } - задаст для thing ширину 50% и вычтет из нее 10px. <strong>Не работает в Android 4.3</strong> и ниже.
+                        </li>
+                        <li>
+                            Поддерживаются сложение, вычитание, деление и умножение.
+                        </li>
+                    </p>
+                    <p>
+                        <h3>Адаптивные меры длины <span class="red">(vmax, vmin, vh, vw)</span></h3>
+                        <p>
+                            В CSS имеются единицы измерения, выражаемые <strong>относительно</strong> размеров <strong>окна просмотра</strong>. Каждая единица измерения представляет собой <strong>процентное</strong> отношение к длине окна просмотра.
+                        </p>
+                        <p>
+                            <li><strong class="red">vh</strong> - для высоты окна просмотра.</li>
+                            <li><strong class="red">vw</strong> - для ширины окна просмотра.</li>
+                            <li><strong class="red">vmin</strong> -  для минимального размера окна просмотра, равна самому малому значению — либо vw, либо vh;</li>
+                            <li><strong class="red">vmax</strong> -  для максимального размера окна просмотра, равна самому большому значению — либо vw, либо vh.</li>
+                        </p>
+                    </p>
+                    <p>
+                        <h3><span class="captureit">CSS-правило</span> <span class="red">@font-face</span></h3>
+                        <ol>
+                            <li>Сперва объявляется <strong class="red">@font-face</strong> и открываются фигурные скобки.</li>
+                            <li>В них записывается название шрифта, например, <strong class="red">font-family</strong>: <strong class="blue">Capture_it</strong>;</li>
+                            <li>И задается путь к файлу шрифтов. Например, <strong class="red">src</strong>: <strong class="blue">url</strong><strong>(../fonts/Capture_it.ttf);</strong></li>
+                        </ol>
+                    </p>
+                    <p>
+                        <h3 class="red">Масштафирование текста относительно размеров окна просмотра.</h3>
+                        <a href="example_05/3/index.html">Пример</a>
+                    </p>
                 </section>
             </article>
         </div>
         <!-- Конец блока с контентом -->
     </div>
+    <footer>
+    </footer>
     <script>
     document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
     </script>

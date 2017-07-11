@@ -1,0 +1,10 @@
+.bg_multi {
+	height: 100vh;
+	width: 100vw;
+	background: url("rosetta.png"),
+				url("moon.png"),
+				url("stars.jpg");
+	background-size: 75vmax, 50vw, cover;	
+	background-position: top 20vh left 10vw, top 5vh left 5vw, top center;
+	background-repeat: no-repeat;		
+}

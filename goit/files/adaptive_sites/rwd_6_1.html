@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Adaptive</title>
+    <link href="../style/js.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/">Старт</a>
+            <a href="https://color.adobe.com/ru/Escape-Technology-Colours-color-theme-6679213/" target="_blank">Цвет</a>
+            <a href="/">menu 3</a>
+            <a href="/">menu 4</a>
+            <a href="/">menu 5</a>
+            <span>Adaptive Web Design</span>
+        </nav>
+    </header>
+    <a href="#">
+        <div id="upward">
+            <img src="../icon/hand.svg" alt="up-arrow" class="up_arrow">
+        </div>
+    </a>
+    <div id="wrapper">
+        <!-- Начало бокового меню -->
+        <aside>
+            <nav>
+                <a href="rwd.html">Начало</a>
+                <a href="rwd_1_1.html">Глава 1</a>
+                <a href="rwd_2_1.html">Глава 2</a>
+                <a href="rwd_3_1.html">Глава 3</a>
+                <a href="rwd_4_1.html">Глава 4</a>
+                <a href="rwd_5_1.html">Глава 5</a>
+                <a href="rwd_6_1.html">Глава 6</a>
+                <a href="rwd_7_1.html">Глава 7</a>
+                <a href="rwd_8_1.html">Глава 8</a>
+                <a href="rwd_9_1.html">Глава 9</a>
+                <a href="rwd_10_1.html">Глава 10</a>
+                <a href="rwd_other.html">Разное</a>
+            </nav>
+        </aside>
+        <!-- Конец бокового меню -->
+        <!-- Начало блока с контентом -->
+        <main>
+            <article>
+                <h3>Глава 6</h3>
+                <h2 class="red">Создание эстетически привлекательных эффектов средствами CSS3</h2>
+                <p>
+                    <strong>Краткий список тем:</strong>
+                </p>
+                <p>
+                    <ol class="margin20">
+                        <li>создание с помощью CSS <strong>теней для текста</strong>;</li>
+                        <li>создание с помощью CSS <strong>теней для блоков</strong>;</li>
+                        <li>создание с помощью CSS <strong>градиентных фонов</strong>;</li>
+                        <li>использование с помощью CSS <strong>нескольких фонов</strong>;</li>
+                        <li>использование градиентных фонов CSS3 для <strong>создания узоров</strong>;</li>
+                        <li>реализация <strong>фоновых изображений с высоким разрешением</strong> с помощью медиазапросов;</li>
+                        <li>использование <strong>фильтров</strong> CSS и их влияние на производительность.</li>
+                    </ol>
+                </p>
+                <section>
+                    <h3 class="red">Создание теней для текста средствами CSS3</h3>
+                    <p>
+                        <li><strong class="red">text-shadow</strong> - св-во, отвечающее за тень текста.</li>
+                        <p class="big_text shadow_for_text">
+                            Пример текста с тенью.
+                        </p>
+                        <p>
+                            <li>
+                                В кратком описании св-в задаются несколько параметров:
+                                <ol>
+                                    <li>Смещение по вертикали</li>
+                                    <li>Смещение по горизонтали</li>
+                                    <li>Размытие</li>
+                                    <li>Цвет тени</li>
+                                </ol>
+                            </li>
+                        </p>
+                        <p>
+                            В итоге CSS-правило выглядит следующим образом: <strong class="blue">text-shadow</strong>: <strong>4</strong><strong class="red">px</strong> <strong>4</strong><strong class="red">px</strong> <strong>2</strong><strong class="red">px</strong> <strong class="blue">#dad7d7</strong>;
+                        </p>
+                        <p>
+                            <li>
+                                Можно задать несколько теней, разделив значения запятой(ми). Например, <strong class="blue">text-shadow</strong>: <strong>0</strong><strong class="red">px</strong> <strong>1</strong><strong class="red">px</strong> <strong class="blue">#fff</strong><strong class="red">,</strong> <strong>4</strong><strong class="red">px</strong> <strong>4</strong><strong class="red">px</strong> <strong>0</strong><strong class="red">px</strong> <strong class="blue">#dad7d7</strong>;
+                            </li>
+                        </p>
+                        <p>
+                            <li>Если размытие не нужно, то его можно и вовсе не записывать.</li>
+                        </p>
+                        <p>
+                            <li>Так же можно задать размеры используя <strong class="red">rem</strong>, а для цвета воспользоваться <strong class="red">rgba</strong>.</li>
+                        </p>
+                        <li>
+                            Для <strong>эстетической</strong> привлекательности лучше все-таки пользоваться размерами в <strong>пикселях</strong> и задавать значения в пределах <strong>1-2 px.</strong>
+                        </li>
+                    </p>
+                    <p>
+                        <h3>Тени для блоков <strong class="red">box-shadow</strong></h3>
+                        <li>
+                            Тени для блоков работают по тому же принципу, и имеют те же параметры, что и тени текста (см. выше) + параметр протяженности/распространения (<strong class="red">spread</strong>).
+                        </li>
+                        <li>
+                            Для блоков можно задать <strong>внутреннюю</strong> тень. Для этого значения должны начинаться со слова <strong class="red">inset</strong>
+                        </li>
+                        <div class="shadowblock_1">
+                            <p>Тень снаружи.</p>
+                            <p>box-shadow: 0px 3px 5px -6px #444;</p>
+                        </div>
+                        <div class="shadowblock_2">
+                            <p>Тень внутри.</p>
+                            <p>box-shadow: inset 0 0 10px #444;</p>
+                        </div>
+                    </p>
+                    <p>
+                        <li>
+                            Если задать параметру протяженности/распространения (<strong class="red">spread</strong>) отрицательное значение, то тень как бы <strong>задвинется</strong> внутрь, под объект (пример выше - 1 блок).
+                        </li>
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        <h3 class="red">Использование нескольких фоновых изображений</h3>
+                        <a href="example_06/1/index.html">Пример</a>
+                        <p>В одном блоке можно использовать сразу несколько фоновых изображений.</p>
+                        <details>
+                            <summary>Они записываются через запятую:</summary>
+                            <p class="p_vajno">.bg {</p>
+                            <p class="p_vajno">&ensp;background:</p>
+                            <p class="p_vajno">&emsp;url('../img/1.png'),</p>
+                            <p class="p_vajno">&emsp;url('../img/2.png'),</p>
+                            <p class="p_vajno">&emsp;url('../img/3.png');</p>
+                            <p class="p_vajno">}</p>
+                        </details>
+                    </p>
+                    <p>
+                        <li>
+                            Первое в списке изображение будет самым верхним.
+                        </li>
+                    </p>
+                    <p>
+                        <li>
+                            Чтобы установить <strong>индивидуальные размеры</strong> для каждого изображения, нужно воспользоваться св-вом <strong>background-size</strong>
+                        </li>
+                        <li>
+                            Значения так же записываются через <strong>запятую</strong>. <strong>Порядок</strong> записи будет <strong>соответствовать порядку</strong> изоб-й в списке <strong>background</strong>.
+                        </li>
+                        <li>
+                            Для каждого изображения указывается сперва ширина, а затем, через пробел, высота. 
+                        </li>
+                    </p>
+
+                    <details>
+                        <summary>Индивидуальные размеры для нескольких фоновых изображений.</summary>
+                        <strong>Для каждого изображения указывается сперва ширина, а затем, через пробел, высота.</strong>
+                        <p class="p_vajno">.bg {</p>
+                        <p class="p_vajno">&emsp;background-size: 100% 50%, 300px 400px, auto;</p>
+                        <p class="p_vajno">}</p>
+                    </details>
+                    <p>
+                        При присваивании размеров можно воспользоваться, как привычными значениями в виде <strong>процентов</strong> и <strong>пикселей</strong>, так и следующими ключевыми словами:
+
+                    </p>
+                    <p>
+                        <li><strong class="red">auto</strong> - задает естественный размер изображения.</li>
+                        <li><strong class="red">cover</strong> -  расширяет изображение, сохраняя соотношение его сторон, чтобы занять всю площадь элемента.</li>
+                        <li><strong class="red">contain</strong> -  расширяет изображение таким образом, чтобы оно поместилось внутри элемента по своей самой длинной стороне с сохранением соотношения сторон.</li>
+                    </p>
+                    <p>
+                        <h3 class="red">CSS-фильтры</h3>
+                        <p>
+                            <li>
+                                <strong class="blue">filter</strong>: <strong class="red">blur()</strong>; - размытие. Задается в пикселях или др. величинах (но только не в процентах)
+                            </li>
+                            <li>
+                                <strong class="blue">filter</strong>: <strong class="red">brightness();</strong>; - используется для затемнения изображения. Задается значениями в диапазоне от 0 до 1, или в процентах. 1 и 100% обеспечивают дефолтную яркость. Если выкрутить более 100%, то изображение станет светлее. 
+                            </li>
+                            <li>
+                                <strong class="blue">filter</strong>: <strong class="red">contrast()</strong>; - контраст. Применяются значения в диапазоне от 0 до 1 или от 0 до 100 %. 1 или 100% обеспечивают нормальную контрастность, а более высокие значения вызывают повышение цветовой контрастности.
+                            </li>
+                            <li>
+                                <strong class="blue">filter</strong>: <strong class="red">grayscale()</strong>; - обесцвечивание. Используются значения от 0 до 1 или от 0 до 100 %, приводящие к различным степеням обесцвечивания элемента. Значение 0 оставляет изображение полноцветным, а 1 его полностью обесцвечивает, превращая цвета в оттенки серого.
+                            </li>
+                            <li>
+                                <strong class="blue">filter</strong>: <strong class="red">hue-rotate()</strong>; - изменение цвета по цветовому кругу. Используются значения от 0 до 360°.
+                            </li>
+                            <li>
+                                <strong class="blue">filter</strong>: <strong class="red">invert(75%)</strong>; - инвертирование цвета. Используются значения от 0 до 100%.
+                            </li>
+                            <li>
+                                <strong class="blue">filter</strong>: <strong class="red">opacity(50%)</strong>; - прозрачность. От 0 до 100%.
+                            </li>
+                            <li>
+                                <strong class="blue">filter</strong>: <strong class="red">saturate()</strong>; - сатурация эл-та. Исчисляется в процентах, может быть более 100%.
+                            </li> 
+                            <li>
+                                <strong class="blue">filter</strong>: <strong class="red">sepia(.75)</strong>; - сепия. Используются значения от 0 до 1, или от 0 до 100%.
+                            </li>
+                            <li>
+                                <strong class="blue">filter</strong>: <strong class="red">drop-shadow(-14px -18px 6px #E4E57C)</strong>; - добавляет тень к эл-ту (а не ко всему блоку). Охуенно работает с png картинками.
+                            </li>
+                        </p>
+                        <details>
+                            <summary>Примеры фильтров</summary>
+                            <p><strong>Original photo</strong>
+                            <img class="filter_tapes" src="../img/tapes-photo.jpg" alt="tapes"></p>
+                            <p><strong class="blue">filter</strong>: <strong class="red">blur(3px)</strong>;
+                            <img class="filter_tapes blur" src="../img/tapes-photo.jpg" alt="tapes"></p>
+                            <p><strong class="blue">filter</strong>: <strong class="red">brightness(2)</strong>;
+                            <img class="filter_tapes brightness" src="../img/tapes-photo.jpg" alt="tapes"></p>
+                            <p><strong class="blue">filter</strong>: <strong class="red">contrast(2)</strong>;
+                            <img class="filter_tapes contrast" src="../img/tapes-photo.jpg" alt="tapes"></p>
+                            <p><strong class="blue">filter</strong>: <strong class="red">grayscale(.8)</strong>;
+                            <img class="filter_tapes grayscale" src="../img/tapes-photo.jpg" alt="tapes"></p>
+                            <p><strong class="blue">filter</strong>: <strong class="red">hue-rotate(25deg)</strong>;
+                            <img class="filter_tapes hue_rotate" src="../img/tapes-photo.jpg" alt="tapes"></p>
+                            <p><strong class="blue">filter</strong>: <strong class="red">invert(75%)</strong>;
+                            <img class="filter_tapes invert" src="../img/tapes-photo.jpg" alt="tapes"></p>
+                            <p><strong class="blue">filter</strong>: <strong class="red">opacity(50%)</strong>;
+                            <img class="filter_tapes opacity" src="../img/tapes-photo.jpg" alt="tapes"></p>
+                            <p><strong class="blue">filter</strong>: <strong class="red">saturate(15%)</strong>;
+                            <img class="filter_tapes saturate" src="../img/tapes-photo.jpg" alt="tapes"></p>
+                            <p><strong class="blue">filter</strong>: <strong class="red">sepia(.75)</strong>;
+                            <img class="filter_tapes sepia" src="../img/tapes-photo.jpg" alt="tapes"></p>
+
+                            <p><strong class="blue">filter</strong>: <strong class="red">drop-shadow(-14px -18px 6px #E4E57C)</strong>;
+                            <img class="filter_tapes drop_shadow" src="../img/cool-jesus.png" alt="tapes"></p>
+                        </details>
+                    </p>
+                    <p>
+                        <li>
+                            Фильтры тоже можно объединять, разделяя их пробелами.
+                        </li>
+                    </p>
+                </section>
+            </article>
+        </main>
+        <!-- Конец блока с контентом -->
+    </div>
+    <footer></footer>
+    
+</body>
+
+</html>

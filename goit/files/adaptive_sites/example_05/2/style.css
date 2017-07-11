@@ -1,0 +1,25 @@
+.Scroll_Wrapper {
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+ /* Придание инерционности прокрутке на сенсорных устройствах на базе WebKit */
+    -webkit-overflow-scrolling: touch;
+ /* Удаление полос прокрутки в поддерживающих это свойство версиях IE */
+    -ms-overflow-style: none;
+}
+.Item {
+    display: inline-flex;
+}
+
+/* Предотвращение появления полосы прокрутки в браузерах с движком WebKit */
+.Scroll_Wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.Caption {
+	max-width: 4rem;
+	padding-left: .5rem;
+	font-size: 1.2rem;
+	line-height: 1.2;
+}

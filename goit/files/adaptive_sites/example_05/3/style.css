@@ -1,0 +1,25 @@
+@font-face {
+	font-family: Capture_it;
+	src: url(../../../fonts/Capture_it.ttf);
+}
+
+main {
+	text-align: center;
+	font-family: Capture_it;
+	font-size: 3vw;
+}
+@media (min-width: 45rem) {
+	html,
+	body {
+		background-color: #B4E8D9;
+		max-width: 50rem;
+		font-size: 1.8vw;
+	}
+}
+@media (min-width: 45rem) {
+	html,
+	body {
+		max-width: 50rem;
+		font-size: 1.8vw;
+	}
+}
